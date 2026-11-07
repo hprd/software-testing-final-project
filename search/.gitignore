@@ -1,0 +1,5 @@
+# Local text extractions of the PDFs in Literature/.
+*.txt
+
+# Downloaded research repositories and dataset snapshots.
+/sources/

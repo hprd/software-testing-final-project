@@ -1,0 +1,26 @@
+{
+  "commons-lang": {
+    "commit": "d58c7ed8d4d3283ee5fbd01a866ce9a10ecf80a8",
+    "url": "https://github.com/apache/commons-lang.git",
+    "java_test_source_files": 372
+  },
+  "commons-io": {
+    "commit": "0c640aef74c65292ef313596f58c48b1b121e1e7",
+    "url": "https://github.com/apache/commons-io.git",
+    "java_test_source_files": 306
+  },
+  "assertj": {
+    "commit": "11c9de396300b624a69955956b8a0cc9d2a37d93",
+    "url": "https://github.com/assertj/assertj.git",
+    "java_test_source_files": 4317
+  },
+  "jimfs": {
+    "commit": "84a56aed7c03031b7fce9e6f1cc303fd868aad62",
+    "url": "https://github.com/google/jimfs.git",
+    "java_test_source_files": 52
+  },
+  "idoft": {
+    "commit": "4903dc9233eead4e4191c66f9ed0b14eea091052",
+    "url": "https://github.com/TestingResearchIllinois/idoft.git"
+  }
+}
