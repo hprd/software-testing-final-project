@@ -1,0 +1,6 @@
+[submodule "ChaosAPI"]
+	path = ChaosAPI
+	url = https://github.com/Yhcrown/ChaosAPI.git
+[submodule "NonDex"]
+	path = NonDex
+	url = https://github.com/TestingResearchIllinois/NonDex.git
