@@ -1,0 +1,18 @@
+# Downloaded model weights (~17 GB)
+/local-llm/models/
+
+# Generated binaries and build files
+/local-llm/build/
+/local-llm/build.*/
+
+# Runtime files, caches, and local settings
+/local-llm/cache/
+/local-llm/tmp/
+/local-llm/logs/
+/local-llm/home/
+/local-llm/config/
+/local-llm/data/
+
+# Python bytecode
+__pycache__/
+*.py[cod]

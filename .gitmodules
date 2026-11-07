@@ -4,3 +4,6 @@
 [submodule "NonDex"]
 	path = NonDex
 	url = https://github.com/TestingResearchIllinois/NonDex.git
+[submodule "local-llm/llama.cpp"]
+	path = local-llm/llama.cpp
+	url = https://github.com/ggml-org/llama.cpp
