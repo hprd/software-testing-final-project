@@ -1,0 +1,13 @@
+{
+  "owner": "java.util.stream.Collectors",
+  "method": "<T>toList()",
+  "jdk": "21",
+  "url": "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/stream/Collectors.html#toList()",
+  "status": "manually reviewed reference, not exhaustive",
+  "variation": "The returned list's concrete type, mutability, serializability, and thread safety are not guaranteed.",
+  "permitted_experiment": "For a properly completed collection, explore an unmodifiable result with the same elements and encounter order, without interfering with collection, characteristics, parallel accumulation, or finisher behavior.",
+  "constraints": ["Preserve the stream's encounter order when one exists", "Preserve contents and multiplicity", "Preserve collection and combiner behavior for sequential and parallel execution", "A collector without an identity finisher must not advertise IDENTITY_FINISH"],
+  "context": "An unordered stream may itself permit different encounter sequences; toList alone does not authorize shuffling an ordered stream.",
+  "evidence": "JDK 21 source Javadoc for Collectors.toList states that type, mutability, serializability and thread safety are not guaranteed, and that the list is in encounter order.",
+  "limitations": ["Alternative result types or restrictions require validation against all relevant collector and stream contracts", "No actual perturbation has been implemented or executed"]
+}

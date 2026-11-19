@@ -1,0 +1,15 @@
+diff --git a/src/test/java/org/apache/commons/lang3/stream/StreamsTest.java b/src/test/java/org/apache/commons/lang3/stream/StreamsTest.java
+index f790a55e0..b7abec902 100644
+--- a/src/test/java/org/apache/commons/lang3/stream/StreamsTest.java
++++ b/src/test/java/org/apache/commons/lang3/stream/StreamsTest.java
+@@ -243,7 +243,9 @@ void testOfEnumeration() {
+         assertTrue(collect.contains("Two"));
+         assertEquals(2, collect.size());
+         assertFalse(Streams.of(table.keys()).filter(String::isEmpty).findFirst().isPresent());
+-        assertEquals(Arrays.asList("OneOne", "TwoTwo"), Streams.of(table.keys()).map(s -> s + s).collect(Collectors.toList()));
++        final List<String> alternateKeys = java.util.Collections.list(table.keys());
++        java.util.Collections.reverse(alternateKeys);
++        assertEquals(Arrays.asList("OneOne", "TwoTwo"), Streams.of(java.util.Collections.enumeration(alternateKeys)).map(s -> s + s).collect(Collectors.toList()));
+         assertFalse(Streams.of(new Hashtable<String, Object>().keys()).filter(String::isEmpty).findFirst().isPresent());
+     }
+ 

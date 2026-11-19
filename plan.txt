@@ -1,0 +1,37 @@
+Goal: Build an agentic workflow in Agent/ that analyzes an input Java project for code or tests that may depend on API behavior not guaranteed by the applicable specification. Report evidence-backed candidates; confirm them through validated perturbation and test execution in a later milestone.
+
+Initial milestone: establish an inventory and evidence-backed analysis for a small set of APIs and call sites.
+
+1. Establish a reproducible project baseline.
+    a. Accept a Java project as input and record its repository revision, build system, JDK version, dependencies, test command, and configuration.
+    b. Run relevant tests without perturbation. Record passing, failing, skipped, and unexecutable tests and preserve the commands and results; do not attribute baseline failures to a later perturbation.
+    c. Identify the scope of analysis and any environment or build limitations.
+
+2. Inventory API calls.
+    a. Use program analysis to identify calls, resolving the declaring class, method, overload, source location, and applicable Java version where possible. Mark unresolved or ambiguous calls instead of guessing.
+    b. Initially analyze project source and test code; document whether dependency code is included and identify limitations such as reflection, dynamic dispatch, and generated code.
+    c. Produce a machine-readable inventory that links calls to their source locations and analysis status.
+
+3. Identify specification-permitted variation.
+    a. Retrieve version-appropriate API documentation and relevant class, inherited, and method contracts. Preserve citations or passages that support each conclusion.
+    b. For each analyzed API and relevant call context, record what observable behavior may vary, the inputs or conditions that permit it, and the properties that must remain unchanged.
+    c. Distinguish unspecified implementation choices from environment, timing, and random behavior; do not assume every use of an API admits the same variation. Allow an insufficient-evidence result.
+    d. For example, Hashtable.keys() does not promise key order. Collectors.toList() must preserve the encounter order of an ordered stream; result mutability is a separate contract question.
+
+4. Analyze how each result is used.
+    a. Trace the returned value into relevant code and tests when feasible. Look for potential dependencies such as fixed-order comparisons or selecting a first element; record evidence and analysis limits.
+    b. Classify each analyzed use as a candidate dependency, no apparent dependency, or inconclusive. An API with permitted variation is not itself a defect, and static evidence alone does not confirm a flaky test.
+    c. Produce a report linking each classification to the call site, contract evidence, conditions, preserved constraints, and relevant use or assertion.
+
+5. Validate and refine the initial workflow.
+    a. Use the existing Commons Lang Hashtable.keys() example as a reference case: identify the call, ordering contract, and fixed-order assertion. Include controls that sort keys or compare membership, and examples where context restricts permitted variation.
+    b. Compare inventory resolution, contract analysis, usage classification, and supporting evidence against manually reviewed examples. Track missed calls, false positives, inconclusive cases, and required human corrections.
+    c. Document how to run the workflow and interpret its machine-readable output and report. Refine its rules and prompts based on observed errors.
+
+Later milestones:
+
+6. Establish an objective evaluation subject set. Freeze a reproducible list of NonDex-paper subjects and revisions where available, define eligibility rules and an objective supplemental selection method, and record exclusions, build failures, and zero-use subjects. Separate exploratory projects from held-out evaluation where practical.
+
+7. Add perturbation and execution. Use the manual Hashtable experiment and stock NonDex control to guide a narrow integration. Validate contract constraints and controls, run baseline and perturbed tests with recorded seeds and configurations, and investigate failures before calling them confirmed findings. Investigate the Files.list(Path) candidate while preserving traversal and resource semantics.
+
+8. Evaluate automation and new coverage separately. Use existing NonDex-supported APIs as reconstruction controls, not new coverage. Measure analysis and generation quality, integration success, manual effort, runtime, false positives, and confirmed findings; report unsupported and inconclusive cases as well as successes.

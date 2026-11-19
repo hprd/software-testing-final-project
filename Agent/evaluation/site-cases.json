@@ -1,0 +1,24 @@
+{
+  "subject": "Commons Lang",
+  "revision": "d58c7ed8d4d3283ee5fbd01a866ce9a10ecf80a8",
+  "cases": [
+    {
+      "api": "java.util.Hashtable.keys()",
+      "file": "src/test/java/org/apache/commons/lang3/stream/StreamsTest.java",
+      "line": 246,
+      "test": "StreamsTest#testOfEnumeration",
+      "contract_review": {"status": "manually_reviewed", "reference": "Agent/contracts/hashtable-keys.json"},
+      "site_review": {"status": "candidate_dependency", "reason": "A fixed-order list equality directly consumes the mapped key enumeration.", "reference": "Agent/results/commons-lang/findings.json"},
+      "experiment": {"status": "confirmed_scoped_failure", "reference": "experiments/hashtable/README.md", "qualification": "The pre-existing plain two-key stable-table fixture caused the unchanged test to fail. This does not validate a general Hashtable implementation."}
+    },
+    {
+      "api": "java.util.Hashtable.keys()",
+      "file": "src/test/java/org/apache/commons/lang3/stream/StreamsTest.java",
+      "line": 241,
+      "test": "StreamsTest#testOfEnumeration",
+      "site_review": {"status": "inconclusive", "reason": "The inventory rule does not trace later uses of the collected list; the local assertions check membership and size.", "reference": "Agent/results/commons-lang/findings.json"},
+      "experiment": {"status": "not_separately_confirmed"}
+    }
+  ],
+  "note": "Manually reviewed site records are distinct from model classifications. Results are specific to the recorded revision."
+}

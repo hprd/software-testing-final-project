@@ -1,0 +1,97 @@
+{
+  "version": 2,
+  "note": "Manually reviewed controls, not exhaustive. Labels apply to the stated scenario, not arbitrary implementations. Version 2 clarifies that the collector returns the changed order before the caller receives the list.",
+  "cases": [
+    {
+      "id": "hashtable-stable-order",
+      "api": "java.util.Hashtable.keys()",
+      "dimension": "ordering",
+      "scenario": "A plain Hashtable contains two distinct keys; there is no structural modification before or during enumeration.",
+      "alternative": "For that same table, return the same keys in the reverse traversal order, preserving enumeration exhaustion.",
+      "label": "candidate",
+      "evidence": "Agent/contracts/hashtable-keys.json",
+      "basis": "No key order guarantee identified; the scoped experiment gives a narrow witness, not a general implementation."
+    },
+    {
+      "id": "hashtable-modified",
+      "api": "java.util.Hashtable.keys()",
+      "dimension": "ordering",
+      "scenario": "Structurally modify the table after creating an enumeration.",
+      "alternative": "Use the undefined result as a normal-use perturbation.",
+      "label": "invalid",
+      "evidence": "Agent/contracts/hashtable-keys.json",
+      "basis": "The documented result is undefined under structural modification."
+    },
+    {
+      "id": "tolist-ordered-shuffle",
+      "api": "java.util.stream.Collectors.<T>toList()",
+      "dimension": "ordering",
+      "scenario": "An ordered stream has distinct elements and is collected using the toList collector.",
+      "alternative": "The collector itself returns a list to the caller with those elements shuffled out of encounter order.",
+      "label": "invalid",
+      "evidence": "Agent/contracts/collectors-to-list.json",
+      "basis": "Encounter order must be preserved."
+    },
+    {
+      "id": "tolist-mutability",
+      "api": "java.util.stream.Collectors.<T>toList()",
+      "dimension": "mutability",
+      "scenario": "Collect an ordered stream, including any valid elements, with sequential or parallel execution.",
+      "alternative": "Return an unmodifiable list preserving contents, multiplicity, encounter order and collector contracts.",
+      "label": "candidate",
+      "evidence": "Agent/contracts/collectors-to-list.json",
+      "basis": "Mutability is not guaranteed; a concrete implementation still needs validation."
+    },
+    {
+      "id": "findfirst-unordered",
+      "api": "java.util.stream.Stream.findFirst()",
+      "dimension": "ordering",
+      "scenario": "A stream has no encounter order and multiple non-null elements.",
+      "alternative": "Select a different element of that stream.",
+      "label": "candidate",
+      "evidence": "JDK 21 Stream.findFirst source Javadoc",
+      "basis": "The method documentation permits any element when no encounter order exists."
+    },
+    {
+      "id": "findfirst-ordered",
+      "api": "java.util.stream.Stream.findFirst()",
+      "dimension": "ordering",
+      "scenario": "An ordered stream has multiple distinct elements.",
+      "alternative": "Return an element other than the first in encounter order.",
+      "label": "invalid",
+      "evidence": "JDK 21 Stream.findFirst source Javadoc",
+      "basis": "The first element is required for ordered streams."
+    },
+    {
+      "id": "aslist-copy",
+      "api": "java.util.Arrays.<T>asList(T...)",
+      "dimension": "state",
+      "scenario": "Wrap an array and subsequently change an element of the array.",
+      "alternative": "Return an independent copy that does not reflect the array change.",
+      "label": "invalid",
+      "evidence": "JDK 21 Arrays.asList source Javadoc",
+      "basis": "The returned fixed-size list is backed by the specified array."
+    },
+    {
+      "id": "singleton-null",
+      "api": "java.util.Collections.<T>singletonList(T)",
+      "dimension": "exceptions",
+      "scenario": "Call singletonList with a null element.",
+      "alternative": "Claim the class-level rule about null collection and class arguments proves this element must be rejected.",
+      "label": "invalid",
+      "evidence": "JDK 21 Collections class and singletonList source Javadoc",
+      "basis": "The cited class rule does not apply to this element argument."
+    },
+    {
+      "id": "unknown-receiver",
+      "api": "java.util.Hashtable.keys()",
+      "dimension": "ordering",
+      "scenario": "The static receiver type is Hashtable, but the concrete subclass and its contract are unknown.",
+      "alternative": "Reverse enumeration without checking the concrete receiver's stronger promises.",
+      "label": "inconclusive",
+      "evidence": "Agent/contracts/hashtable-keys.json",
+      "basis": "The applicable receiver-specific contract is unresolved."
+    }
+  ],
+  "split": "development"
+}
