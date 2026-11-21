@@ -1,0 +1,11 @@
+nondexFilter=.*
+nondexMode=FULL
+nondexSeed=1016066
+nondexStart=0
+nondexEnd=9223372036854775807
+nondexPrintstack=false
+nondexDir=/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-lang-verified/.nondex
+nondexJarDir=/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-lang-verified/.nondex
+nondexExecid=jdSGG9yFn1XI8w1KXyOzmZ3Qpy9R4QM9nMzqRS7s5QU=
+nondexLogging=INFO
+test=

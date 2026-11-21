@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: edu.illinois.nondex.it.AppTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.043 s <<< FAILURE! - in edu.illinois.nondex.it.AppTest
+testHashSet(edu.illinois.nondex.it.AppTest)  Time elapsed: 0.023 s  <<< FAILURE!
+org.junit.ComparisonFailure: To Debug expected:<[[0, 2, 3, 4, 5, 6, 7, 8, 9]]> but was:<[[4, 5, 1, 9, 8, 0, 7, 6, 2]]>
+	at edu.illinois.nondex.it.AppTest.testHashSet(AppTest.java:59)
+

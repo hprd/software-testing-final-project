@@ -1,5 +1,13 @@
 # Software Testing Final Project
 
+This project explores using LLMs to automate adding Java API perturbation support to **NonDex**, with **ChaosAPI** as future work. The intended workflow identifies API usage, analyzes documentation for specification-permitted variations, generates and validates perturbations, and runs existing tests with expanded tool coverage. The aim is to reduce manual effort and expose assumptions that can cause flaky tests.
+
+- [Experiments](experiments/README.md): manual perturbations and live specification-classification pilots.
+- [PROJECT_OVERVIEW.md](PROJECT_OVERVIEW.md): purpose, terminology, intended workflow, design considerations, and general roadmap.
+- [HANDOFF.md](HANDOFF.md): current progress, latest work, limitations, directory guide, next steps, and reproduction details.
+- [Agent/README.md](Agent/README.md): commands for the research prototype.
+- [NonDex API support](NonDex.wiki/SUPPORTED-APIS.md): audited coverage of the pinned tool.
+
 ## Clone the project
 
 Clone the repository with its submodules:

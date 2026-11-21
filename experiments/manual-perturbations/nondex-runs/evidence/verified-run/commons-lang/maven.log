@@ -1,0 +1,256 @@
+yp_bind_client_create_v3: RPC: Unknown host
+yp_bind_client_create_v3: RPC: Unknown host
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< org.apache.commons:commons-lang3 >------------------
+[INFO] Building Apache Commons Lang 3.22.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> nondex:2.2.5-SNAPSHOT:nondex (default-cli) > test-compile @ commons-lang3 >>>
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-maven-version) @ commons-lang3 ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-java-version) @ commons-lang3 ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+[INFO] 
+[INFO] --- apache-rat:0.17:check (rat-check) @ commons-lang3 ---
+[INFO] RAT will not execute since it is configured to be skipped via system property 'rat.skip'.
+[INFO] 
+[INFO] --- artifact:3.7.0:check-buildplan (check-buildplan) @ commons-lang3 ---
+[INFO] No known issue in 21 plugins
+[INFO] 
+[INFO] --- build-helper:3.6.2:parse-version (parse-version) @ commons-lang3 ---
+[INFO] 
+[INFO] --- antrun:3.2.0:run (javadoc.resources) @ commons-lang3 ---
+[INFO] Executing tasks
+[INFO]      [copy] Copying 2 files to /misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-lang-verified/target/apidocs/META-INF
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- remote-resources:3.3.0:process (process-resource-bundles) @ commons-lang3 ---
+[INFO] Skipping remote resources execution.
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ commons-lang3 ---
+[INFO] skip non existing resourceDirectory /misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-lang-verified/src/main/resources
+[INFO] Copying 2 resources from . to target/classes/META-INF
+[INFO] 
+[INFO] --- compiler:3.16.0:compile (default-compile) @ commons-lang3 ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 264 source files with javac [debug release 8] to target/classes
+[INFO] /misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-lang-verified/src/main/java/org/apache/commons/lang3/builder/ToStringStyle.java: Some input files use or override a deprecated API.
+[INFO] /misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-lang-verified/src/main/java/org/apache/commons/lang3/builder/ToStringStyle.java: Recompile with -Xlint:deprecation for details.
+[INFO] /misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-lang-verified/src/main/java/org/apache/commons/lang3/AppendableJoiner.java: Some input files use unchecked or unsafe operations.
+[INFO] /misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-lang-verified/src/main/java/org/apache/commons/lang3/AppendableJoiner.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- bundle:5.1.9:manifest (bundle-manifest) @ commons-lang3 ---
+[INFO] No MANIFEST.MF file found, generating manifest.
+[INFO] Writing manifest: /misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-lang-verified/target/osgi/MANIFEST.MF
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ commons-lang3 ---
+[INFO] Copying 7 resources from src/test/resources to target/test-classes
+[INFO] Copying 2 resources from . to target/test-classes/META-INF
+[INFO] 
+[INFO] --- compiler:3.16.0:testCompile (default-testCompile) @ commons-lang3 ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 372 source files with javac [debug release 8] to target/test-classes
+[WARNING] /misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-lang-verified/src/test/java/org/apache/commons/lang3/CharSetTest.java:[394,55] non-varargs call of varargs method with inexact argument type for last parameter;
+  cast to java.lang.String for a varargs call
+  cast to java.lang.String[] for a non-varargs call and to suppress this warning
+[INFO] /misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-lang-verified/src/test/java/org/apache/commons/lang3/AppendableJoinerTest.java: Some input files use or override a deprecated API.
+[INFO] /misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-lang-verified/src/test/java/org/apache/commons/lang3/AppendableJoinerTest.java: Recompile with -Xlint:deprecation for details.
+[INFO] /misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-lang-verified/src/test/java/org/apache/commons/lang3/EnumUtilsTest.java: Some input files use unchecked or unsafe operations.
+[INFO] /misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-lang-verified/src/test/java/org/apache/commons/lang3/EnumUtilsTest.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] <<< nondex:2.2.5-SNAPSHOT:nondex (default-cli) < test-compile @ commons-lang3 <<<
+[INFO] 
+[INFO] 
+[INFO] --- nondex:2.2.5-SNAPSHOT:nondex (default-cli) @ commons-lang3 ---
+INFO: The original argline is: -Xmx1G --add-opens java.base/java.lang.reflect=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.time=ALL-UNNAMED --add-opens java.base/java.time.chrono=ALL-UNNAMED  --add-opens java.base/java.util.concurrent.atomic=ALL-UNNAMED  
+INFO: Creating new argline for Surefire
+[WARNING]  Parameter 'disableXmlReport' (user property 'disableXmlReport') is deprecated: instead use disable within statelessTestsetReporter since of 3.0.0-M6
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[WARNING] The system property nondexLogging is configured twice! The property appears in <argLine/> and any of <systemPropertyVariables/>, <systemProperties/> or user property.
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+yp_bind_client_create_v3: RPC: Unknown host
+yp_bind_client_create_v3: RPC: Unknown host
+yp_bind_client_create_v3: RPC: Unknown host
+[INFO] Running org.apache.commons.lang3.stream.StreamsTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.096 s -- in org.apache.commons.lang3.stream.StreamsTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+INFO: Adding excluded groups to newly created one
+INFO: Creating new argline for Surefire
+[WARNING]  Parameter 'disableXmlReport' (user property 'disableXmlReport') is deprecated: instead use disable within statelessTestsetReporter since of 3.0.0-M6
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[WARNING] The system property nondexLogging is configured twice! The property appears in <argLine/> and any of <systemPropertyVariables/>, <systemProperties/> or user property.
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+yp_bind_client_create_v3: RPC: Unknown host
+yp_bind_client_create_v3: RPC: Unknown host
+yp_bind_client_create_v3: RPC: Unknown host
+[INFO] Running org.apache.commons.lang3.stream.StreamsTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.065 s -- in org.apache.commons.lang3.stream.StreamsTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+INFO: Adding excluded groups to newly created one
+INFO: Creating new argline for Surefire
+[WARNING]  Parameter 'disableXmlReport' (user property 'disableXmlReport') is deprecated: instead use disable within statelessTestsetReporter since of 3.0.0-M6
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[WARNING] The system property nondexLogging is configured twice! The property appears in <argLine/> and any of <systemPropertyVariables/>, <systemProperties/> or user property.
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+yp_bind_client_create_v3: RPC: Unknown host
+yp_bind_client_create_v3: RPC: Unknown host
+yp_bind_client_create_v3: RPC: Unknown host
+[INFO] Running org.apache.commons.lang3.stream.StreamsTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.065 s -- in org.apache.commons.lang3.stream.StreamsTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+INFO: Adding excluded groups to newly created one
+INFO: Creating new argline for Surefire
+[WARNING]  Parameter 'disableXmlReport' (user property 'disableXmlReport') is deprecated: instead use disable within statelessTestsetReporter since of 3.0.0-M6
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[WARNING] The system property nondexLogging is configured twice! The property appears in <argLine/> and any of <systemPropertyVariables/>, <systemProperties/> or user property.
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+yp_bind_client_create_v3: RPC: Unknown host
+yp_bind_client_create_v3: RPC: Unknown host
+yp_bind_client_create_v3: RPC: Unknown host
+[INFO] Running org.apache.commons.lang3.stream.StreamsTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.070 s -- in org.apache.commons.lang3.stream.StreamsTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+INFO: Creating new argline for Surefire
+[WARNING]  Parameter 'disableXmlReport' (user property 'disableXmlReport') is deprecated: instead use disable within statelessTestsetReporter since of 3.0.0-M6
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[WARNING] The system property nondexLogging is configured twice! The property appears in <argLine/> and any of <systemPropertyVariables/>, <systemProperties/> or user property.
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+yp_bind_client_create_v3: RPC: Unknown host
+yp_bind_client_create_v3: RPC: Unknown host
+yp_bind_client_create_v3: RPC: Unknown host
+[INFO] Running org.apache.commons.lang3.stream.StreamsTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.067 s -- in org.apache.commons.lang3.stream.StreamsTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+INFO: Adding excluded groups to newly created one
+INFO: Creating new argline for Surefire
+[WARNING]  Parameter 'disableXmlReport' (user property 'disableXmlReport') is deprecated: instead use disable within statelessTestsetReporter since of 3.0.0-M6
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[WARNING] The system property nondexLogging is configured twice! The property appears in <argLine/> and any of <systemPropertyVariables/>, <systemProperties/> or user property.
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+yp_bind_client_create_v3: RPC: Unknown host
+yp_bind_client_create_v3: RPC: Unknown host
+yp_bind_client_create_v3: RPC: Unknown host
+[INFO] Running org.apache.commons.lang3.stream.StreamsTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.072 s -- in org.apache.commons.lang3.stream.StreamsTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+INFO: Adding excluded groups to newly created one
+INFO: Creating new argline for Surefire
+[WARNING]  Parameter 'disableXmlReport' (user property 'disableXmlReport') is deprecated: instead use disable within statelessTestsetReporter since of 3.0.0-M6
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[WARNING] The system property nondexLogging is configured twice! The property appears in <argLine/> and any of <systemPropertyVariables/>, <systemProperties/> or user property.
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+yp_bind_client_create_v3: RPC: Unknown host
+yp_bind_client_create_v3: RPC: Unknown host
+yp_bind_client_create_v3: RPC: Unknown host
+[INFO] Running org.apache.commons.lang3.stream.StreamsTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.069 s -- in org.apache.commons.lang3.stream.StreamsTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+INFO: Adding excluded groups to newly created one
+INFO: Creating new argline for Surefire
+[WARNING]  Parameter 'disableXmlReport' (user property 'disableXmlReport') is deprecated: instead use disable within statelessTestsetReporter since of 3.0.0-M6
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[WARNING] The system property nondexLogging is configured twice! The property appears in <argLine/> and any of <systemPropertyVariables/>, <systemProperties/> or user property.
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+yp_bind_client_create_v3: RPC: Unknown host
+yp_bind_client_create_v3: RPC: Unknown host
+yp_bind_client_create_v3: RPC: Unknown host
+[INFO] Running org.apache.commons.lang3.stream.StreamsTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.066 s -- in org.apache.commons.lang3.stream.StreamsTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] NonDex SUMMARY:
+[INFO] *********
+[INFO] mvn nondex:nondex  -DnondexFilter='.*' -DnondexMode=FULL -DnondexSeed=933178 -DnondexStart=0 -DnondexEnd=9223372036854775807 -DnondexPrintstack=false -DnondexDir="/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-lang-verified/.nondex" -DnondexJarDir="/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-lang-verified/.nondex" -DnondexExecid=71IK7kuUosUINfwVJNsAv54PKA5qmoiKOwSXFEy4+4= -DnondexLogging=INFO
+[INFO] No Test Failed with this configuration.
+[INFO] *********
+[INFO] *********
+[INFO] mvn nondex:nondex  -DnondexFilter='.*' -DnondexMode=FULL -DnondexSeed=974622 -DnondexStart=0 -DnondexEnd=9223372036854775807 -DnondexPrintstack=false -DnondexDir="/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-lang-verified/.nondex" -DnondexJarDir="/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-lang-verified/.nondex" -DnondexExecid=9oBJJLwl3l29Ed+B0xZp8HRRTWDmS+dPI4TY1xuA= -DnondexLogging=INFO
+[INFO] No Test Failed with this configuration.
+[INFO] *********
+[INFO] *********
+[INFO] mvn nondex:nondex  -DnondexFilter='.*' -DnondexMode=FULL -DnondexSeed=1016066 -DnondexStart=0 -DnondexEnd=9223372036854775807 -DnondexPrintstack=false -DnondexDir="/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-lang-verified/.nondex" -DnondexJarDir="/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-lang-verified/.nondex" -DnondexExecid=jdSGG9yFn1XI8w1KXyOzmZ3Qpy9R4QM9nMzqRS7s5QU= -DnondexLogging=INFO
+[INFO] No Test Failed with this configuration.
+[INFO] *********
+[INFO] *********
+[INFO] mvn nondex:nondex  -DnondexFilter='.*' -DnondexMode=FULL -DnondexSeed=933178 -DnondexStart=0 -DnondexEnd=9223372036854775807 -DnondexPrintstack=false -DnondexDir="/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-lang-verified/.nondex" -DnondexJarDir="/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-lang-verified/.nondex" -DnondexExecid=KEd9lzfdKWZfxP218oISDdq4EqxYRFXdQsBWSzLF0= -DnondexLogging=INFO
+[INFO] No Test Failed with this configuration.
+[INFO] *********
+[INFO] *********
+[INFO] mvn nondex:nondex  -DnondexFilter='.*' -DnondexMode=FULL -DnondexSeed=974622 -DnondexStart=0 -DnondexEnd=9223372036854775807 -DnondexPrintstack=false -DnondexDir="/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-lang-verified/.nondex" -DnondexJarDir="/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-lang-verified/.nondex" -DnondexExecid=craMuDfwFKURq47b6a0NBzLmuctXHAQe3GpvB4kWD4= -DnondexLogging=INFO
+[INFO] No Test Failed with this configuration.
+[INFO] *********
+[INFO] *********
+[INFO] mvn nondex:nondex  -DnondexFilter='.*' -DnondexMode=FULL -DnondexSeed=1016066 -DnondexStart=0 -DnondexEnd=9223372036854775807 -DnondexPrintstack=false -DnondexDir="/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-lang-verified/.nondex" -DnondexJarDir="/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-lang-verified/.nondex" -DnondexExecid=KdhasNhnhBtm6HyROF9bzhI4RPKx6G3kD39nDPaw78o= -DnondexLogging=INFO
+[INFO] No Test Failed with this configuration.
+[INFO] *********
+[INFO] All tests pass without NonDex shuffling
+[INFO] ####################
+[INFO] Across all seeds:
+[INFO] Test results can be found at: 
+[INFO] file:///misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-lang-verified/.nondex/71IK7kuUosUINfwVJNsAv54PKA5qmoiKOwSXFEy4+4=/test_results.html
+[INFO] [NonDex] The id of this run is: 71IK7kuUosUINfwVJNsAv54PKA5qmoiKOwSXFEy4+4=
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  58.904 s
+[INFO] Finished at: 2026-11-20T23:07:32-06:00
+[INFO] ------------------------------------------------------------------------

@@ -1,0 +1,35 @@
+{
+  "provenance": {
+    "subject_revision": "d58c7ed8d4d3283ee5fbd01a866ce9a10ecf80a8",
+    "subject": "/misc/scratch/hkp423/software-testing-final-project/search/sources/commons-lang",
+    "source": "src/test/java/org/apache/commons/lang3/stream/StreamsTest.java",
+    "source_sha256": "edbcffac9b1c3b678b9a35bcaa8bc1789a4fbc0d4b53382061a3988459cbb3bc",
+    "method": "testOfEnumeration",
+    "method_lines": [
+      234,
+      248
+    ],
+    "scoped_call_count": 47,
+    "scope_selection": "Pinned source method bounds; no filtering by expected API classification.",
+    "review_selection": "Known Hashtable.keys() pilot; other extracted API groups are not contract-reviewed.",
+    "manual_rule_findings_used_as_model_input": false,
+    "prepared_utc": "2026-11-21T05:17:43.591104+00:00",
+    "infrastructure_sha256": {
+      "run.py": "ea8cba9da432039c01d9a8f8ffc40e5569e49b11d8c519eaeaa65f3834852a59",
+      "src/Inventory.java": "2f569490918e99dac9bae8a2ea01892ef13567eb217ae977abd341ad135e9d5a",
+      "contracts_deep_dive.py": "a49d34fd1230298cb7db7958091cc6c4b76291278021d328812ed8aed24a097b",
+      "src/Docs.java": "f1aa017c3324e4b46c77a29804c1245c066effb54d4765ce5c50eef8d3c5f7e2",
+      "pipeline.py": "3f15862acca2ba824e159793c0b062ac66361a65a136d426bd7ee5426f5fa9af",
+      "orchestrator.py": "71da7bd8eb2459d5ce5a0948337cacfba3e9ab093d24236f7f9c617665dbe4e9"
+    }
+  },
+  "endpoint": "http://127.0.0.1:8080/v1/chat/completions",
+  "model": "local-coder",
+  "request_count": 3,
+  "statuses": {
+    "not_selected": 14,
+    "error": 1,
+    "documentation_unavailable": 6
+  },
+  "warning": "Model judgments are provisional; human review is separate."
+}

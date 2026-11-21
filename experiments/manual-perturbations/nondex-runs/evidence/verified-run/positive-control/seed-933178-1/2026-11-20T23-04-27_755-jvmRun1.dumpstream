@@ -1,0 +1,2000 @@
+# Created at 2026-11-20T23:04:29.969
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.concurrent.ConcurrentHashMap$Traverser.<init>(ConcurrentHashMap.java:3342)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.concurrent.ConcurrentHashMap$Traverser.<init>(ConcurrentHashMap.java:3342)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:29.973
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:29.977
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.concurrent.ConcurrentHashMap$Traverser.<init>(ConcurrentHashMap.java:3342)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.concurrent.ConcurrentHashMap$Traverser.<init>(ConcurrentHashMap.java:3342)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:29.979
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:29.983
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.concurrent.ConcurrentHashMap$Traverser.<init>(ConcurrentHashMap.java:3342)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.concurrent.ConcurrentHashMap$Traverser.<init>(ConcurrentHashMap.java:3342)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:29.985
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:29.987
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.concurrent.ConcurrentHashMap$Traverser.<init>(ConcurrentHashMap.java:3342)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.concurrent.ConcurrentHashMap$Traverser.<init>(ConcurrentHashMap.java:3342)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:29.993
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:29.997
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.concurrent.ConcurrentHashMap$Traverser.<init>(ConcurrentHashMap.java:3342)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.concurrent.ConcurrentHashMap$Traverser.<init>(ConcurrentHashMap.java:3342)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.000
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.005
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.concurrent.ConcurrentHashMap$Traverser.<init>(ConcurrentHashMap.java:3342)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.concurrent.ConcurrentHashMap$Traverser.<init>(ConcurrentHashMap.java:3342)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.007
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.011
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.lang.Class.getDeclaredMethods(Class.java:2309)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.lang.Class.getDeclaredMethods(Class.java:2309)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.014
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.018
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.lang.Class.getDeclaredMethods(Class.java:2309)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.lang.Class.getDeclaredMethods(Class.java:2309)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.021
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.025
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.lang.Class.getDeclaredMethods(Class.java:2309)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.lang.Class.getDeclaredMethods(Class.java:2309)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.027
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.031
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.concurrent.ConcurrentHashMap$Traverser.<init>(ConcurrentHashMap.java:3342)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.concurrent.ConcurrentHashMap$Traverser.<init>(ConcurrentHashMap.java:3342)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.035
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.039
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.043
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.047
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.concurrent.ConcurrentHashMap$Traverser.<init>(ConcurrentHashMap.java:3342)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.concurrent.ConcurrentHashMap$Traverser.<init>(ConcurrentHashMap.java:3342)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.049
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.053
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.concurrent.ConcurrentHashMap$Traverser.<init>(ConcurrentHashMap.java:3342)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.concurrent.ConcurrentHashMap$Traverser.<init>(ConcurrentHashMap.java:3342)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.057
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.061
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.concurrent.ConcurrentHashMap$Traverser.<init>(ConcurrentHashMap.java:3342)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.concurrent.ConcurrentHashMap$Traverser.<init>(ConcurrentHashMap.java:3342)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.065
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.069
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.concurrent.ConcurrentHashMap$Traverser.<init>(ConcurrentHashMap.java:3342)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.concurrent.ConcurrentHashMap$Traverser.<init>(ConcurrentHashMap.java:3342)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.073
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.077
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.concurrent.ConcurrentHashMap$Traverser.<init>(ConcurrentHashMap.java:3342)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.concurrent.ConcurrentHashMap$Traverser.<init>(ConcurrentHashMap.java:3342)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.083
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.085
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.concurrent.ConcurrentHashMap$Traverser.<init>(ConcurrentHashMap.java:3342)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.concurrent.ConcurrentHashMap$Traverser.<init>(ConcurrentHashMap.java:3342)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.089
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.091
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.concurrent.ConcurrentHashMap$Traverser.<init>(ConcurrentHashMap.java:3342)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.concurrent.ConcurrentHashMap$Traverser.<init>(ConcurrentHashMap.java:3342)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.095
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.099
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.concurrent.ConcurrentHashMap$Traverser.<init>(ConcurrentHashMap.java:3342)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.concurrent.ConcurrentHashMap$Traverser.<init>(ConcurrentHashMap.java:3342)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.103
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.105
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.110
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.111
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.concurrent.ConcurrentHashMap$Traverser.<init>(ConcurrentHashMap.java:3342)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.concurrent.ConcurrentHashMap$Traverser.<init>(ConcurrentHashMap.java:3342)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.115
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.117
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.lang.Class.getDeclaredMethods(Class.java:2309)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.lang.Class.getDeclaredMethods(Class.java:2309)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.122
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.125
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.lang.Class.getDeclaredMethods(Class.java:2309)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.lang.Class.getDeclaredMethods(Class.java:2309)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.127
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.131
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.lang.Class.getDeclaredMethods(Class.java:2309)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.lang.Class.getDeclaredMethods(Class.java:2309)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.135
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.139
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.lang.Class.getDeclaredMethods(Class.java:2309)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.lang.Class.getDeclaredMethods(Class.java:2309)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.145
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.147
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.concurrent.ConcurrentHashMap$Traverser.<init>(ConcurrentHashMap.java:3342)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.concurrent.ConcurrentHashMap$Traverser.<init>(ConcurrentHashMap.java:3342)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.151
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.155
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.concurrent.ConcurrentHashMap$Traverser.<init>(ConcurrentHashMap.java:3342)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.concurrent.ConcurrentHashMap$Traverser.<init>(ConcurrentHashMap.java:3342)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.159
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.165
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.171
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.173
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.177
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.181
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.concurrent.ConcurrentHashMap$Traverser.<init>(ConcurrentHashMap.java:3342)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.concurrent.ConcurrentHashMap$Traverser.<init>(ConcurrentHashMap.java:3342)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.185
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.188
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.191
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.195
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.199
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.209
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.lang.Class.getDeclaredMethods(Class.java:2309)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.lang.Class.getDeclaredMethods(Class.java:2309)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.213
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.217
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.lang.Class.getMethods(Class.java:1904)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.lang.Class.getMethods(Class.java:1904)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.221
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.223
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.229
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.235
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.lang.Class.getMethods(Class.java:1904)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.lang.Class.getMethods(Class.java:1904)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.239
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.244
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.247
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.253
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.257
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.260
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.263
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.269
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.273
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.275
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.lang.Class.getMethods(Class.java:1904)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.lang.Class.getMethods(Class.java:1904)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.277
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.281
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.285
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.289
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.lang.Class.getMethods(Class.java:1904)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.lang.Class.getMethods(Class.java:1904)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.293
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.297
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.301
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.303
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.307
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.309
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.315
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.319
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.lang.Class.getDeclaredMethods(Class.java:2309)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.lang.Class.getDeclaredMethods(Class.java:2309)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.321
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.323
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.lang.Class.getMethods(Class.java:1904)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.lang.Class.getMethods(Class.java:1904)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.327
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.331
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.339
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.345
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.348
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.351
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.355
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.359
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.lang.Class.getMethods(Class.java:1904)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.lang.Class.getMethods(Class.java:1904)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.365
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.369
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.373
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.379
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.383
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.385
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.389
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.393
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.lang.Class.getDeclaredMethods(Class.java:2309)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.lang.Class.getDeclaredMethods(Class.java:2309)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.397
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.404
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.407
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.409
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.lang.Class.getMethods(Class.java:1904)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.lang.Class.getMethods(Class.java:1904)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.415
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.419
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.423
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.425
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.lang.Class.getMethods(Class.java:1904)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.lang.Class.getMethods(Class.java:1904)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.430
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.433
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.437
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.441
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.443
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.447
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.451
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.455
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.lang.Class.getMethods(Class.java:1904)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.lang.Class.getMethods(Class.java:1904)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.461
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.463
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.467
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.469
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.lang.Class.getMethods(Class.java:1904)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.lang.Class.getMethods(Class.java:1904)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.475
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.481
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.483
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.485
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.489
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.492
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.495
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.500
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.lang.Class.getMethods(Class.java:1904)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.lang.Class.getMethods(Class.java:1904)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.505
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.509
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.513
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.519
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.lang.Class.getMethods(Class.java:1904)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.lang.Class.getMethods(Class.java:1904)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.525
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.529
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.536
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.539
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.543
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.547
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.552
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.556
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.560
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.564
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.lang.Class.getDeclaredFields(Class.java:2248)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.lang.Class.getDeclaredFields(Class.java:2248)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.567
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.571
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.lang.Class.getMethods(Class.java:1904)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.lang.Class.getMethods(Class.java:1904)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.576
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.577
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.581
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.588
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.lang.Class.getMethods(Class.java:1904)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.lang.Class.getMethods(Class.java:1904)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.593
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.597
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.600
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.604
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.609
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.613
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.618
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.622
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.625
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.634
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.637
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.643
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.concurrent.ConcurrentHashMap$Traverser.<init>(ConcurrentHashMap.java:3342)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.concurrent.ConcurrentHashMap$Traverser.<init>(ConcurrentHashMap.java:3342)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.645
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.648
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.652
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.657
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.659
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.696
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.700
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.704
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.concurrent.ConcurrentHashMap$Traverser.<init>(ConcurrentHashMap.java:3342)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.concurrent.ConcurrentHashMap$Traverser.<init>(ConcurrentHashMap.java:3342)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.707
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.712
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.concurrent.ConcurrentHashMap$Traverser.<init>(ConcurrentHashMap.java:3342)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.concurrent.ConcurrentHashMap$Traverser.<init>(ConcurrentHashMap.java:3342)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.716
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.720
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.concurrent.ConcurrentHashMap$Traverser.<init>(ConcurrentHashMap.java:3342)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.concurrent.ConcurrentHashMap$Traverser.<init>(ConcurrentHashMap.java:3342)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.723
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.726
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.concurrent.ConcurrentHashMap$Traverser.<init>(ConcurrentHashMap.java:3342)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.concurrent.ConcurrentHashMap$Traverser.<init>(ConcurrentHashMap.java:3342)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.730
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.734
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.concurrent.ConcurrentHashMap$Traverser.<init>(ConcurrentHashMap.java:3342)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.concurrent.ConcurrentHashMap$Traverser.<init>(ConcurrentHashMap.java:3342)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.739
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.744
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.concurrent.ConcurrentHashMap$Traverser.<init>(ConcurrentHashMap.java:3342)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.concurrent.ConcurrentHashMap$Traverser.<init>(ConcurrentHashMap.java:3342)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.747
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.750
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.concurrent.ConcurrentHashMap$Traverser.<init>(ConcurrentHashMap.java:3342)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.concurrent.ConcurrentHashMap$Traverser.<init>(ConcurrentHashMap.java:3342)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.753
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.758
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.concurrent.ConcurrentHashMap$Traverser.<init>(ConcurrentHashMap.java:3342)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.concurrent.ConcurrentHashMap$Traverser.<init>(ConcurrentHashMap.java:3342)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.762
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.766
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.771
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.776
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.HashMap$HashIterator$HashIteratorShuffler.<init>(Unknown Source)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.778
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.782
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: The invocation element is: java.base/java.util.IdentityHashMap$IdentityHashMapIterator.<init>(IdentityHashMap.java:720)'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: The invocation element is: java.base/java.util.IdentityHashMap$IdentityHashMapIterator.<init>(IdentityHashMap.java:720)'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+# Created at 2026-11-20T23:04:30.786
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'FINE: Exploring for current source'.
+java.lang.IllegalArgumentException: Stream stdin corrupted. Expected comma after third character in command 'FINE: Exploring for current source'.
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$OperationalData.<init>(ForkClient.java:507)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.processLine(ForkClient.java:210)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.consumeLine(ForkClient.java:177)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+

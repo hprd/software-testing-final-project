@@ -1,0 +1,74 @@
+{
+  "status": "staged_review_error_with_provisional_ordering_proposal",
+  "provenance": {
+    "subject_revision": "d58c7ed8d4d3283ee5fbd01a866ce9a10ecf80a8",
+    "subject": "/misc/scratch/hkp423/software-testing-final-project/search/sources/commons-lang",
+    "source": "src/test/java/org/apache/commons/lang3/stream/StreamsTest.java",
+    "source_sha256": "edbcffac9b1c3b678b9a35bcaa8bc1789a4fbc0d4b53382061a3988459cbb3bc",
+    "method": "testOfEnumeration",
+    "method_lines": [
+      234,
+      248
+    ],
+    "scoped_call_count": 47,
+    "scope_selection": "Pinned source method bounds; no filtering by expected API classification.",
+    "review_selection": "Known Hashtable.keys() pilot; other extracted API groups are not contract-reviewed.",
+    "manual_rule_findings_used_as_model_input": false,
+    "prepared_utc": "2026-11-21T05:17:43.591104+00:00",
+    "infrastructure_sha256": {
+      "run.py": "ea8cba9da432039c01d9a8f8ffc40e5569e49b11d8c519eaeaa65f3834852a59",
+      "src/Inventory.java": "2f569490918e99dac9bae8a2ea01892ef13567eb217ae977abd341ad135e9d5a",
+      "contracts_deep_dive.py": "a49d34fd1230298cb7db7958091cc6c4b76291278021d328812ed8aed24a097b",
+      "src/Docs.java": "f1aa017c3324e4b46c77a29804c1245c066effb54d4765ce5c50eef8d3c5f7e2",
+      "pipeline.py": "3f15862acca2ba824e159793c0b062ac66361a65a136d426bd7ee5426f5fa9af",
+      "orchestrator.py": "71da7bd8eb2459d5ce5a0948337cacfba3e9ab093d24236f7f9c617665dbe4e9"
+    }
+  },
+  "review_statuses": {
+    "not_selected": 14,
+    "error": 1,
+    "documentation_unavailable": 6
+  },
+  "full_inventory_included": false,
+  "full_inventory_sha256": "cb8643fa6e6b32264d1756aff3edfb346d7f0d12ed94d0539a67c6000cf191ea",
+  "notes": [
+    "Exact raw evidence and original Agent prompt/source snapshots are included.",
+    "The scanner built-in Hashtable findings were not model inputs.",
+    "Assessment-context sources were inspected after the run and were not supplied to the model.",
+    "Historical absolute paths in moved manual-perturbation evidence were preserved."
+  ],
+  "files_sha256": {
+    "assessment-context/Dictionary.java": "1a74165e9f0ee9c7ab8f6f28d91f30da80a54e8b895fdf20540ba6b1393f8389",
+    "assessment-context/Enumeration.java": "ffbc18eeb48a265b0e360bdd7373fd609f3e617f971f161caf3d3df047da2561",
+    "assessment.json": "528ab9bdc191b40a6a48f0475ad78c28de4179541c0df9344cc557a3a65b5b29",
+    "baseline-test.xml": "fe65ba2febde64c7ec2910d38ce9cde74c69d38a02d49293ea090a17f23fa920",
+    "commands.json": "50c33b03b21a88838472c94fb31e56c2ca0c286220a093ab2fd21d90697014a9",
+    "documentation/api-queue.jsonl": "38c4bb6bff18e84f61ea6342669e8c1ee673bb3174ef2e0b9e50b80d2b63f25f",
+    "documentation/coverage.json": "fe81598274ea5c1d320bb2887500a418d473f3869bfdf627822428e2875c780a",
+    "documentation/doc-diagnostics.log": "d154522c6771efc72a976294dfa2223506d1c835895e7b8c4f48f739c0a554e2",
+    "documentation/jdk-docs.jsonl": "f6c7d3d03212cd8fb6207379f28d20659b6a98a62030bbeab8e4ac39b6fcacb2",
+    "documentation.log": "ef86b33f9c7aee52f769b3980d8f1ad37599d68f2a4b5637705069d503cf9092",
+    "infrastructure/contracts_deep_dive.py": "a49d34fd1230298cb7db7958091cc6c4b76291278021d328812ed8aed24a097b",
+    "infrastructure/experiment-runner.py": "f68229649d1ba9bddf12ae23e6296f9d79252903f8dde06f4794ffa71d3fb573",
+    "infrastructure/orchestrator.py": "71da7bd8eb2459d5ce5a0948337cacfba3e9ab093d24236f7f9c617665dbe4e9",
+    "infrastructure/pipeline.py": "3f15862acca2ba824e159793c0b062ac66361a65a136d426bd7ee5426f5fa9af",
+    "infrastructure/run.py": "ea8cba9da432039c01d9a8f8ffc40e5569e49b11d8c519eaeaa65f3834852a59",
+    "infrastructure/src/Docs.java": "f1aa017c3324e4b46c77a29804c1245c066effb54d4765ce5c50eef8d3c5f7e2",
+    "infrastructure/src/Inventory.java": "2f569490918e99dac9bae8a2ea01892ef13567eb217ae977abd341ad135e9d5a",
+    "inventory/baseline.log": "93ec5d181d8a1bb44a04d6f2993fb04e5ec6e0d4d711c87c54d9a823dbf52589",
+    "inventory/diagnostics.log": "5215776dcdca611ebef77be2778496aabeaf71c9edd2a5b2671d7d2bb6c24edc",
+    "inventory/summary.json": "4fcfdb58cd93b635b13c6d43a65292b41798981949175fa2a77654c618db5edb",
+    "inventory.log": "c8c2a9894ac0a45a82db5ac8b4d4eacd83a01bc96ee98f86066cbf47cdb04c0e",
+    "pipeline/list-review/ec0b440fa2fb2c609e0e.json": "6f0ca85d4c7cbda7bce195933045abee8cfc5639a9ebf5c9441746261f056980",
+    "pipeline/manifest.json": "7767a3f5c331c349ea43bf5ca5b0ce3f5142a5c92c4bfb445033a2d6c50306f2",
+    "pipeline/reviews/4071c0a03a28e9a3cc9fd981.json": "11f06afb602f0326848033f3b0f5e9c122c11b2128a2385c39dc3f280e793eac",
+    "provenance.json": "0cd6f1f842ade295c25ff738bd277ccb35f54e9e2fe633867569f4edae1bdc73",
+    "requests/01.json": "68a3be316346c7ffb281ac039a5feab72a158aa6622a7ec37f39986654af2977",
+    "requests/02.json": "0aa9653749953e5365c1d620cc15d5a00f2af55168b96fa4302d7670505a82cf",
+    "requests/03.json": "c564991c70c2f22aadf9e5cd71c023858ec182f5d22971f4349ca1bfe36a0cfc",
+    "review-run.json": "79c0fed0f85ee85c9c6f9bbb89445527f39222f31ea657a5d966d28755afa74a",
+    "server-models.json": "024abccbe468b4e8755a5e53b51ac2528cae8234a44e38558377dcf437fea1f1",
+    "target-method.java.txt": "18c5df2e783d87533982f5fc5e215e77ea7b0af878409630e5337f2f84215864",
+    "test-calls.jsonl": "65dfd7edbc8be97b691392e523d5428c8f17aac77332a03e6814bd32f4304ba0"
+  }
+}

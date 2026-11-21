@@ -1,0 +1,106 @@
+NOTE: Picked up JDK_JAVA_OPTIONS: --patch-module=java.base=/misc/scratch/hkp423/software-testing-final-project/experiments/files-list/build/verified-run/fixture/patch -Dfileslist.fixture.directory=/misc/scratch/hkp423/software-testing-final-project/experiments/files-list/build/verified-run/subject
+yp_bind_client_create_v3: RPC: Unknown host
+yp_bind_client_create_v3: RPC: Unknown host
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< commons-io:commons-io >------------------------
+[INFO] Building Apache Commons IO 2.23.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-maven-version) @ commons-io ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-java-version) @ commons-io ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+[INFO] 
+[INFO] --- apache-rat:0.17:check (rat-check) @ commons-io ---
+[INFO] RAT will not execute since it is configured to be skipped via system property 'rat.skip'.
+[INFO] 
+[INFO] --- artifact:3.7.0:check-buildplan (check-buildplan) @ commons-io ---
+[INFO] No known issue in 20 plugins
+[INFO] 
+[INFO] --- build-helper:3.6.2:parse-version (parse-version) @ commons-io ---
+[INFO] 
+[INFO] --- antrun:3.2.0:run (javadoc.resources) @ commons-io ---
+[INFO] Executing tasks
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- remote-resources:3.3.0:process (process-resource-bundles) @ commons-io ---
+[INFO] Skipping remote resources execution.
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ commons-io ---
+[INFO] skip non existing resourceDirectory /misc/scratch/hkp423/software-testing-final-project/experiments/files-list/build/verified-run/subject/src/main/resources
+[INFO] Copying 2 resources from . to target/classes/META-INF
+[INFO] 
+[INFO] --- compiler:3.16.0:compile (default-compile) @ commons-io ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- bundle:5.1.9:manifest (bundle-manifest) @ commons-io ---
+[INFO] Writing manifest: /misc/scratch/hkp423/software-testing-final-project/experiments/files-list/build/verified-run/subject/target/osgi/MANIFEST.MF
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ commons-io ---
+[INFO] Copying 68 resources from src/test/resources to target/test-classes
+[INFO] Copying 2 resources from . to target/test-classes/META-INF
+[INFO] 
+[INFO] --- compiler:3.16.0:testCompile (default-testCompile) @ commons-io ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- jacoco:0.8.16:prepare-agent (prepare-agent) @ commons-io ---
+[INFO] argLine set to -javaagent:/misc/scratch/hkp423/testing-tools/maven-repository/org/jacoco/org.jacoco.agent/0.8.16/org.jacoco.agent-0.8.16-runtime.jar=destfile=/misc/scratch/hkp423/software-testing-final-project/experiments/files-list/build/verified-run/subject/target/jacoco.exec,exclclassloader=jdk.internal.loader.ClassLoaders$PlatformClassLoader
+[INFO] 
+[INFO] --- surefire:3.6.1:test (default-test) @ commons-io ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+NOTE: Picked up JDK_JAVA_OPTIONS: --patch-module=java.base=/misc/scratch/hkp423/software-testing-final-project/experiments/files-list/build/verified-run/fixture/patch -Dfileslist.fixture.directory=/misc/scratch/hkp423/software-testing-final-project/experiments/files-list/build/verified-run/subject
+yp_bind_client_create_v3: RPC: Unknown host
+yp_bind_client_create_v3: RPC: Unknown host
+yp_bind_client_create_v3: RPC: Unknown host
+yp_bind_client_create_v3: RPC: Unknown host
+[INFO] Running org.apache.commons.io.function.IOBinaryOperatorStreamTest
+FILES_LIST_FIXTURE call=1 action=identity
+FILES_LIST_FIRST call=1 path=./.asf.yaml
+FILES_LIST_FIXTURE call=2 action=swap-first-pair
+FILES_LIST_FIRST call=2 path=./.gitattributes
+[ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.172 s <<< FAILURE! -- in org.apache.commons.io.function.IOBinaryOperatorStreamTest
+[ERROR] org.apache.commons.io.function.IOBinaryOperatorStreamTest.testReduce -- Time elapsed: 0.133 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: </misc/scratch/hkp423/software-testing-final-project/experiments/files-list/build/verified-run/subject/.asf.yaml> but was: </misc/scratch/hkp423/software-testing-final-project/experiments/files-list/build/verified-run/subject/.gitattributes>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at org.apache.commons.io.function.IOBinaryOperatorStreamTest.testReduce(IOBinaryOperatorStreamTest.java:102)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   IOBinaryOperatorStreamTest.testReduce:102 expected: </misc/scratch/hkp423/software-testing-final-project/experiments/files-list/build/verified-run/subject/.asf.yaml> but was: </misc/scratch/hkp423/software-testing-final-project/experiments/files-list/build/verified-run/subject/.gitattributes>
+[INFO] 
+[ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  19.871 s
+[INFO] Finished at: 2026-11-20T22:04:59-06:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.6.1:test (default-test) on project commons-io: There are test failures.
+[ERROR] 
+[ERROR] See /misc/scratch/hkp423/software-testing-final-project/experiments/files-list/build/verified-run/subject/target/surefire-reports for the individual test results.
+[ERROR] See dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

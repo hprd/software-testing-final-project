@@ -1,0 +1,21 @@
+{
+  "jdk_version": "yp_bind_client_create_v3: RPC: Unknown host\nyp_bind_client_create_v3: RPC: Unknown host\nopenjdk version \"11.0.33\" 2026-10-20\nOpenJDK Runtime Environment Temurin-11.0.33+10 (build 11.0.33+10)\nOpenJDK 64-Bit Server VM Temurin-11.0.33+10 (build 11.0.33+10, mixed mode)",
+  "jdk_source_sha256": "ab658c99b66fe05565e69651fd3f176ee4a65c5879e9f6cb4bed215b492072c0",
+  "jdk_source_archive": "/usr/lib/jvm/java-11-temurin-jdk/lib/src.zip",
+  "jdk_docs_sha256": "f6c7d3d03212cd8fb6207379f28d20659b6a98a62030bbeab8e4ac39b6fcacb2",
+  "distinct_groups": 21,
+  "calls": 47,
+  "jdk_owners_found": 7,
+  "jdk_owners_missing": [],
+  "statuses": {
+    "pending_review": 15,
+    "documentation_unavailable": 6
+  },
+  "limitations": [
+    "JDK source comments are raw Javadoc, not rendered API docs; links, inheritDoc and inherited contracts are not expanded.",
+    "Same-name overload comments are included as candidates; exact overload matching must be validated.",
+    "Non-JDK APIs lack version-pinned external documentation in this stage.",
+    "Grouped call counts and signatures inherit static inventory and approximate-classpath limitations.",
+    "No finite list of all valid runtime variations or contract compliance can be guaranteed."
+  ]
+}

@@ -3,7 +3,7 @@
 import argparse, datetime, hashlib, io, json, os, pathlib, re, shutil, signal, subprocess, sys, tarfile, time, xml.etree.ElementTree as ET
 
 ROOT=pathlib.Path(__file__).resolve().parent.parent
-FIXTURE=ROOT/'experiments/hashtable'
+FIXTURE=ROOT/'experiments/manual-perturbations/hashtable'
 REVISION='d58c7ed8d4d3283ee5fbd01a866ce9a10ecf80a8'
 CASE='hashtable-keys-two-key-reversal'
 TEST='StreamsTest#testOfEnumeration'

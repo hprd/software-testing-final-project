@@ -1,0 +1,833 @@
+                        2016 IEEE International Conference on Software Testing, Verification and Validation
+
+
+
+
+        Detecting Assumptions on Deterministic
+   Implementations of Non-deterministic Speciﬁcations
+                                    August Shi, Alex Gyori, Owolabi Legunsen, and Darko Marinov
+                                                        Department of Computer Science
+                                                University of Illinois at Urbana-Champaign, USA
+                                               Email: {awshi2,gyori,legunse2,marinov}@illinois.edu
+
+
+     Abstract—Some commonly used methods have non-                                code—is often bad. Such ADINS code can behave unexpect-
+  deterministic speciﬁcations, e.g., iterating through a set can                  edly when the implementation changes, even if the speciﬁca-
+  return the elements in any order. However, non-deterministic                    tion remains the same. For example, Java code that assumes
+  speciﬁcations typically have deterministic implementations, e.g.,
+  iterating through two sets constructed in the same way may                      a speciﬁc iteration order of a HashSet, e.g., that a HashSet
+  return their elements in the same order. We use the term                        with elements 1 and 2 will be always represented as a string
+  ADINS code to refer to code that Assumes a Deterministic                        {1, 2} rather than {2, 1}, is ADINS and not robust: the Java
+  Implementation of a method with a Non-deterministic                             implementation of HashSet can change such that the iteration
+  Speciﬁcation. Such ADINS code can behave unexpectedly when                      order of the elements changes and the string differs.
+  the implementation changes, even if the speciﬁcation remains
+  the same. Further, ADINS code can lead to ﬂaky tests—tests                         Unexpected behavior of ADINS code can lead to ﬂaky tests,
+  that pass or fail seemingly non-deterministically.                              which are tests that seem to non-deterministically pass or fail.
+     We present a simple technique, called N ON D EX, for detecting               Flaky tests are bad as they can mask bugs (pass when there are
+  ﬂaky tests due to ADINS code. We implemented N ON D EX for                      bugs) or raise false alarms (fail when there are no bugs). A test
+  Java: we found 31 methods with non-deterministic speciﬁcations                  that executes ADINS code can be ﬂaky if it assumes that some
+  in the Java Standard Library, manually built non-deterministic
+  models for these methods, and used a modiﬁed Java Virtual                       values are deterministic even if they can change: when the
+  Machine to explore various non-deterministic choices. We evalu-                 assumptions hold, the test passes, but when the assumptions
+  ated N ON D EX on 195 open-source projects from GitHub and 72                   do not hold, the test may fail. Not all ﬂaky tests are due to
+  student submissions from a programming homework assignment.                     ADINS code, e.g., a test asserting that a ﬁle system contains
+  N ON D EX detected 60 ﬂaky tests in 21 open-source projects and                 /tmp could pass on one machine but fail on another. Flaky
+  110 ﬂaky tests in 34 student submissions.
+                                                                                  tests are emerging as an active research topic, with recent
+                         I. I NTRODUCTION                                         work on characterizing [25], detecting [2], [4], [10], [12], [14],
+     Non-deterministic speciﬁcations are not uncommon for                         [38], and avoiding [1], [22] ﬂaky tests. However, no previous
+  many methods, including in the standard libraries of many                       research investigated ADINS code as a cause for ﬂaky tests.
+  programming languages. For example, the speciﬁcation for the                       While ﬂaky tests are an important problem in software
+  Object#hashCode() method in Java can return any integer.                        practice and research, we also encountered them in teaching.
+  Non-deterministic speciﬁcations are not restricted to simple                    Typically, the teaching staff grades students’ solutions to
+  APIs. The order in which elements of a set are returned by                      programming assignments using automated tests. These tests
+  an iterator is not-speciﬁed—it can be any order. The order in                   can be ﬂaky, and as a result students with correct solutions may
+  which entries in a SQL table are returned is also sometimes                     have failing tests, and students with incorrect solutions may
+  not speciﬁed—it depends on the query. Such speciﬁcations                        have passing tests. We discuss more details from one recent
+  give implementers more freedom to develop various imple-                        course in Section IV-B. Besides educating people about ﬂaky
+  mentations for different goals, e.g., to optimize performance,                  tests, how can we help practitioners in the real world and the
+  while still satisfying the speciﬁcation.                                        students in our courses to detect more ﬂaky tests faster?
+     Even when speciﬁcations allow for non-determinism, typical                      We propose a simple technique, called N ON D EX, to detect
+  implementations of such speciﬁcations are often determinis-                     ﬂaky tests due to ADINS code. We implement N ON D EX for
+  tic, with respect to certain controlled sources. For example,                   Java, but it can be easily generalized to any other language.
+  Object#hashCode() could return the same integer (if one                         In a nutshell, we identify 31 methods with non-deterministic
+  controls for all other sources, e.g., OpenJDK Java 8 could                      speciﬁcations as discussed in Section III-A, wrote models for
+  return a deterministic value on the ﬁrst call if the under-                     these methods to produce various non-deterministic choices,
+  lying random() implementation in C is deterministic). The                       and use an execution environment that can explore various
+  implementation of HashSet is such that iterating through the                    combinations of these non-deterministic choices. Our tool,
+  elements returns them in a deterministic order for one Java                     called also N ON D EX, modiﬁes a regular Java Virtual Machine
+  version, but that order can change between Java versions.                       (in particular, the OpenJDK JVM version b132) to randomly
+     Code that Assumes a Deterministic Implementation of                          explore choices by rerunning the test suites multiple times
+  a Non-deterministic Speciﬁcation—which we call ADINS                            from scratch with different random seeds.
+
+978-1-5090-1827-7/16 $31.00 © 2016 IEEE                                      80
+DOI 10.1109/ICST.2016.40
+   Authorized licensed use limited to: University of Texas at Austin. Downloaded on November 07,2026 at 00:54:40 UTC from IEEE Xplore. Restrictions apply.
+   We evaluated N ON D EX on two sets of programs: 195 open-                    1    class Book {
+                                                                                2      String title;
+source projects from GitHub and 72 student submissions from                     3      String author;
+one homework assignment in our software-engineering course.                     4      String getStringRepresentation() { ... }
+                                                                                5    }
+We ﬁnd N ON D EX to be highly effective at detecting ﬂaky                       6    class BookTest {
+tests in both open-source projects and student submissions.                     7      @Test
+                                                                                8      public void testGetStringRepresentation() {
+N ON D EX detected 60 ﬂaky tests in 21 of the 195 open-                         9        Book b = new Book("book", "name");
+source projects. Because our experiments use some older                         10       assertEquals("{\"title\":\"book\",\"author\":\"name\"}",
+                                                                                11                    b.getStringRepresentation());
+project revisions, three of these tests were already ﬁxed by                    12     }
+the developers in the latest revision. (This ﬁxing additionally                 13   }
+
+conﬁrms that ﬂaky tests are important and that developers are                              Fig. 1. Example ﬂaky test simpliﬁed from student code
+willing to address them.) We conﬁrmed that 57 tests are still
+present in the respective projects’ latest revision. We leave                   returned value depends on the input (the state of the ﬁle
+it as future work to properly debug these tests and ﬁle bug                     system) and can be true or false on different machines,
+reports. For student submissions, N ON D EX detected that 34                    when executed on the same input, any implementation that
+submissions, representing almost half of 72 considered, fail                    conforms to the speciﬁcation must return the same value.
+due to some ADINS code, with a total of 110 ﬂaky tests                          A. An Example Flaky Test
+detected. It is important to note that the homework assignment
+was designed a few years ago by a teaching assistant who had                       Code that (transitively) calls methods with non-deterministic
+no knowledge of our research on ﬂaky tests. We plan in the                      speciﬁcations can be ADINS and lead to ﬂaky tests. Figure 1
+future to expose students to N ON D EX and teach them to better                 shows an example ﬂaky test simpliﬁed from a student sub-
+detect and avoid ADINS code and ﬂaky tests.                                     mission. The Book class has two ﬁelds, title and author.
+   This paper makes the following contributions:                                The method under test, getStringRepresentation(), uses
+                                                                                a third-party JSON library that turns an object into a string.
+    Problem. We deﬁne the problem of ADINS code, identify
+                                                                                The test asserts that the result equals a hard-coded string that
+     it as a cause of ﬂaky tests, and raise awareness about
+                                                                                has the two ﬁelds in a particular order, ﬁrst title and then
+     the problem of ﬂaky tests in both software development
+                                                                                author. However, the library uses a HashMap to store the
+     practice and software engineering education.
+                                                                                mapping from ﬁelds to values, and iterates over this map to
+    Technique and Implementation. We propose a simple
+                                                                                produce the resulting string. The iteration order over elements
+     technique for detecting ﬂaky tests caused by ADINS code
+                                                                                in a HashMap is not speciﬁed, so while this test can pass for
+     and describe our non-deterministic models and a tool that
+                                                                                one implementation, it can fail for another implementation that
+     embody this technique.
+                                                                                has author before title. N ON D EX can detect such tests.
+    Evaluation. We evaluated our N ON D EX technique on
+     195 open-source Java projects and 72 student code                          B. Levels of Non-determinism
+     submissions. N ON D EX detected 57 previously unknown                         Some non-deterministic speciﬁcations can allow for multi-
+     ﬂaky tests in open-source projects and three ﬂaky tests                    ple levels of non-determinism. Figure 2 presents an example:
+     that have been already ﬁxed by the open-source software                    the class HashSet has a non-deterministic speciﬁcation that
+     developers. N ON D EX also detected 110 ﬂaky tests in                      can be (mis)interpreted in different ways. The JavaDoc speci-
+     student submissions.                                                       ﬁcation [11] states “[HashSet] makes no guarantees as to the
+         II. N ON -D ETERMINISTIC S PECIFICATIONS                               iteration order of the set; in particular, it does not guarantee
+                                                                                that the order will remain constant over time.”. Hence, the el-
+   A non-deterministic speciﬁcation allows for multiple im-
+                                                                                ements in the array returned by HashSet#toArray() can be
+plementations that can yield different outputs when executed
+                                                                                in any order. The code ﬁrst constructs an Integer HashSet
+with the same input; we consider “input” in a broad sense
+                                                                                object s with the elements 1 and 2 (lines 1–2). A deterministic
+to include all interactions of code with its environment. For
+                                                                                implementation could return either of the two orders shown in
+example, consider the method File#list() that returns a
+                                                                                the two assertions on lines 4 and 5, and one of the assertions
+String array with names of all ﬁles and directories present
+                                                                                should pass, while the other should fail.
+in the directory on which the method was invoked. Its JavaDoc
+                                                                                   Whether the other assertions pass or fail is more open to
+speciﬁcation [6] states “There is no guarantee that the name
+                                                                                different interpretations of this non-deterministic speciﬁcation.
+strings in the resulting array will appear in any speciﬁc
+                                                                                First, one could assume that two iterations on the same un-
+order; they are not, in particular, guaranteed to appear in
+                                                                                changed set object should yield the same order. However, the
+alphabetical order.” This speciﬁcation allows implementations
+                                                                                speciﬁcation states that the order can vary “over time”, which
+to return names in any order even when executed with the
+                                                                                could mean that the order in which elements are returned
+exact same input (the state of the ﬁle system), hence this
+                                                                                can change from one invocation to another even for the same
+speciﬁcation is non-deterministic. In contrast, consider the
+                                                                                set. Hence, the assertion on line 7 may get a different order
+method File#exists() that returns a boolean value indi-
+                                                                                and fail. Second, one could assume that the order should not
+cating whether or not the ﬁle on which the method was invoked
+                                                                                change if the set is only read. Hence, the assertion on line 10
+exists. This speciﬁcation is not non-deterministic; while the
+
+
+
+                                                                           81
+
+ Authorized licensed use limited to: University of Texas at Austin. Downloaded on November 07,2026 at 00:54:40 UTC from IEEE Xplore. Restrictions apply.
+1    Set<Integer> s = new HashSet<Integer>();                                                                     TABLE I
+2    s.add(1); s.add(2);                                                                N ON - DETERMINISTIC METHODS IDENTIFIED ; METHODS MARKED ∗
+3    Integer[] a = s.toArray();                                                       RETURN A COLLECTION WITH A NON - DETERMINISTIC ITERATION ORDER
+4    // assertArrayEquals(a, new Integer[]{1, 2});
+5    // assertArrayEquals(a, new Integer[]{2, 1});
+6
+                                                                                       Class                                                       Kind
+ 7   // assertArrayEquals(a, s.toArray()); // differ from "a"?                           method(s)
+8                                                                                      java.lang.Object#hashCode                                   random
+ 9
+10
+     s.contains(1); // observer calls on "s" may matter
+     // assertArrayEquals(a, s.toArray());
+                                                                                       java.util.HashMap#keySet∗ , values∗ , entrySet∗             permute
+11                                                                                     java.util.concurrent.ConcurrentHashMap                      permute
+12   s.add(3); s.remove(3); // "s" modified and restored                                 keySet∗ , values∗ , entrySet∗ , keys∗ , elements∗
+13   // assertArrayEquals(a, s.toArray()); // differ from "a"?                         java.io.File#list, listFiles, listRoots                     permute
+14
+15   Set<Integer> t = new HashSet<Integer>();
+                                                                                       java.lang.Class                                             permute
+16   t.add(1); t.add(2); // "t" constructed same way as "s"                              getClasses, getFields, getDeclaredFields
+17   // assertArrayEquals(a, t.toArray()); // differ from "a"?                           getConstructors, getAnnotations
+18                                                                                       getMethods, getDeclaredConstructors
+19   Set<Integer> u = new HashSet<Integer>();
+20   u.add(3); u.add(4); // "u" with different elements
+                                                                                         getDeclaredMethods, getDeclaredClasses
+21   Integer[] b = u.toArray();                                                          getDeclaredAnnotations
+22   // assertEquals(a[0] < a[1], b[0] < b[1]); // order?                              java.lang.reﬂect.Method#getParameterAnnotations             permute
+     Fig. 2. Different levels of non-determinism may fail different assertions         java.lang.reﬂect.Field#getDeclaredAnnotations               permute
+                                                                                       java.text.DateFormatSymbols#getAvailableLocales             permute
+                                                                                       java.text.BreakIterator#getAvailableLocales                 permute
+could fail or pass. Third, one could assume that if a set is                           java.text.Collator#getAvailableLocales                      permute
+modiﬁed and then restored to its original state, the order in                          java.text.DecimalFormatSymbols#getAvailableLocales          permute
+which the elements are iterated can change from that before                            java.text.NumberFormat#getAvailableLocales                  permute
+the modiﬁcation of the set. Hence, the assertion on line 13                            java.text.DateFormat#getAvailableLocales                    permute
+could either pass or fail. Fourth, one could assume that two                           java.text.DateFormatSymbols#getZoneStrings                  extend
+sets constructed in exactly the same way would yield the
+same order, but if that does not hold, the assertion on line 17                       Thus, when run on Java 6, methods were returned in one order,
+can pass or fail. Fifth, one could assume that elements are                           but in a completely different order in Java 7. This seemingly
+iterated in the order of addition; line 21 creates a new set                          innocuous change caused tests run by JUnit to fail [21] due to
+using different elements but added in the same order as in                            test-order dependencies [1], [2], [10], [14], [22], [38]. Finding
+set s, by their natural ordering. One could assume that both                          non-deterministic methods solely from the code is infeasible;
+sets will be iterated in the same order—in which elements                             one must reason about the speciﬁcation itself to ﬁnd if a
+are added, or the natural order; depending on whether this                            method can be non-deterministic. This makes it inherently hard
+assumption holds, the assertion on line 22 can pass or fail.                          for any static or dynamic analysis technique to ﬁnd such non-
+(This ﬁnal assumption is not unrealistic; LinkedHashSet                               deterministic methods from one implementation.
+indeed guarantees the iteration order over elements to be the                            To ﬁnd non-deterministic methods in the Java Standard Li-
+same as that in which the elements are added [24].)                                   brary, we ﬁrst searched for methods that may have such spec-
+                                                                                      iﬁcations and then carefully reasoned from their JavaDoc to
+                              III. T ECHNIQUE
+                                                                                      determine if their speciﬁcations are indeed non-deterministic.
+  Our N ON D EX technique detects ﬂaky tests due to ADINS                             We used two queries, based on (1) JavaDoc keywords and
+code making deterministic assumptions on non-deterministic                            (2) return types. Speciﬁcally, the ﬁrst query searches through
+speciﬁcations. Section III-A describes how we identiﬁed sev-                          JavaDoc for the following keywords that could indicate non-
+eral non-deterministic methods in the Java Standard Library.                          deterministic speciﬁcations: “order”, “deterministic”, and
+Section III-B describes the models we developed for those                             “not speciﬁed”. The second query searches for all public
+non-deterministic methods. Section III-C presents some im-                            methods that return arrays. These queries produced many
+plementation details of N ON D EX.                                                    false positives, e.g., because not every method that mentions
+A. Identifying Non-deterministic Methods                                              “order” is non-deterministic, and some methods that return
+                                                                                      arrays can return elements in a speciﬁed order. Our search is
+   Finding methods which have non-deterministic speciﬁca-                             deﬁnitely not complete, and we leave as future work to develop
+tions is hard; in particular, one cannot easily look for non-                         better approaches to ﬁnd non-deterministic speciﬁcations.
+deterministic implementations as individual implementations                              After inspection, we found the non-deterministic methods
+are deterministic most of the time. Rather, non-determinism                           summarized in Table I. We tabulate the class name, method
+occurs when non-deterministic speciﬁcations allow multiple                            name(s), and the kind of speciﬁcation non-determinism. We
+implementations to behave differently from one another while                          found three kinds, which we call “random”, “permute”,
+still meeting the speciﬁcation, even if each implementation                           and “extend”. For random, the speciﬁc int returned by
+is deterministic. For example, upgrading from Java 6 to                               Object#hashCode() is not speciﬁed, so relying on it to
+Java 7 changed the order in which the Java Reflection                                 return some speciﬁc value is ADINS. For permute, the spec-
+API returned the list of methods in a class. JUnit uses the                           iﬁcations of some methods that return arrays or collections
+Reflection API for obtaining the list of methods to run.                              can have an unspeciﬁed order of elements. For extend, the
+
+
+
+                                                                                 82
+
+     Authorized licensed use limited to: University of Texas at Austin. Downloaded on November 07,2026 at 00:54:40 UTC from IEEE Xplore. Restrictions apply.
+speciﬁcation of one method speciﬁes just a lower bound on                                                   TABLE II
+                                                                                       L EVELS THAT CAN FAIL () ASSERTIONS FROM F IGURE 2
+the length of the returned array but not the precise length.
+   For class Object, it is well known that hashCode() is                                          Assertion
+non-deterministic. The inner class HashMap$HashIterator                                                         4,5    7     10    13    17    22
+                                                                                    Levels
+does not have a speciﬁed iteration order and can return the                         FULL                                                  
+map’s elements in any order; this inner class is exposed                            ID                                -     -               
+                                                                                    EQ                                -     -     -     -     
+to the clients via some methods from Table I (keySet(),
+                                                                                    ONE                               -     -     -     -     -
+entrySet() and values()), so code that calls these methods
+can be ADINS. Moreover, HashMap is the underlying data                          method invocation on an unchanged object will return a
+structure for many other data structures, e.g., HashSet; we                     different order. The ID level preserves the same order for
+do not count separately the other non-deterministic methods,                    objects that have the same identity (unchanged objects) but
+e.g., HashSet#iterator(), that could lead to ADINS code.                        can return different orders for the same object if the object
+However, changing one piece of code in HashMap can affect                       is ever modiﬁed. The EQ level preserves the order for objects
+many types of objects. The speciﬁcation for iterating through                   that are equal (not necessarily the same object) but can change
+ConcurrentHashMap is similar to the speciﬁcation for iter-                      the orders of non-equal objects. The ONE level changes the
+ating through HashMap. The File class has multiple list                         order of an object only when it is ﬁrst accessed (so it can have
+methods that return an array of ﬁles in a given directory; the                  a different order) but this order does not change in the rest of
+speciﬁcation allows these arrays to be in any order. The classes                the run. Table II shows which of the assertions in Figure 2
+Class, Method, and Field provide several reﬂection methods                      (referred to by line numbers in the column headers) can fail
+that return arrays of elements, e.g., an array of all methods in a              under the four levels that N ON D EX supports.
+class or an array of all annotations on a ﬁeld; the speciﬁcations                  Either assertions 4 and 5 can fail on any of the levels,
+for most of these methods allow these arrays to be in any                       because all levels explore different orderings of the elements in
+order. The classes in the package java.text return arrays                       the HashSet than the ones in the both assertions (recall that in
+of available locales and zone strings which can be in any or-                   a deterministic JVM, one of the assertions will always pass and
+der. Finally, the DateFormatSymbols#getZoneStrings()                            one will always fail, whereas in our exploration the they can
+method returns an array of arrays, each of which has length                     both pass, both fail or swap the order of pass/fail). Assertions 7
+at least ﬁve; these arrays are indeed of length ﬁve in Java 7                   and 10 can only fail in FULL since they will only fail in
+but of length seven in Java 8.                                                  levels that allow different orders on two successive invocations
+   We also brieﬂy explored an option of automatically ﬁnding                    (including observer methods). Assertions 13 and 17 can fail
+non-deterministic methods in the Java Standard Library. We                      in FULL and ID since these levels explore different orderings
+attempted to automatically generate tests that could show a                     of objects based on their identity. Assertion 22 can fail in all
+behavior difference between Java 7 and Java 8. To that end,                     levels except ID which would permute elements in the same
+we used Randoop [28] to generate tests. We ﬁrst instructed                      way for both objects.
+Randoop to generate tests for a large number of classes                            For non-deterministic methods of the random kind, when
+in the Java Standard Library on Java 8 and then ran the                         using the Object class, it should not be assumed that the
+generated tests (that still compile) on Java 7. However, the                    hashCode() method returns a speciﬁc integer value. In par-
+tests (and assertions) that Randoop generated were unable to                    ticular, it should not be expected to return the same value
+detect any changes in the behavior of the two Java versions.                    across different runs. However, the returned value should
+Even focusing Randoop on only one class, HashMap, did not                       be unique for an object in the same run. We model these
+generate (after one hour) a single test for Java 8 that would                   potentially different values by randomizing the value returned
+fail when run on Java 7. The reason is that the search space                    by hashCode() on the initial invocation and then cache this
+for HashMap is large, with 29 methods, and only a tiny ratio                    value for future calls. For non-deterministic methods of the
+of method sequences in that space can show the difference                       extend kind, we model the possibility that the lengths of arrays
+between the two Java versions. In the end, we were able to                      returned are increased non-deterministically on any invocation.
+generate tests that can reveal differences between Java 8 and
+Java 7 only after manually focusing Randoop to only four                        C. Implementations of Models
+methods in the HashMap.                                                            We implemented our N ON D EX technique for the Java
+                                                                                programming language by modifying a regular Java Virtual
+B. Non-deterministic Models                                                     Machine, in particular, the OpenJDK JVM version b132,
+   We developed models to explore potential non-determinism                     which corresponds to Java 8. We downloaded the publicly
+allowed by the speciﬁcations of the identiﬁed methods. N ON -                   available OpenJDK code, which consists of the C/C++ code
+D EX has a model for each non-deterministic method, and                         that implements the core virtual machine, and the Java code
+each model has up to four different levels of non-determinism:                  for the Java Standard Library. We changed the Java Standard
+FULL, ID, EQ, and ONE.                                                          Library to add non-deterministic models for all methods listed
+   For non-deterministic methods of the permute kind, the                       in Table I except for hashCode(), for which we modiﬁed the
+FULL level is the most non-deterministic and each different                     C++ implementation to return different values. For each of the
+
+
+
+                                                                           83
+
+ Authorized licensed use limited to: University of Texas at Austin. Downloaded on November 07,2026 at 00:54:40 UTC from IEEE Xplore. Restrictions apply.
+1    class HashMap {                                                                1    class NonDex {
+2     Node<K,V>[] table; // internal table of key-value pairs                       2     static int level; // FULL, ID, EQ, or ONE
+3     int modCount = ... // stores modification count                               3     int seed = ...;
+4     class Node<K,V> { ... } // stores a key-value pair                            4     static Random full = new Random(seed);
+5     ...                                                                           5
+6     class HashIterator { // inner class of HashMap                                 6       public static <T> List<T> shuffle(List<T> l, int v) {
+7      Node<K,V> next;       // next entry to return                                7          int size = l.size();
+8      Node<K,V> current;    // current entry                                       8          Random rand = (level == FULL) ? full : // Full
+9      int expectedModCount; // for fast-fail                                       9            (level == ID) ? new Random(seed + v) : // Same object
+10     int index;            // current slot                                        10           (level == EQ) ? new Random(seed + v) : // Equal object
+11                                                                                  11           (level == ONE) ? new Random(seed);     // Once
+12     final boolean original_hasNext() {                                           12         for (int i = 0; i < size - 1; i++) {
+13       return next != null; // original code                                      13           int s = rand.getNext(i, size);
+14     }                                                                            14           if (s == i) continue;
+15     final Node<K,V> original_nextNode() {                                        15           T obj = l.get(i);
+16       // original code, advances "index" and "next"                              16           l.set(i, l.get(s));
+17       ...                                                                        17           l.set(s, obj);
+18     }                                                                            18         }
+19     final void original_remove() {                                               19         return l;
+20       // original code, can modify the entire "table"                            20       }
+21       ...                                                                        21   }
+22     }
+23     HashIterator() {                                                                                  Fig. 4. Implementation of exploration
+24       expectedModCount = modCount;
+25       Node<K,V>[] t = table;                                                                                       TABLE III
+26       current = next = null;                                                                21 PROJECTS ( OUT OF 195) WITH AT LEAST ONE FLAKY TEST
+27       index = 0;
+28       if (t != null && size > 0) { // advance to first entry                                PID    P ROJECT                               SHA
+29         do {} while
+30          (index < t.length && (next = t[index++]) == null);
+                                                                                               P1     EsotericSoftware/reﬂectasm             455f612e
+31       }                                                                                     P2     EsotericSoftware/yamlbeans             2ccfbd9d
+32   /** all (and only) the code below is NonDex extension **/                                 P3     JodaOrg/joda-time                      07002501
+33       List<Node<K, V>> original = new ArrayList<>();                                        P4     OryxProject/oryx                       833c3fea
+34       while (original_hasNext())
+35         original.add(original_nextNode());
+                                                                                               P5     Thomas-S-B/visualee                    410a80f0
+36       NonDex.shuffle(original, (NonDex.level == ID)                                         P6     apache/commons-cli                     a0dcd6a0
+37           ? System.identityHashCode(HashMap.this) + modCount :                              P7     apache/commons-lang                    fad946a1
+38         (NonDex.level == EQ) ? HashMap.this.hashCode() : 0);                                P8     benas/easy-batch                       4761ba5a
+39       NonDex_iter = original.iterator();
+40     }
+                                                                                               P9     bpsm/edn-java                          c1d891d6
+41                                                                                             P10    caelum/vraptor                         443cf0ed
+42           Iterator<Node<K, V>> NonDex_iter;                                                 P11    fernandezpablo85/scribe-java           0311a435
+43           public final boolean hasNext() {                                                  P12    geosolutions-it/geoserver-manager      a4268dda
+44             return NonDex_iter.hasNext();
+45           }
+                                                                                               P13    jknack/handlebars.java                 83dd013a
+46           final Node<K, V> nextNode() {                                                     P14    joel-costigliola/assertj-core          e8a696e8
+47             if (modCount != expectedModCount)                                               P15    jscep/jscep                            a224cc25
+48              throw new ConcurrentModificationException();                                   P16    junit-team/junit                       1d63100e
+49             current = NonDex_iter.next();
+50             return current;
+                                                                                               P17    ning/org-json                          9be37018
+51           }                                                                                 P18    qos-ch/slf4j                           52fcbbe8
+52           public final void remove() {                                                      P19    sematext/ActionGenerator               10f4a3e6
+53             original_remove();                                                              P20    stickﬁgure/objectify                   819eb72f
+54           }
+55       }
+                                                                                               P21    versly/wsdoc                           89480c5d
+56   }
+
+                    Fig. 3. Non-deterministic model for HashMap
+                                                                                    object to perform all shufﬂings, which means two consecutive
+                                                                                    shufﬂings of the same object can yield different orders,. For
+methods whose output permutes, we call N ON D EX and shufﬂe                         ID, N ON D EX considers a value representing the identity of
+on the returned value in the library code.                                          the object; for HashMap, this value is the sum of the identity
+   Figure 3 shows the model we use for exploring different                          hash code and the modCount ﬁeld counting the number of
+orderings when iterating over a HashMap object. The itera-                          modiﬁcations, which means that for the same object with the
+tion is done using the inner class HashIterator. We kept                            same modCount, N ON D EX uses a fresh Random object with
+the original code and renamed its methods with the preﬁx                            the same seed. Similarly, for EQ, N ON D EX considers the
+original_. The constructor, starting at line 33, computes                           value-based hash code of the object to produce a new Random
+the order that the original code would have normally returned,                      object. For ONE, N ON D EX always creates a fresh Random
+applies a shufﬂe depending on the N ON D EX level, and stores                       object using the same seed.
+the resulting order in an Iterator object. The next method
+                                                                                                                IV. E VALUATION
+returns the elements in the shufﬂed order. The hasNext
+method is based on the new order and delegates to the new                             We evaluated our N ON D EX technique on 195 open-
+Iterator object. The remove method just delegates to the                            source projects and 72 student submissions from a software-
+original method that changes the table.                                             engineering course. Section IV-A describes our experiments
+   Figure 4 shows how N ON D EX performs shufﬂing depending                         with the open-source projects, and Section IV-B describes our
+on the level. For FULL, N ON D EX uses the same Random                              experiments with the student code.
+
+
+
+
+                                                                               84
+
+     Authorized licensed use limited to: University of Texas at Austin. Downloaded on November 07,2026 at 00:54:40 UTC from IEEE Xplore. Restrictions apply.
+                                                                    TABLE IV
+                                                  F LAKY TESTS DETECTED IN OPEN - SOURCE PROJECTS
+
+   PID T EST C LASS # TEST NAME                                         FULL         ID      EQ      ONE      C AUSE
+   P1     FieldAccessTest#testIndexSetAndGet                               48         0        0        0     Class#getDeclaredFields
+   P2     GenericTest#testWrite                                            73        75       54       53     HashMap#entrySet
+   P3     TestDateTimeZone#testGetShortName                                35        53       53       53     DateFormatSymbols#getZoneStrings
+   P4     TextUtilsTest#testJSONMap                                        51        52       60       53     HashMap#entrySet
+   P5     JPAExaminerTest#testFindAndSetAttributesManyT...                  8         5        5        6     Class#getDeclaredMethods
+   P5     JavaSourceTest#testGetDependenciesOfType                         12        12       12        4     Class#getDeclaredMethods
+   P6     OptionGroupTest#testToString                                     42         0        0        0     HashMap#values
+   P6     BugCLI162Test#testPrintHelpLongLines                             51        55       55       53     HashMap#values
+   P7     MultilineRecursiveToStringStyleTest#boolArray                   100       100      100      100     Class#getDeclaredFields
+   P7     ...other 14 similar tests, total failures...                   1296      1216     1215     1138     Class#getDeclaredFields
+   P7     FieldUtilsTest#testGetAllFields                                 100         0        0        0     Class#getDeclaredFields
+   P7     FieldUtilsTest#testGetAllFieldsList                             100         0        0        0     Class#getDeclaredFields
+   P7     FieldUtilsTest#testGetFieldsWithAnnotation                       56        51       53       45     Class#getDeclaredFields
+   P8     GsonRecordMarshallerTest#marshal                                 86        77       77       84     Class#getDeclaredFields
+   P8     JacksonRecordMarshallerTest#marshal                              87        81       81       84     Class#getDeclaredFields
+   P8     XstreamRecordMarshallerTest#marshal                              96        94       94       97     Class#getDeclaredFields
+   P9     PrinterTest#testPrettyPrinting                                   69        73       54       53     HashMap#entrySet
+   P10    XStreamSerializerTest#shouldSerializeCollection                  41        48       45       52     Class#getDeclaredFields
+   P10    ...other 13 similar tests, total failures...                    736       709      737      764     Class#getDeclaredFields
+   P11    MapUtilsTest#shouldPrettyPrintMap                                97        94       97       97     HashMap#entrySet
+   P12    GSLayerEncoder21Test#testMetadata                                84        81       71      100     HashMap#entrySet
+   P13    TagTypeTest#collectSectionAndVars                               100       100      100      100     HashMap#keySet
+   P14    Maps format Test#should format Map containing...                 76        50       62       53     HashMap#entrySet
+   P15    DefaultCertStoreInspectorTest#example                            92        94       59       53     HashMap#keySet
+   P15    HarmonyCertStoreInspectorTest#example                            95        96       59       53     HashMap#keySet
+   P16    MethodSorterTest#testJvmMethodSorter                            100         0        0        0     Class#getDeclaredMethods
+   P17    TestSuite#testJSONStringerObject                                 79        77       83       84     Class#getFields
+   P18    EventLoggerTest#testEventLogger                                 100         0        0        0     Class#getDeclaredMethods
+   P19    BulkJSONDataESSinkTest#testGetBulkData                           49        37       47       43     HashMap#entrySet
+   P19    JSONUtilsTest#testGetElasticSearchAddDocument                    35        35       43       47     HashMap#entrySet
+   P19    XMLUtilsTest#testGetSolrAddDocument                              36        43       43       47     HashMap#entrySet
+   P20    CollectionTests#testBasicSets                                   100        96       91       84     HashMap#keySet
+   P20    CollectionTests#testCustomSet                                    85        79       91       84     HashMap#keySet
+   P21    JaxRSRestAnnotationProcessorTest#stabilitySet...                 71        86       51       53     HashMap#keySet
+   P21    SpringMVCRestAnnotationProcessorTest#stabilit...                 76        75       51       53     HashMap#keySet
+   Flaky Tests Found                                                       60        54       54       54
+   Total Failures                                                        4362      3744     3643     3590
+   Min Failures                                                             8         0        0        0
+   Max Failures                                                           100       100      100      100
+
+                                                                                   Table IV shows a partial list of the 60 tests that we
+A. Experiments on Open-Source Projects                                          examined. We tabulate the PID (from Table III), the name
+   We evaluated N ON D EX on 195 open-source projects. We                       of the test class and its ﬂaky test method, the number of
+selected these projects and their speciﬁc revisions from our                    failures detected for the each of the four levels, and the
+previous studies with open-source projects [4], [23], [33]. All                 most likely non-deterministic method that causes the fail-
+these projects are from GitHub [8], use Maven to build [26],                    ures. The apache/commons-lang project has 14 tests sim-
+and compile successfully using Java 8. For each project, we                     ilar to MultilineRecursiveToStringStyleTest#boolArray, and
+ﬁrst ran N ON D EX with 10 randomly generated seeds, using                      the caelum/vraptor project has 13 tests similar to XStream-
+the FULL level. If any test failed with these 10 seeds, we                      SerializerTest#shouldSerializeCollection, so the two table rows
+examined it to determine what caused the failure. (As a side                    show the total number of failures for each level across all
+note, we found that manually inspecting these failures was                      14 and 13 tests, respectively. Our evaluation started on older
+rather challenging, and we leave it as future work to automate                  revisions of these projects, and three tests (GenericTest#test-
+debugging test failures due to ADINS code.)                                     Write, TestDateTimeZone#testGetShortName, and TagType-
+   We detected 60 ﬂaky tests in the 21 projects listed in                       Test#collectSectionAndVars) are already ﬁxed on the current
+Table III. We tabulate a short ID for ease of reference, the                    revisions of their respective projects.
+project name, and the project revision on which we ran                            Running N ON D EX using the FULL level may introduce too
+N ON D EX. For each project with a ﬂaky test, we then reran that                much non-determinism, and one might initially consider some
+project’s tests using N ON D EX with 100 randomly generated                     detected ﬂaky tests to be false alarms. However, Table IV
+seeds, using all non-deterministic levels. We obtained the                      shows that only six ﬂaky tests (FieldAccessTest#testIndexSet-
+number of times each ﬂaky test fails out of the 100 seeds.
+
+
+                                                                           85
+
+ Authorized licensed use limited to: University of Texas at Austin. Downloaded on November 07,2026 at 00:54:40 UTC from IEEE Xplore. Restrictions apply.
+1    public class OptionGroupTest {                                                 1    public class MapUtilsTest {
+2      public void testToString() {                                                 2      @Test public void shouldPrettyPrintMap() {
+3        OptionGroup g1 = new OptionGroup();                                        3        Map<Integer, String> map = new HashMap<>();
+4        g1.addOption(new Option(null, "foo", false, "Foo"));                       4        map.put(1, "one"); map.put(2, "two");
+5        g1.addOption(new Option(null, "bar", false, "Bar"));                       5        map.put(3, "three"); map.put(4, "four");
+6        if (!"[--bar Bar, --foo Foo]".equals(g1.toString())) {                     6        assertEquals(
+7          assertEquals("[--foo Foo, --bar Bar]", g1.toString());                   7         "{ 1 -> one , 2 -> two , 3 -> three , 4 -> four }",
+8        }                                                                          8         MapUtils.toString(map));
+9        ...                                                                        9      }
+10     }                                                                            10   }
+11   }                                                                              11
+12                                                                                  12   public class MapUtils {
+13   public class OptionGroup ... {                                                 13     public static <K,V> String toString(Map<K,V> map) {
+14     Map<String, Option> om = new HashMap<String, Option>();                      14       ...
+15     public OptionGroup addOption(Option option) {                                15       StringBuilder result = new StringBuilder();
+16       om.put(option.getKey(), option);                                           16       for(Map.Entry<K,V> entry : map.entrySet()) {
+17       return this;                                                               17         result.append(String.format(", %s -> %s ",
+18     }                                                                            18           entry.getKey().toString(),
+19     public String toString() {                                                   19           entry.getValue().toString()));
+20       StringBuilder buff = new StringBuilder();                                  20       }
+21       Iterator<Option> iter = getOptions().iterator();                           21       return "{" + result.substring(1) + "}";
+22       buff.append("[");                                                          22     }
+23       while (iter.hasNext()) {                                                   23   }
+24         /* ... populate buff with the values in iter ... */
+25         return buff.toString();                                                              Fig. 6. Flaky test from fernandezpablo85/scribe-java
+26       }
+27     }
+28   }                                                                              non-determinism, from ONE to FULL. Because the common
+                                                                                    threats to validity apply to our study, our results may not
+                  Fig. 5. Flaky test from apache/commons-cli
+                                                                                    generalize to other projects or ﬂaky tests. Of particular concern
+                                                                                    is that our experiments could have missed some ﬂaky tests
+AndGet, OptionGroupTest#testToString, FieldUtilsTest#test-                          even in the projects that we ran with 10 seeds. If some test
+GetAllFields, FieldUtilsTest#testGetAllFieldsList, Method-                          fails infrequently, it may be missed; there might be many such
+SorterTest#testJvmMethodSorter, and EventLoggerTest#test-                           tests that N ON D EX missed, so we could not have even studied
+EventLogger) fail sometimes for the FULL level but not fail                         them in more detail. In the future, we plan to evaluate more
+at all for any of the 100 randomly generated seeds for any of                       systematic exploration to check whether this is indeed the case.
+the other levels. The remaining 54 ﬂaky tests are also detected                        We next discuss in more detail three ﬂaky tests detected by
+by the other levels, suggesting that these are not false alarms.                    N ON D EX in open-source projects.
+   For each ﬂaky test, the table shows the number of seeds/runs                        1) Overly Non-deterministic Level: A case where the
+on which it fails. For most ﬂaky tests, the number of seeds                         FULL level detects a ﬂaky test that is never detected for
+is fairly high, with only 8–14 ﬂaky tests failing for less than                     any other level is OptionGroupTest#testToString from the
+50 seeds for each level (not counting ﬂaky tests that have                          apache/commons-cli project. Figure 5 shows that ﬂaky test.
+0 failures for a given level), and only two of those tests                          Lines 4 and 5 add some options to the OptionGroup g1.
+fail less than 30 times for each level. These high numbers                          OptionGroup stores options in a HashMap (line 16), and its
+suggest that it is likely that a ﬂaky test can be detected by                       toString() method (lines 19–27) iterates over this map. The
+running N ON D EX with just a few seeds. Assume that the                            developer realized that the iteration order over the HashMap
+actual probability of a ﬂaky test failing for a seed is equal to                    is not guaranteed, so lines 6 and 7 check that the result of
+the percentage of seeds that fail out of the 100 seeds that were                    calling toString() on g1 is either of the two hard-coded
+run. For example, if the probability of a ﬂaky test failing for a                   strings. However, toString() is invoked twice, and in the
+seed is 30%, then the probability of the ﬂaky test not failing for                  FULL level, N ON D EX can reshufﬂe the order differently for
+10 different, independent seeds is (1−0.3)10 = 0.028; in other                      the two invocations, causing the assertion to potentially fail.
+words, there is a less than 3% chance of N ON D EX missing                          The developer made a reasonable assumption that calling
+to detect that ﬂaky test running with 10 seeds. In the most                         toString() on the same, unchanged object twice returns
+extreme case we detected, in the Thomas-S-B/visualee project,                       the same string both times; we see that the other levels of
+the expected probability of a ﬂaky test failing for a seed in the                   N ON D EX never ﬂag this test as ﬂaky. Nevertheless, the test
+FULL level is only 8%, so the chance of N ON D EX missing                           could be still changed to call toString() only once and then
+this ﬂaky test running with 10 seeds is (1 − 0.08)10 = 0.434.                       to assert that it returns one of the two possible values.
+Even in this case, there is more than 50% chance of detecting                          2) Example New Flaky Test: We detected 57 ﬂaky
+such a ﬂaky test with 10 seeds, despite the chance of it failing                    tests that are not ﬁxed on the current revision of the
+for any one seed being rather low.                                                  projects, and Figure 6 shows one such ﬂaky test, MapUtils-
+   In summary, a developer using N ON D EX to detect ﬂaky                           Test#shouldPrettyPrintMap from the fernandezpablo85/scribe-
+tests may not need to run with many seeds and can still                             java project. The test (lines 3–5) makes and populates
+have some conﬁdence that N ON D EX does not miss to detect                          a HashMap and then compares the result of calling
+any ﬂaky tests. Therefore, we recommend that N ON D EX by                           MapUtils#toString() with a hard-coded string (lines 6–
+default be run for 10 seeds while increasing the level of                           8). However, MapUtils#toString() calls entrySet() on
+
+
+
+
+                                                                               86
+
+     Authorized licensed use limited to: University of Texas at Austin. Downloaded on November 07,2026 at 00:54:40 UTC from IEEE Xplore. Restrictions apply.
+1    public class DefaultNameProvider implements NameProvider {                     on an older revision of the code, and the developers have since
+2      public String getName(...) {
+3        String[] nameSet = getNameSet(...);                                        ﬁxed this problem by changing checks such as the one shown
+4        return nameSet[0];                                                         on line 11 to be s.length >= 5 instead.
+5      }
+6      private synchronized String[] getNameSet(...) {
+7        String[][] z = DateTimeUtils.getDateFormatSymbols(...).                    B. Experiments on Student Code
+                getZoneStrings();
+8        String[] setEn = null;                                                        We also evaluated N ON D EX on 72 student submissions for
+9        ...                                                                        a programming assignment. We ﬁrst describe the assignment
+10       for (String[] s : z) {
+11         if (s != null && s.length == 5 && id.equals(s[0])) {                     that the students were supposed to do. We then describe how
+12           setEn = s;                                                             we set up our experiments for the student submissions. We
+13           break;
+14         }                                                                        ﬁnally describe high-level results concerning our ﬁndings of
+15       }                                                                          running N ON D EX on the student submissions.
+16       ...
+17     }                                                                               1) Assignment: The assignment asked the students to cre-
+18
+19
+     }                                                                              ate a simple library-management application1. The students
+20   public class TestDateTimeZone extends TestCase {                               were expected to write both code that implements such an
+21     public void testGetShortName() {                                             application and unit tests using JUnit [20] to test the different
+22       DateTimeZone zone = DateTimeZone.forID(...);
+23       assertEquals("BST", zone.getShortName(...));                               components of the application.
+         ...
+24
+25     }
+                                                                                       The teaching staff provided the students some skeleton code
+26   }                                                                              outlining the basic expected components of the application.
+27
+28   public abstract class DateTimeZone ... {
+                                                                                    The application should represent a library containing books
+29     public String getShortName(...) {                                            which can be organized into collections. The Book class
+         String name;
+30
+31       NameProvider np = getNameProvider();
+                                                                                    represents a book and has only two ﬁelds, a title and an author,
+32       if (np instanceof DefaultNameProvider) {                                   both represented by String objects. This Book class extends
+33         name = ((DefaultNameProvider) np).getShortName(...);
+34       }
+                                                                                    the abstract class Element. The Collection class represents
+35       ...                                                                        a collection of such Elements that are stored in a List.
+         return name;
+36
+37     }
+                                                                                    Furthermore, the Collection class also extends Element,
+38     private static NameProvider getDefaultNameProvider() {                       so a Collection is allowed to contain other Collection
+39       NameProvider nameProvider = null;
+40       ...
+                                                                                    objects, creating a hierarchy that illustrates the composite
+41       if (nameProvider == null) {                                                design pattern [7]. Finally, at the top level, there is a Library
+42         nameProvider = new DefaultNameProvider();
+43       }
+                                                                                    class that can hold a List of Collection objects.
+44       return nameProvider;                                                          Students were expected to implement several methods
+45     }
+46   }
+                                                                                    and constructors for each of these classes. We discuss
+                                                                                    those that are most relevant for this study. For both
+                   Fig. 7. Flaky test from JodaOrg/joda-time
+                                                                                    Book and Collection, students must implement a method
+                                                                                    getStringRepresentation() that returns String repre-
+its input Map, and the order of iteration is not ﬁxed, so the
+assertion on lines 6–8 can sometimes fail. More precisely, it                       sentations of objects of those classes. Given such a string rep-
+fails in all but one of the 4! orderings, i.e., in about 96% of                     resentations, students must implement a constructor for Book
+cases, as also obtained in our experiments.                                         that takes the string representation and constructs the corre-
+   3) Example Fixed Flaky Test: We next describe a ﬂaky                             sponding Book object. For Collection, students must sim-
+test that N ON D EX detected when run on an older revision                          ilarly implement a static method restoreCollection that
+                                                                                    takes a string representation of a Collection and constructs
+of the JodaOrg/joda-time project; the test has been ﬁxed
+                                                                                    the corresponding Collection object. For Library, students
+since then. Figure 7 shows TestDateTimeZone#testGetShort-
+                                                                                    must implement (1) the constructor that takes a ﬁle containing
+Name and the relevant portions of the code under test.
+                                                                                    string representations of a sequence of Collection objects
+The call to getShortName() on line 23 eventually leads
+to a call to the DefaultNameProvider#getNameSet()                                   and constructs the corresponding Library and (2) the method
+                                                                                    saveLibraryToFile() that writes out the Library to a ﬁle.
+method deﬁned on lines 6–17. The problem is the guard
+condition, s.length == 5 on line 11. In Java 7, the call                               Along with the skeleton code and implementation require-
+to DateFormatSymbols#getZoneStrings() on line 7 re-                                 ments, the teaching staff made further restrictions and sug-
+turned each array element of z of exactly length ﬁve. However,                      gestions. First, the students’ code must build successfully on
+the speciﬁcation of that method only guarantees that each                           a common platform used by the entire class. This platform
+element of z has length of at least ﬁve. In fact, in Java 8,                        uses OpenJDK Java 7, so students’ code must also compile
+the implementation changed such that each array element has                         to Java 7 bytecode and run successfully using the OpenJDK
+length exactly seven, which still satisﬁes the speciﬁcation but                     Java 7 JVM. Students must also write tests for each of the
+is different from what was the case in Java 7. This change                            1 This library-management assignment was ﬁrst created three years ago and
+
+in the implementation revealed the developer’s reliance on the                      has been minimally updated by different teaching staff members over the
+length of the elements of z. N ON D EX was able to detect this                      years; this year’s iteration of the assignment was updated by two teaching
+                                                                                    assistants who were not involved in this study.
+
+
+
+
+                                                                               87
+
+     Authorized licensed use limited to: University of Texas at Austin. Downloaded on November 07,2026 at 00:54:40 UTC from IEEE Xplore. Restrictions apply.
+                            TABLE V                                             same (either all three had at least one failure or all three had
+          F LAKY TESTS DETECTED IN STUDENT SUBMISSIONS
+                                                                                no failure), for student submissions, ID detected more ﬂaky
+                              FULL        ID      EQ      ONE                   tests than either EQ or ONE that detected exactly the same
+      Flaky Tests Found         110       88       34       34                  ﬂaky tests. Considering the total number of failures, like for
+      Total Failures           8159     6785     2031     1827                  open-source projects, we see that the FULL level detects more
+      Min Failures               37        0        0        0                  failures than the ID level, followed by the EQ level and ﬁnally
+      Max Failures              100      100       81       78
+                                                                                by the ONE level.
+                                                                                   Running N ON D EX even with 100 different seeds may not
+three classes they implement, with at least nine tests for the
+                                                                                detect all ﬂaky tests, as the random choices explored can miss
+entire application. Finally, the staff strongly encouraged the
+                                                                                some cases that would cause a test to fail. To more systemati-
+students to use some third-party library to handle the pretty-
+                                                                                cally explore these tests, we used Java PathFinder (JPF) [17],
+printing/parsing of objects to/from strings, as the Library can
+                                                                                [34]. JPF provides a specialized JVM, implemented in Java,
+potentially have complex structures involving deeply nested
+                                                                                that can explore all non-deterministic choices. However, JPF
+Collection objects. However, the staff did not restrict the
+                                                                                cannot handle all Java code out-of-the-box. In particular, it
+students to a speciﬁc third-party library, so the students chose
+                                                                                cannot handle code that depends on native methods, such as
+whatever library they felt comfortable with. Many used various
+                                                                                those in Gson or XStream that students used.
+libraries for JSON or XML.
+                                                                                   To use JPF, we changed our model for HashMap to not make
+   2) Experimental Setup: For our evaluation on student code,
+                                                                                some random choices but rather systematically explore all
+we started from the 89 submissions that built successfully
+                                                                                choices; speciﬁcally, considering Figure 4, on line 13, we re-
+(both compiled and had all tests pass) on the common platform
+                                                                                placed rand.getNext(i, size) with Verify.getInt(i,
+that uses OpenJDK Java 7. With these 89 submissions, we ran
+                                                                                size - 1), where the JPF method Verify.getInt explores
+the tests on another platform that is exactly the same as the
+                                                                                all possible values between the bounds i and size - 1,
+platform provided to the students, except this other platform
+                                                                                inclusive. Hence, JPF shufﬂes each List to explore all per-
+uses OpenJDK Java 8 instead. By running the students’ tests
+                                                                                mutations. Because JPF can systematically explore all choices
+against their own code on a platform using Java 8, we already
+                                                                                until either the test fails or all possible permutations execute
+detected some students’ tests to be ﬂaky as they assumed
+                                                                                and the test does not fail, JPF will not miss any test that
+speciﬁc behavior of the libraries (either the Java Standard
+                                                                                depends on some ordering for the elements in a HashMap.
+Library or the third-party libraries used), and most likely
+                                                                                Because JPF cannot handle most ﬁle system operations, we
+failing due to the presence of ADINS code.
+                                                                                could not run the tests for the Library class which need
+   Running the students’ tests in this Java 8 environment, we                   to read/write some ﬁle from/to disk. Even without running
+found 17 submissions that fail. In fact, in the past, running in                the tests for Library, there were still many cases where JPF
+multiple environments (e.g., on Linux virtual machines and on                   throws some internal exception because of functionality that
+Mac and Windows laptops from teaching assistants) was the                       is not yet implemented in JPF. As a result, we ignored the 22
+only approach that we could use to detect (some) ﬂaky tests.                    submissions that do not work with JPF and only ran the tests
+Using N ON D EX, we can have a more thorough detection of                       for Book and Collection.
+ﬂaky tests; even if some tests pass on both Java 7 and Java 8,                     Using JPF, we detected 22 submissions where exploring
+it does not imply they do not contain any ADINS code that                       permutations on HashMap iterator order causes a test to fail.
+could fail on some future Java 9 (or even on Java 8 on another                  In total, JPF detected 51 ﬂaky tests. We compared these results
+OS or by another JVM provider, say, IBM). We therefore focus                    with those obtained from running N ON D EX on our modiﬁed
+the rest of our evaluation on the remaining 72 submissions.                     JVM, using only the non-deterministic methods in HashMap,
+   3) Results: We ran the student submissions using our N ON -                  and running only tests for Book and Collection. We found
+D EX tool in all four non-deterministic levels and for 100 ran-                 that N ON D EX detected all tests detected by JPF, increasing
+domly generated seeds. (The tests from students submissions                     conﬁdence that 100 seeds sufﬁce for student submissions.
+run much faster than the open-source projects, so we could                         4) Discussion: In the 17 cases where the students’ tests
+immediately use 100 seeds.) N ON D EX detected 34 student                       fail just by switching from Java 7 to Java 8, the ﬂaky tests
+submissions with at least one ﬂaky test. In total, N ON D EX                    check the functionality of the methods that get the string
+detected 110 ﬂaky tests. Table V summarizes the results. We                     representation of a Book or a Collection object. The tests
+tabulate the number of ﬂaky tests detected in each level (up to                 generally construct some Book or Collection objects and
+110), and the total, minimum, and maximum number of the                         assert that the return of the method that gets the string
+100 seeds that cause a failure for one of those ﬂaky tests in                   representation matches some hard-coded string value. In all
+each level. We elide detailed results for each individual test                  but one of these submissions, students either directly use a
+as in Table IV because there are too many tests.                                Java HashMap as part of their implementation for constructing
+   From the table, we see that the FULL level detects the                       a string representation, or they use a third-party library (e.g.,
+most ﬂaky tests, followed by ID, and then by EQ and ONE,                        JSON in Java [18] or JSON.Simple [19]) where the serial-
+which both detect the same number of ﬂaky tests. Unlike for                     ization is backed by a Java HashMap. The assertions against
+open-source projects where all three partial levels behaved the                 the hard-coded strings succeed in Java 7 because the order
+
+
+
+                                                                           88
+
+ Authorized licensed use limited to: University of Texas at Austin. Downloaded on November 07,2026 at 00:54:40 UTC from IEEE Xplore. Restrictions apply.
+remains consistent across different runs of the JVM, but in                     concurrent programs; and Joshi et al. [16] applied randomness
+Java 8, the underlying implementation of HashMap changed                        in thread scheduling to create resource deadlocks in multi-
+such that the iteration order can differ from that of Java 7. The               threaded programs. Moreover, JPF can also control thread
+one remaining failing submission uses an XML serialization                      schedules to potentially explore all paths in the code [34]. In
+library (XStream [37]) to construct a string representation of                  contrast, N ON D EX focuses on sequential code and exploration
+a Collection object, but the order of the declared ﬁelds for                    of non-deterministic speciﬁcations.
+a class is also not guaranteed, so the comparison with a hard-                     Non-determinism has been also studied for various other
+coded string value here once again fails in this later version                  domains. For example, for map-reduce programs, Xiao et
+of Java. In summary, all these 17 submissions have ADINS                        al. [36] studied non-determinism that arises due to non-
+code and fail due to relying on some assumed order that is                      commutative reducers and found many bugs due to non-
+not guaranteed to hold.                                                         commutative reducers that make assumptions on the order
+   In the student submissions that do not fail on Java 8,                       of input data rows. For GUI code, Memon and Cohen [27]
+N ON D EX detected more ﬂaky tests that fail due to the non-                    showed various factors that may cause non-determinism and
+determinism in the ordering provided by the iterator for a                      hence impact the results of analyses and experiments based
+HashMap. As with the tests that fail on Java 8, these ﬂaky                      on GUI software. For state machines, testing conformance of
+tests generally construct Book and Collection objects and                       deterministic implementations against non-deterministic spec-
+assert their string representation to be equal to a hard-coded                  iﬁcations has a long history [13], [30]–[32]. More recently,
+string. Similar to some cases in the open-source projects, some                 Cook and Koskinen [3] aim to ﬁnd restrictions on non-
+failures are due to “too much” non-determinism in the order-                    deterministic value-choices using a CEGAR loop; they apply
+ings, e.g., when a test calls getStringRepresentation()                         their technique to examples drawn from real code. N ON D EX
+on an object and then compares the string against another                       explores non-determinism in the context of abstract data-type
+call of getStringRepresentation() of an equal object                            speciﬁcations using concrete exploration of real code.
+rather than asserting the string to be the same as a hard-coded                            VI. C ONCLUSIONS AND F UTURE W ORK
+string. In such a case, the FULL or ID level would shufﬂe both
+calls to getStringRepresentation() and potentially end                             Non-deterministic speciﬁcations are good because they al-
+up failing the assertion where the other two levels do not fail.                low implementers to provide various implementations. How-
+Moreover, the FULL level also detects as ﬂaky some cases that                   ever, non-deterministic speciﬁcations are bad because they can
+depend on the ﬁeld ordering, which other levels never detect.                   result in seemingly random failures. In particular, ADINS
+                                                                                code that assumes a deterministic implementation of non-
+                       V. R ELATED W ORK                                        deterministic speciﬁcation is susceptible to failures that
+  Detecting problems due to wrong assumptions that de-                          arise from changing implementations. Tests that depend on
+velopers make about speciﬁcations and implementations has                       ADINS code can become ﬂaky tests that seemingly non-
+been explored in other domains. For example, Jin et al. [15]                    deterministically pass or fail. We proposed a novel N ON D EX
+reported how wrong assumptions about code can lead to                           technique to detect ﬂaky tests due to ADINS code. N ON D EX
+performance bugs, in particular, they ﬁnd the second most                       detected many ﬂaky tests in both larger, open-source projects
+common reason for the introduction of performance bugs to                       and small-sized student code submissions.
+be that “developers misunderstand the performance feature                          In the future, we plan to investigate how to automate debug-
+of certain functions”. N ON D EX does not target performance                    ging of failures that N ON D EX reports. While it is good that
+bugs but helps detect another class of bugs that are due to                     N ON D EX detected many ﬂaky tests, manually investigating
+speciﬁcation misunderstanding. As another example, from a                       them turned out to be hard. Interestingly, we found that only
+security perspective, Wang et al. [35] propose a technique                      7 of the 31 non-deterministic models were the likely causes for
+to analyze implicit assumptions that are necessary for the                      all detected ﬂaky tests. Considering our experience with Java 7
+secure use of libraries. Their work involves building models                    and Java 8, we also plan to study advanced approaches to ﬁnd
+of methods which are then used to ﬁnd bugs in software                          behavior differences between different JVM implementations,
+that fail to meet these implicit assumptions, ﬁnding serious                    e.g., using automated test generation that previously revealed
+security vulnerabilities in the process. Their techniques are                   differences in IDEs, Java compilers, and JPF [9]. Finally, to
+mostly static, while N ON D EX uses a dynamic, randomized                       help developers avoid misunderstandings of non-determinism,
+exploration of methods with non-deterministic speciﬁcations.                    we envision that code could have some determinism anno-
+  Randomness has been applied in different contexts to detect                   tations, e.g., @Unordered to specify methods that provide
+bugs, with many of these applications for concurrent code.                      no guarantee on the order of elements. Overall, ADINS code
+For example, Eytani et al. [5] developed a tool that monitors                   seems to open an interesting new line of research.
+shared variable accesses and applies random context switching                   Acknowledgments: We thank Lamyaa Eloussi, Wajih Ul
+when shared variables are accessed in order to trigger bugs in                  Hassan, Nicholas Lu, Xinyue Xu, and Tifany Yung for help in
+concurrent code; Parizek and Kalibera [29] used an abstract                     this project. This research was partially supported by the NSF
+environment in software model checkers that randomly selects                    Grant Nos. CCF-1012759, CCF-1409423, CCF-1421503, and
+sequence of method calls in each thread to detect bugs in                       CCF-1439957.
+
+
+
+                                                                           89
+
+ Authorized licensed use limited to: University of Texas at Austin. Downloaded on November 07,2026 at 00:54:40 UTC from IEEE Xplore. Restrictions apply.
+                              R EFERENCES                                             [22] W. Lam, S. Zhang, and M. D. Ernst, “When tests collide: Evaluating and
+                                                                                            coping with the impact of test dependence,” University of Washington
+ [1] J. Bell and G. Kaiser, “Unit test virtualization with VMVM,” in ICSE,                  Department of Computer Science and Engineering, Tech. Rep., 2015.
+     2014.                                                                            [23] O. Legunsen, D. Marinov, and G. Rosu, “Evolution-aware monitoring-
+ [2] J. Bell, G. Kaiser, E. Melski, and M. Dattatreya, “Efﬁcient dependency                 oriented programming,” in ICSE NIER, 2015.
+     detection for safe Java test acceleration,” in ESEC/FSE, 2015.
+ [3] B. Cook and E. Koskinen, “Reasoning about nondeterminism in pro-                 [24] “LinkedHashSet JavaDoc,” http://docs.oracle.com/javase/8/docs/api/
+     grams,” in PLDI, 2013.                                                                 java/util/LinkedHashSet.html.
+ [4] L. Eloussi, “Detecting ﬂaky tests from test failures,” Master’s thesis,          [25] Q. Luo, F. Hariri, L. Eloussi, and D. Marinov, “An empirical analysis
+     UIUC, 2015.                                                                            of ﬂaky tests,” in FSE, 2014.
+ [5] Y. Eytani, E. Farchi, and Y. Ben-Asher, “Heuristics for ﬁnding concur-           [26] “Maven Sureﬁre plugin,” http://maven.apache.org/sureﬁre/index.html.
+     rent bugs,” in IPDPS, 2003.                                                      [27] A. M. Memon and M. B. Cohen, “Automated testing of GUI applica-
+ [6] “File - list JavaDoc,” http://docs.oracle.com/javase/8/docs/api/java/io/               tions: Models, tools, and controlling ﬂakiness,” in ICSE, 2013.
+     File.html#list--.                                                                [28] C. Pacheco, S. Lahiri, M. Ernst, and T. Ball, “Feedback-directed random
+ [7] E. Gamma, R. Helm, R. Johnson, and J. Vlissides, Design patterns:                      test generation,” in ICSE, 2007.
+     elements of reusable object-oriented software. Pearson Education, 1994.
+                                                                                      [29] P. Parizek and T. Kalibera, “Efﬁcient detection of errors in Java
+ [8] “GitHub,” https://github.com/.
+                                                                                            components using random environment and restarts,” in TACAS, 2010.
+ [9] M. Gligoric, T. Gvero, V. Jagannath, S. Khurshid, V. Kuncak, and
+     D. Marinov, “Test generation through programming in UDITA,” in ICSE,             [30] A. Petrenko, N. Yevtushenko, and G. V. Bochmann, “Testing deter-
+     2010.                                                                                  ministic implementations from nondeterministic FSM speciﬁcations,” in
+[10] A. Gyori, A. Shi, F. Hariri, and D. Marinov, “Reliable testing: Detecting              IWTCS, 1996.
+     state-polluting tests to prevent test dependency,” in ISSTA, 2015.               [31] A. Petrenko, N. Yevtushenko, A. Lebedev, and A. Das, “Nondetermin-
+[11] “HashSet JavaDoc,” https://docs.oracle.com/javase/8/docs/api/java/util/                istic state machines in protocol conformance testing,” in IWPTS, 1994.
+     HashSet.html.                                                                    [32] T. Savor and R. E. Seviora, “Supervisors for testing non-deterministically
+[12] K. Herzig and N. Nagappan, “Empirically detecting false test alarms                    speciﬁed systems,” in ITC, 1997.
+     using association rules,” in ICSE SEIP, 2015.                                    [33] A. Shi, T. Yung, A. Gyori, and D. Marinov, “Comparing and combining
+[13] R. Hierons and M. Harman, “Testing conformance of a deterministic                      test-suite reduction and regression test selection,” in FSE, 2015.
+     implementation against a non-deterministic stream X-machine,” Theo-              [34] W. Visser, K. Havelund, G. Brat, S. Park, and F. Lerda, “Model checking
+     retical Computer Science, 2004.                                                        programs,” ASE Journal, 2003.
+[14] C. Huo and J. Clause, “Improving oracle quality by detecting brittle
+     assertions and unused inputs in tests,” in FSE, 2014.                            [35] R. Wang, Y. Zhou, S. Chen, S. Qadeer, D. Evans, and Y. Gurevich,
+[15] G. Jin, L. Song, X. Shi, J. Scherpelz, and S. Lu, “Understanding and                   “Explicating SDKs: Uncovering assumptions underlying secure authen-
+     detecting real-world performance bugs,” in PLDI, 2012.                                 tication and authorization,” in USENIX, 2013.
+                                                                                      [36] T. Xiao, J. Zhang, H. Zhou, Z. Guo, S. McDirmid, W. Lin, W. Chen,
+[16] P. Joshi, C.-S. Park, K. Sen, and M. Naik, “A randomized dynamic
+                                                                                            and L. Zhou, “Nondeterminism in MapReduce considered harmful?
+     program analysis technique for detecting real deadlocks,” in PLDI, 2009.
+                                                                                            An empirical study on non-commutative aggregators in MapReduce
+[17] “JPF home page,” http://babelﬁsh.arc.nasa.gov/trac/jpf/.
+                                                                                            programs,” in ICSE SEIP, 2014.
+[18] “JSON in Java,” http://www.json.org/java/.
+[19] “JSON-Simple,” https://code.google.com/p/json-simple/.                           [37] “XStream,” http://x-stream.github.io/.
+[20] “JUnit,” http://junit.org/.                                                      [38] S. Zhang, D. Jalali, J. Wuttke, K. Muslu, M. Ernst, and D. Notkin,
+[21] “JUnit 4.11 - What’s new? Test execution order,” http://randomallsorts.                “Empirically revisiting the test independence assumption,” in ISSTA,
+     blogspot.com/2012/12/junit-411-whats-new-test-execution-order.html.              2014.
+
+
+
+
+                                                                                 90
+
+ Authorized licensed use limited to: University of Texas at Austin. Downloaded on November 07,2026 at 00:54:40 UTC from IEEE Xplore. Restrictions apply.
+

@@ -9,7 +9,7 @@
       "test": "StreamsTest#testOfEnumeration",
       "contract_review": {"status": "manually_reviewed", "reference": "Agent/contracts/hashtable-keys.json"},
       "site_review": {"status": "candidate_dependency", "reason": "A fixed-order list equality directly consumes the mapped key enumeration.", "reference": "Agent/results/commons-lang/findings.json"},
-      "experiment": {"status": "confirmed_scoped_failure", "reference": "experiments/hashtable/README.md", "qualification": "The pre-existing plain two-key stable-table fixture caused the unchanged test to fail. This does not validate a general Hashtable implementation."}
+      "experiment": {"status": "confirmed_scoped_failure", "reference": "experiments/manual-perturbations/hashtable/README.md", "qualification": "The pre-existing plain two-key stable-table fixture caused the unchanged test to fail. This does not validate a general Hashtable implementation."}
     },
     {
       "api": "java.util.Hashtable.keys()",

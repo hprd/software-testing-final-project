@@ -1,0 +1,7 @@
+yp_bind_client_create_v3: RPC: Unknown host
+yp_bind_client_create_v3: RPC: Unknown host
+Apache Maven 3.9.9 (8e8579a9e76f7d015ee5ec7bfcdc97d260186937)
+Maven home: /misc/scratch/hkp423/testing-tools/apache-maven-3.9.9
+Java version: 11.0.33, vendor: Eclipse Adoptium, runtime: /usr/lib/jvm/java-11-temurin-jdk
+Default locale: en, platform encoding: UTF-8
+OS name: "linux", version: "4.18.0-553.183.1.el8_10.x86_64", arch: "amd64", family: "unix"

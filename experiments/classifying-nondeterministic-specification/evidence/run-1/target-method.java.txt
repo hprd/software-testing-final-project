@@ -1,0 +1,15 @@
+    void testOfEnumeration() {
+        final Hashtable<String, Integer> table = new Hashtable<>();
+        assertEquals(0, Streams.of(table.elements()).count());
+        table.put("One", 1);
+        assertEquals(1, Streams.of(table.elements()).count());
+        table.put("Two", 2);
+        assertEquals(2, Streams.of(table.elements()).count());
+        final List<String> collect = Streams.of(table.keys()).collect(Collectors.toList());
+        assertTrue(collect.contains("One"));
+        assertTrue(collect.contains("Two"));
+        assertEquals(2, collect.size());
+        assertFalse(Streams.of(table.keys()).filter(String::isEmpty).findFirst().isPresent());
+        assertEquals(Arrays.asList("OneOne", "TwoTwo"), Streams.of(table.keys()).map(s -> s + s).collect(Collectors.toList()));
+        assertFalse(Streams.of(new Hashtable<String, Object>().keys()).filter(String::isEmpty).findFirst().isPresent());
+    }

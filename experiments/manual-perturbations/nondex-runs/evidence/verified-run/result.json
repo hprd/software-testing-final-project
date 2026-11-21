@@ -1,0 +1,447 @@
+{
+  "nondex_revision": "f1f407ce3e026f597567e7d96ee08cb08875690f",
+  "runtime": "Temurin 11.0.33+10",
+  "maven": "3.9.9",
+  "mode": "FULL",
+  "seeds": [
+    933178,
+    974622,
+    1016066
+  ],
+  "status": "both_target_cases_not_flagged_positive_control_flagged",
+  "cases": {
+    "commons-lang": {
+      "command": {
+        "command": [
+          "/misc/scratch/hkp423/testing-tools/apache-maven-3.9.9/bin/mvn",
+          "-o",
+          "-B",
+          "-Dmaven.repo.local=/misc/scratch/hkp423/testing-tools/maven-repository",
+          "-Dtest=StreamsTest#testOfEnumeration",
+          "-Drat.skip=true",
+          "-Dsurefire.rerunFailingTestsCount=0",
+          "-DnondexRuns=3",
+          "-DnondexRunsWithoutShuffling=1",
+          "-DnondexLogging=INFO",
+          "edu.illinois:nondex-maven-plugin:2.2.5-SNAPSHOT:nondex"
+        ],
+        "cwd": "/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-lang-verified",
+        "java_home": "/usr/lib/jvm/java-11-temurin-jdk",
+        "cleared_environment": [
+          "JDK_JAVA_OPTIONS",
+          "JAVA_TOOL_OPTIONS",
+          "_JAVA_OPTIONS",
+          "MAVEN_OPTS",
+          "MAVEN_ARGS"
+        ],
+        "exit_code": 0,
+        "seconds": 60.41,
+        "log": "/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-lang-verified-offline-verified.log",
+        "log_sha256": "4b889d0a9ccadd9f3d4b6875aa559ccf8fe29eebb930810960d87186e0199e7c"
+      },
+      "runs": [
+        {
+          "kind": "instrumented",
+          "seed": 933178,
+          "execution_id": "71IK7kuUosUINfwVJNsAv54PKA5qmoiKOwSXFEy4+4=",
+          "tests": 1,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "files": {
+            "commons-lang/seed-933178-1/org.apache.commons.lang3.stream.StreamsTest.txt": "6eacf41c506a06abe1610c76b34c77cba3e22a4a45f68eec7a6a87ea7e372403",
+            "commons-lang/seed-933178-1/TEST-org.apache.commons.lang3.stream.StreamsTest.xml": "7434426c4f3ffd5f07ccb30590909e35c4d18e34001ef7835a02ba2c95807587",
+            "commons-lang/seed-933178-1/config": "e62a625d83fc09e1c26cd8983034a1ee50fe5e73d9d55597c7c9c2925dbb9c02",
+            "commons-lang/seed-933178-1/invocations": "237c9c266bdd6da0e22cd8559b9799e2c15760d763b93db8334407b24ad0aaee",
+            "commons-lang/seed-933178-1/failures": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "commons-lang/seed-933178-1/test_results.html": "25fbcb2c62a0f956ef9a513247b343e5a0eaa2fe546102be135f7030f42ca345"
+          },
+          "invocations": {
+            "COUNT": 7321,
+            "SHUFFLES": 7321
+          }
+        },
+        {
+          "kind": "instrumented",
+          "seed": 974622,
+          "execution_id": "9oBJJLwl3l29Ed+B0xZp8HRRTWDmS+dPI4TY1xuA=",
+          "tests": 1,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "files": {
+            "commons-lang/seed-974622-1/org.apache.commons.lang3.stream.StreamsTest.txt": "6eacf41c506a06abe1610c76b34c77cba3e22a4a45f68eec7a6a87ea7e372403",
+            "commons-lang/seed-974622-1/TEST-org.apache.commons.lang3.stream.StreamsTest.xml": "5b63c40dd34c88f5e305efbb2e97f209a4f6975fe97af73c4fad7882b6d384e5",
+            "commons-lang/seed-974622-1/config": "3a3ea6abb77a811922ba019244028e85338843ad8e8534482cbf0a5db555d474",
+            "commons-lang/seed-974622-1/invocations": "237c9c266bdd6da0e22cd8559b9799e2c15760d763b93db8334407b24ad0aaee",
+            "commons-lang/seed-974622-1/failures": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "invocations": {
+            "COUNT": 7321,
+            "SHUFFLES": 7321
+          }
+        },
+        {
+          "kind": "instrumented",
+          "seed": 933178,
+          "execution_id": "KEd9lzfdKWZfxP218oISDdq4EqxYRFXdQsBWSzLF0=",
+          "tests": 1,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "files": {
+            "commons-lang/seed-933178-2/org.apache.commons.lang3.stream.StreamsTest.txt": "9587dc0bcc19a065ad65a429427db864e21d80fd99b022995dd9bbff092cc338",
+            "commons-lang/seed-933178-2/TEST-org.apache.commons.lang3.stream.StreamsTest.xml": "aeb35062df61ff1fa4985dce2e9afb9d93316b3ebe2a1d32a0aed981fdbef3cb",
+            "commons-lang/seed-933178-2/config": "0edc9ee86e5a813a4420ea015c2d29f9fd4fc110158631d9465b267c9f6b925d",
+            "commons-lang/seed-933178-2/invocations": "237c9c266bdd6da0e22cd8559b9799e2c15760d763b93db8334407b24ad0aaee",
+            "commons-lang/seed-933178-2/failures": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "invocations": {
+            "COUNT": 7321,
+            "SHUFFLES": 7321
+          }
+        },
+        {
+          "kind": "instrumented",
+          "seed": 1016066,
+          "execution_id": "KdhasNhnhBtm6HyROF9bzhI4RPKx6G3kD39nDPaw78o=",
+          "tests": 1,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "files": {
+            "commons-lang/seed-1016066-1/org.apache.commons.lang3.stream.StreamsTest.txt": "07a7cbf8f41207c782fb0209cadf84642484699d92edc3be9f89d8fb488bd4bf",
+            "commons-lang/seed-1016066-1/TEST-org.apache.commons.lang3.stream.StreamsTest.xml": "baa607ea3389951856568c0d83c82eedd9943b1e93b0351ce273819d97e59c07",
+            "commons-lang/seed-1016066-1/config": "ea74d3ff71fa34b08cf78955d020202bdb5f41215d6571357731c4a6674f62a2",
+            "commons-lang/seed-1016066-1/invocations": "237c9c266bdd6da0e22cd8559b9799e2c15760d763b93db8334407b24ad0aaee",
+            "commons-lang/seed-1016066-1/failures": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "invocations": {
+            "COUNT": 7321,
+            "SHUFFLES": 7321
+          }
+        },
+        {
+          "kind": "clean",
+          "seed": 933178,
+          "execution_id": "clean_840qNrFsS6RfDU+kGz3Zbj56CBdmfBNtjT8+brscVnU=",
+          "tests": 1,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "files": {
+            "commons-lang/clean-1/org.apache.commons.lang3.stream.StreamsTest.txt": "8de969c195b4d64a0c2f42e97c4c13f0fae1f2d93439db6203dc14a554455238",
+            "commons-lang/clean-1/TEST-org.apache.commons.lang3.stream.StreamsTest.xml": "34da3942f949791903dea26d986b85fbf48e5531b388b0900c2e6aaf877fbce5"
+          }
+        },
+        {
+          "kind": "clean",
+          "seed": 933178,
+          "execution_id": "clean_nKWEcx27NKUFH00ut+KqS1h2INbKHlQlM4zgsNG+fo=",
+          "tests": 1,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "files": {
+            "commons-lang/clean-2/org.apache.commons.lang3.stream.StreamsTest.txt": "5114be1a2fb4fca30c15c046e93d6b406e5198b8ef3e4dd671b98398ed806640",
+            "commons-lang/clean-2/TEST-org.apache.commons.lang3.stream.StreamsTest.xml": "a4aa4d5646f1ff2f6b7f6e8642abfdf4044c88f9dc7daa95519aae7f510fde7f"
+          }
+        },
+        {
+          "kind": "instrumented",
+          "seed": 974622,
+          "execution_id": "craMuDfwFKURq47b6a0NBzLmuctXHAQe3GpvB4kWD4=",
+          "tests": 1,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "files": {
+            "commons-lang/seed-974622-2/org.apache.commons.lang3.stream.StreamsTest.txt": "8adb65f8ace1a6489b964d9188d9a8cff3f43131f02a699bd32b12591e135693",
+            "commons-lang/seed-974622-2/TEST-org.apache.commons.lang3.stream.StreamsTest.xml": "e28483d8e6f29ca1dda2755e16bb4815fb38a82f23c316cbc1bf52ee3c9e0a89",
+            "commons-lang/seed-974622-2/config": "7d007e2ad7e619d6b2219a9233d4c4be16cdafe004ddb1d017c0b90ed4bc82f7",
+            "commons-lang/seed-974622-2/invocations": "237c9c266bdd6da0e22cd8559b9799e2c15760d763b93db8334407b24ad0aaee",
+            "commons-lang/seed-974622-2/failures": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "invocations": {
+            "COUNT": 7321,
+            "SHUFFLES": 7321
+          }
+        },
+        {
+          "kind": "instrumented",
+          "seed": 1016066,
+          "execution_id": "jdSGG9yFn1XI8w1KXyOzmZ3Qpy9R4QM9nMzqRS7s5QU=",
+          "tests": 1,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "files": {
+            "commons-lang/seed-1016066-2/org.apache.commons.lang3.stream.StreamsTest.txt": "b007a1e980c1f150080b259121ae4add2136c713caa75aa6781c3a068e41887f",
+            "commons-lang/seed-1016066-2/TEST-org.apache.commons.lang3.stream.StreamsTest.xml": "dd8b8f6abd0323b8367e75b75667f94cef4a875e79c01424ea779d505c2d741b",
+            "commons-lang/seed-1016066-2/config": "a6402963b0e917b86d0479148ff1b910bc9127ac1157cae24b039089dbb54127",
+            "commons-lang/seed-1016066-2/invocations": "237c9c266bdd6da0e22cd8559b9799e2c15760d763b93db8334407b24ad0aaee",
+            "commons-lang/seed-1016066-2/failures": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "invocations": {
+            "COUNT": 7321,
+            "SHUFFLES": 7321
+          }
+        }
+      ],
+      "instrumented_jar_sha256": "82cb4e5a438158c10195142f600f6f4e100306ab79976b2e88062d3d7df6eb11",
+      "maven_log_sha256": "4b889d0a9ccadd9f3d4b6875aa559ccf8fe29eebb930810960d87186e0199e7c",
+      "subject": {
+        "revision": "d58c7ed8d4d3283ee5fbd01a866ce9a10ecf80a8",
+        "test": "StreamsTest#testOfEnumeration",
+        "source": "src/test/java/org/apache/commons/lang3/stream/StreamsTest.java",
+        "sha256": "edbcffac9b1c3b678b9a35bcaa8bc1789a4fbc0d4b53382061a3988459cbb3bc"
+      },
+      "source_unchanged": true
+    },
+    "commons-io": {
+      "command": {
+        "command": [
+          "/misc/scratch/hkp423/testing-tools/apache-maven-3.9.9/bin/mvn",
+          "-o",
+          "-B",
+          "-Dmaven.repo.local=/misc/scratch/hkp423/testing-tools/maven-repository",
+          "-Dtest=IOBinaryOperatorStreamTest#testReduce",
+          "-Drat.skip=true",
+          "-Dsurefire.rerunFailingTestsCount=0",
+          "-DnondexRuns=3",
+          "-DnondexRunsWithoutShuffling=1",
+          "-DnondexLogging=FINE",
+          "edu.illinois:nondex-maven-plugin:2.2.5-SNAPSHOT:nondex"
+        ],
+        "cwd": "/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io",
+        "java_home": "/usr/lib/jvm/java-11-temurin-jdk",
+        "cleared_environment": [
+          "JDK_JAVA_OPTIONS",
+          "JAVA_TOOL_OPTIONS",
+          "_JAVA_OPTIONS",
+          "MAVEN_OPTS",
+          "MAVEN_ARGS"
+        ],
+        "exit_code": 0,
+        "seconds": 41.11,
+        "log": "/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io-offline-verified.log",
+        "log_sha256": "95eaf3f85c67ad34daaf06e70a5e47129386bf01967d14d6aa498e8bc5c1ebb4"
+      },
+      "runs": [
+        {
+          "kind": "instrumented",
+          "seed": 933178,
+          "execution_id": "Kk8UqYFw7jTUz7o64oyZExQm+iwns7HW0oAilztc=",
+          "tests": 1,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "files": {
+            "commons-io/seed-933178-1/2026-11-20T23-04-42_886-jvmRun1.dumpstream": "9f08307956c00abab5099107f969d40940f0136f33da5a2a7326533f95cf105d",
+            "commons-io/seed-933178-1/org.apache.commons.io.function.IOBinaryOperatorStreamTest.txt": "1b41366985c89694dba4ea79a5e9da3d6cbaafbbe61faab08edaaa7def1522b2",
+            "commons-io/seed-933178-1/TEST-org.apache.commons.io.function.IOBinaryOperatorStreamTest.xml": "899f43f0b5f0a369eb90afbe3010a4188e72c8d131d3ee3680886c8cf9d40261",
+            "commons-io/seed-933178-1/config": "eaa91c6c31087cae5f44cd3b8989b7231a8d866ed5c17ece2351b347de5018b7",
+            "commons-io/seed-933178-1/invocations": "61dc9bb1ff762eeeae4c50c7410d559ae822a2a4374cc99409deab1901776ca4",
+            "commons-io/seed-933178-1/failures": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "commons-io/seed-933178-1/test_results.html": "ce41ee79a7755d6f44dbb0d5160bfbca3955fa7856f64e053173073211ff8d35"
+          },
+          "invocations": {
+            "COUNT": 614,
+            "SHUFFLES": 614
+          }
+        },
+        {
+          "kind": "instrumented",
+          "seed": 974622,
+          "execution_id": "QXO6cf5JCps+Q9hM60znie7DQOy0xW4S4z3FBTbxyzA=",
+          "tests": 1,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "files": {
+            "commons-io/seed-974622-1/2026-11-20T23-04-42_886-jvmRun1.dumpstream": "9a383f85579025fcb5f8af91be780db277dbfacc2aeea51c5f3f0d2d4ad68a92",
+            "commons-io/seed-974622-1/org.apache.commons.io.function.IOBinaryOperatorStreamTest.txt": "fcbf362c04af6daf70b36197456ae4b9d65781bdd49e888feceb89c848db0807",
+            "commons-io/seed-974622-1/TEST-org.apache.commons.io.function.IOBinaryOperatorStreamTest.xml": "7f4fbd1c202da9295e78c9cda664c1e19afc082e10d2ffed88bff056b955e293",
+            "commons-io/seed-974622-1/config": "428a0f05f4811812f744b8b5cc8fbc4a9e88cc229c6257b28fa717d97c9d822b",
+            "commons-io/seed-974622-1/invocations": "9581198b75ed8e74b0566f3fdc13556ef8bb22f3decf3976a9d1c943dd10b113",
+            "commons-io/seed-974622-1/failures": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "invocations": {
+            "COUNT": 613,
+            "SHUFFLES": 613
+          }
+        },
+        {
+          "kind": "clean",
+          "seed": 933178,
+          "execution_id": "clean_6+bcnDK9P338jqukmdY5JxRnnuNQ9GPPh9PqSrkJHA=",
+          "tests": 1,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "files": {
+            "commons-io/clean-1/org.apache.commons.io.function.IOBinaryOperatorStreamTest.txt": "d69a803f6e46736fecdc898cb4c36839b435a9539987493e06ad7f440e34f04a",
+            "commons-io/clean-1/TEST-org.apache.commons.io.function.IOBinaryOperatorStreamTest.xml": "24dfa90c80bc945d94321fa708b52dba8c37c03388630e3578fb65752b38c140"
+          }
+        },
+        {
+          "kind": "instrumented",
+          "seed": 1016066,
+          "execution_id": "nWMBJOdSWWL19DcqYeL2gOO1BmIF+L4xfDNbOJHujS0=",
+          "tests": 1,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "files": {
+            "commons-io/seed-1016066-1/2026-11-20T23-04-42_886-jvmRun1.dumpstream": "232affdf9074adc57f9718f8d8c58fcf08c53883dd57267c270623146f7cf82f",
+            "commons-io/seed-1016066-1/org.apache.commons.io.function.IOBinaryOperatorStreamTest.txt": "09fe074c146ac8c66947f5f234b9c7cb6eb6f6598da01a58a3b92edc26c056d5",
+            "commons-io/seed-1016066-1/TEST-org.apache.commons.io.function.IOBinaryOperatorStreamTest.xml": "a3b60689922411800f0ace2b515def918d9eb7e84c219b43c6dc7577784b44ab",
+            "commons-io/seed-1016066-1/config": "7234c9c796a7d25cf34a8ce5e2b6d3d14a4b3cc850b2d6114873df02de14b6d8",
+            "commons-io/seed-1016066-1/invocations": "9581198b75ed8e74b0566f3fdc13556ef8bb22f3decf3976a9d1c943dd10b113",
+            "commons-io/seed-1016066-1/failures": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "invocations": {
+            "COUNT": 613,
+            "SHUFFLES": 613
+          }
+        }
+      ],
+      "instrumented_jar_sha256": "626a9ba360f12d90380c31e220810c9f5762e84d86226f2b64cc2b3e08af805e",
+      "maven_log_sha256": "95eaf3f85c67ad34daaf06e70a5e47129386bf01967d14d6aa498e8bc5c1ebb4",
+      "subject": {
+        "revision": "0c640aef74c65292ef313596f58c48b1b121e1e7",
+        "test": "IOBinaryOperatorStreamTest#testReduce",
+        "source": "src/test/java/org/apache/commons/io/function/IOBinaryOperatorStreamTest.java",
+        "sha256": "480c2a06bcc42c2b35b70680b90e9087888e344b2cd0ad2c4fe220091e476196"
+      },
+      "source_unchanged": true
+    },
+    "positive-control": {
+      "command": {
+        "command": [
+          "/misc/scratch/hkp423/testing-tools/apache-maven-3.9.9/bin/mvn",
+          "-o",
+          "-B",
+          "-Dmaven.repo.local=/misc/scratch/hkp423/testing-tools/maven-repository",
+          "-Dtest=AppTest#testHashSet",
+          "-Drat.skip=true",
+          "-Dsurefire.rerunFailingTestsCount=0",
+          "-DnondexRuns=3",
+          "-DnondexRunsWithoutShuffling=1",
+          "-DnondexLogging=FINE",
+          "edu.illinois:nondex-maven-plugin:2.2.5-SNAPSHOT:nondex"
+        ],
+        "cwd": "/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/positive-control",
+        "java_home": "/usr/lib/jvm/java-11-temurin-jdk",
+        "cleared_environment": [
+          "JDK_JAVA_OPTIONS",
+          "JAVA_TOOL_OPTIONS",
+          "_JAVA_OPTIONS",
+          "MAVEN_OPTS",
+          "MAVEN_ARGS"
+        ],
+        "exit_code": 1,
+        "seconds": 13.96,
+        "log": "/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/positive-control-offline-verified.log",
+        "log_sha256": "7e89508b8e2c11b4be78a20b517e0423fd976a5ef8dcb1dcb0ee511fb685d553"
+      },
+      "runs": [
+        {
+          "kind": "instrumented",
+          "seed": 974622,
+          "execution_id": "S3lLPhNbmFtAoehehTLjI5F8Q1HWEPppKBUjRqObjzc=",
+          "tests": 1,
+          "failures": 1,
+          "errors": 0,
+          "skipped": 0,
+          "files": {
+            "positive-control/seed-974622-1/2026-11-20T23-04-27_755.dumpstream": "e81b0277ef7093d39270c2e5a85bb2b50bafb0e47874082b324b73e8aa4a4478",
+            "positive-control/seed-974622-1/2026-11-20T23-04-27_755-jvmRun1.dumpstream": "068530fa9b14d225a992ed4feaa6595a55d5d29540464035165a683f9f5ebeb9",
+            "positive-control/seed-974622-1/edu.illinois.nondex.it.AppTest.txt": "1847d5ace99cef05b406514dcafd7c62a4d73794d68435f271ad6c22292c78d0",
+            "positive-control/seed-974622-1/TEST-edu.illinois.nondex.it.AppTest.xml": "ee40ceb7c2dc3e3c4a408fbfd6d1507b950b72afa077022c3195b61de62bbf52",
+            "positive-control/seed-974622-1/config": "5b74795cb350b2678b9d4cd200a29ffd35ab44bff6ab741d4c0eaee8ce7d6da0",
+            "positive-control/seed-974622-1/invocations": "f1b191a8d1dea7c0dbcd759594a41b8c10af5caa73dca22c4008c52e29e3c7d0",
+            "positive-control/seed-974622-1/failures": "11f70d5cc8086b34e4571d5b96bdb38c8f541203df5192b03517c92e628a4bb9"
+          },
+          "invocations": {
+            "COUNT": 88,
+            "SHUFFLES": 88
+          }
+        },
+        {
+          "kind": "instrumented",
+          "seed": 933178,
+          "execution_id": "VkQG93Q1SndgheDDGkokmGrant0Z7iWwToufFLQUPM=",
+          "tests": 1,
+          "failures": 1,
+          "errors": 0,
+          "skipped": 0,
+          "files": {
+            "positive-control/seed-933178-1/2026-11-20T23-04-27_755.dumpstream": "5b83f0db12b40fc2e4d2440a2bc02bfe8a80682deade2c65eb24bd8ae5f68c90",
+            "positive-control/seed-933178-1/2026-11-20T23-04-27_755-jvmRun1.dumpstream": "8dfa3848cffdf669d225da8a91afc0d8e0f72ae1017c679acae05d10b2445cf2",
+            "positive-control/seed-933178-1/edu.illinois.nondex.it.AppTest.txt": "849bad3f3c8ed1658f07dab552634807baec962f4b72e10bc6dc08a1a7c43cb6",
+            "positive-control/seed-933178-1/TEST-edu.illinois.nondex.it.AppTest.xml": "e256089b05ede93fad2a572d656cb91171f524552c5b0c77a6ba9b6e51f9e49b",
+            "positive-control/seed-933178-1/config": "2bb551fa1f6c79edcaf3eb21e02f7fe7ddb0dd74214c08ba9bc73949351fe600",
+            "positive-control/seed-933178-1/invocations": "f1b191a8d1dea7c0dbcd759594a41b8c10af5caa73dca22c4008c52e29e3c7d0",
+            "positive-control/seed-933178-1/failures": "11f70d5cc8086b34e4571d5b96bdb38c8f541203df5192b03517c92e628a4bb9",
+            "positive-control/seed-933178-1/test_results.html": "9a59aeee02e3ea6768bf08a4042c1a600717fbf77e3b26bc400b16556893991b"
+          },
+          "invocations": {
+            "COUNT": 88,
+            "SHUFFLES": 88
+          }
+        },
+        {
+          "kind": "clean",
+          "seed": 933178,
+          "execution_id": "clean_5u7eI6hys2JhRYMmJgrp06StAUidkgBemyAUUkY2S7Y=",
+          "tests": 1,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "files": {
+            "positive-control/clean-1/2026-11-20T23-04-27_755.dumpstream": "e5aa25d23e0574c0f6dbdfbfecb85f80e2ede0a3af2ac01c02d3ddc9a6f7a51f",
+            "positive-control/clean-1/edu.illinois.nondex.it.AppTest.txt": "b7cbefd13b5160915b0fb75e8c134eae56a90083d7bb87b40ebe51b1f3be3418",
+            "positive-control/clean-1/TEST-edu.illinois.nondex.it.AppTest.xml": "07473587f85ef6f901f64d4a440a40376869a8280983b48f9de32188c4f4806d"
+          }
+        },
+        {
+          "kind": "instrumented",
+          "seed": 1016066,
+          "execution_id": "y7o5gEDEBqL09QrHS5m1tglDTzQV83Pib4y9VrBvAiY=",
+          "tests": 1,
+          "failures": 1,
+          "errors": 0,
+          "skipped": 0,
+          "files": {
+            "positive-control/seed-1016066-1/2026-11-20T23-04-27_755.dumpstream": "cc6b5fb3d2a7d5f98d04ee1ee88e5c50768fe573d85ce3240fb460fd98225391",
+            "positive-control/seed-1016066-1/2026-11-20T23-04-27_755-jvmRun1.dumpstream": "bae305c2062a7638c0a5792a22ad4ef2860c04c224f4d76a93135c29c2711fe4",
+            "positive-control/seed-1016066-1/edu.illinois.nondex.it.AppTest.txt": "16373cfa91749e31f01ad8546e7af47c53fbdb66dbc82d2292115e9649c97183",
+            "positive-control/seed-1016066-1/TEST-edu.illinois.nondex.it.AppTest.xml": "0880c129c08487eff29e115c80b98ac3cf906cba2203813d04c5151132c034da",
+            "positive-control/seed-1016066-1/config": "b03644d6b867b506a0901b0aef3b5fa06f20cd58fa49563347205ba09f0cb9b9",
+            "positive-control/seed-1016066-1/invocations": "f1b191a8d1dea7c0dbcd759594a41b8c10af5caa73dca22c4008c52e29e3c7d0",
+            "positive-control/seed-1016066-1/failures": "11f70d5cc8086b34e4571d5b96bdb38c8f541203df5192b03517c92e628a4bb9"
+          },
+          "invocations": {
+            "COUNT": 88,
+            "SHUFFLES": 88
+          }
+        }
+      ],
+      "instrumented_jar_sha256": "3c2f4f33264ae638c64e33a1845ba295db8d1e24567abac3030baf6480e46297",
+      "maven_log_sha256": "7e89508b8e2c11b4be78a20b517e0423fd976a5ef8dcb1dcb0ee511fb685d553"
+    }
+  },
+  "notes": [
+    "Subject passes alone do not establish absence of API support; consult NonDex.wiki/SUPPORTED-APIS.md for the independent path analysis.",
+    "Commons Lang has two Surefire configurations and produces two clean plus six instrumented executions.",
+    "Initial explicit Maven seed-property attempts were excluded because the property overrode subsequent per-JVM seeds."
+  ],
+  "installed_artifacts_sha256": {
+    "nondex-common": "8ca02d4e75ae5df05b75ef46942693e5d804109432966fe371846fce0502b0b8",
+    "nondex-instrumentation": "f2a06c75c69c402970de0cc4872a621714c214c7a2abf0f761a82705221123a0",
+    "nondex-annotations": "8155f7c755f7605e2a25959c10dc565481015faddde115844f6139b205e9b6d7",
+    "nondex-maven-plugin": "988e69ff04e4399c188ac2ab2e942f581901991af4e9a2dc5223641992d3501e"
+  },
+  "nondex_tracked_status": ""
+}

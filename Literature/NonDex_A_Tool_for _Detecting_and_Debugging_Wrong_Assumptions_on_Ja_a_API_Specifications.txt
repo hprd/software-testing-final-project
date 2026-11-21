@@ -1,0 +1,300 @@
+                  NonDex: A Tool for Detecting and Debugging
+                 Wrong Assumptions on Java API Specifications
+
+                Alex Gyori, Ben Lambeth, August Shi, Owolabi Legunsen, and Darko Marinov
+                              Department of Computer Science, University of Illinois at Urbana-Champaign
+                                                      Urbana, IL 61801, USA
+                                    {gyori, blambet2, awshi2, legunse2, marinov}@illinois.edu
+
+
+ABSTRACT                                                                                            if each implementation is itself deterministic and always re-
+We present NonDex, a tool for detecting and debugging                                               turns the same result for the same input. We refer to an API
+wrong assumptions on Java APIs. Some APIs have underde-                                             with such a specification as an underdetermined API. An
+termined specifications to allow implementations to achieve                                         example underdetermined API is the iterator() method in
+different goals, e.g., to optimize performance. When clients                                        java.util.HashSet, whose Javadoc specification states, “The
+of such APIs assume stronger-than-specified guarantees, the                                         elements are returned in no particular order” [4]. Similarly,
+resulting client code can fail. For example, HashSet’s iter-                                        libraries for generating JSON typically do not guarantee any
+ation order is underdetermined, and code assuming some                                              order for elements in a JSON document [7]. Having such
+implementation-specific iteration order can fail. NonDex                                            underdetermined specifications is good because it gives im-
+helps to proactively detect and debug such wrong assump-                                            plementers of the underdetermined APIs the flexibility to
+tions. NonDex performs detection by randomly exploring                                              optimize various implementations of the API for different
+different behaviors of underdetermined APIs during test ex-                                         goals, e.g., they may optimize performance in different ways.
+ecution. When a test fails during exploration, NonDex                                               However, it is important to precisely state underdetermined
+searches for the invocation instance of the API that caused                                         specifications in the API documentation to express all ex-
+the failure. NonDex is open source, well-integrated with                                            pected behaviors of all API’s implementations.
+Maven, and also runs from the command line. During our                                                 Unfortunately, even when underdetermined APIs have pre-
+experiments with the NonDex Maven plugin, we detected                                               cise documentation, developers do make wrong assumptions
+21 new bugs in eight Java projects from GitHub, and, using                                          about the underdetermined APIs. While such APIs could
+the debugging feature of NonDex, we identified the un-                                              allow even non-deterministic implementations, each typical
+derlying wrong assumptions for these 21 new bugs and 54                                             implementation is deterministic, i.e., two runs of the same
+previously detected bugs. We opened 13 pull requests; de-                                           implementation (on the same platform) give the same result
+velopers already accepted 12, and one project changed the                                           for the same input. For example, two runs of a program
+continuous-integration configuration to run NonDex on ev-                                           that iterates over a HashSet may return the elements in the
+ery push. The demo video is at: https://youtu.be/h3a9ONkC59c.                                       same order. However, such deterministic implementations
+                                                                                                    can mislead the developers of API clients, who may assume
+                                                                                                    that all API implementations are guaranteed to behave in
+CCS Concepts                                                                                        the same deterministic manner. For HashSet, while one Java
+•Software defect analysis → Software testing and de-                                                version could provide a deterministic iteration order, differ-
+bugging;                                                                                            ent Java versions provide different iteration orders (e.g., the
+                                                                                                    order in Java 7 differs from the order in Java 8). If clients
+Keywords                                                                                            of an underdetermined API assume stronger-than-specified
+                                                                                                    guarantees, the resulting code can fail when the API im-
+NonDex, flaky tests, underdetermined API                                                            plementation changes, albeit the specification remains the
+                                                                                                    same. A well-known example of such wrong assumptions is
+1.     INTRODUCTION                                                                                 that many projects with JUnit tests relied on a particular
+  Some commonly used Java APIs have underdetermined                                                 order in which tests are executed; when these projects up-
+specifications. Following Liskov [9], we say that a specifi-                                        graded from Java 6 to Java 7, many tests failed because the
+cation is underdetermined if it allows multiple implemen-                                           order changed from Java 6 to Java 7 [8], albeit the specifi-
+tations to return different results for the same input, even                                        cation of the order did not change.
+                                                                                                       The state-of-the-practice in detecting the negative effects
+                                                                                                    of wrong assumptions on underdetermined APIs is rather
+Permission to make digital or hard copies of all or part of this work for personal or               reactive. Most developers discover such assumptions only af-
+classroom use is granted without fee provided that copies are not made or distributed               ter failures happen (e.g., after platforms are changed). Un-
+for profit or commercial advantage and that copies bear this notice and the full citation
+on the first page. Copyrights for components of this work owned by others than ACM                  expected behaviors can also manifest as so called “flaky”
+must be honored. Abstracting with credit is permitted. To copy otherwise, or republish,             tests [10], which can pass or fail seemingly without any
+to post on servers or to redistribute to lists, requires prior specific permission and/or a
+fee. Request permissions from Permissions@acm.org.                                                  changes to the code. A flaky test that assumes a certain
+FSE’16, November 13–18, 2016, Seattle, WA, USA                                                      behavior, which is not guaranteed by the API specification,
+ c 2016 ACM. 978-1-4503-4218-6/16/11...$15.00                                                       can fail when the API implementation changes. The devel-
+http://dx.doi.org/10.1145/2950290.2983932
+
+
+
+
+                                                                                              993
+opers of several projects followed a reactive practice in the             The NonDex Maven plugin provides three goals: non-
+past by fixing their own code as a result of test failures due          dex:nondex runs all tests while exploring different random
+to wrong assumptions [3, 6, 8, 11, 12, 17].                             behaviors of 41 underdetermined APIs from the standard
+   We propose NonDex, a tool to proactively detect wrong                Java library and reports failing tests; nondex:debug reruns
+assumptions on underdetermined APIs by randomly explor-                 test(s) that failed during exploration to locate the invoca-
+ing different allowed behaviors during test execution. For              tion(s) of an underdetermined API that made the wrong
+HashSet, for example, with its underdetermined iteration or-            assumption; and nondex:clean deletes the .nondex directo-
+der, NonDex randomly explores different iteration orders,               ries where NonDex stores auxiliary files during exploration
+which can proactively detect failures of tests that iterate             and debugging. The NonDex Maven plugin also takes sev-
+over HashSet, either directly in the test code itself or in the         eral optional arguments (with sensible defaults): nondexSeed
+code under test. Once a test fails during exploration, that             is the main seed to use for randomization; nondexRuns is the
+failure demonstrates that the code makes some wrong as-                 number of runs to perform, each with a different starting
+sumption. NonDex also helps in debugging by pinpointing                 seed computed from the main seed; and nondexMode is one
+the location where the assumption is being made; the debug-             of two exploration modes, ONE and FULL, where ONE has more
+ging feature searches for the dynamic invocation of the API             determinism than FULL as described in our prior work [16].
+whose exploration causes the failure. NonDex can be run
+as a stand-alone command-line tool and can thus be run on               2.2      Command-Line Invocation
+any Java-based project, regardless of the build system used.               NonDex can be run from command line. First, the in-
+We additionally provide a NonDex Maven plugin that al-                  strumentation engine should be run once to (i) modify the
+lows easy integration with projects that use the Maven build            code for underdetermined APIs by adding the random ex-
+system. Developers can run NonDex, e.g., during contin-                 ploration code and (ii) package the modified code as a JAR
+uous integration, to check for wrong assumptions on Java                file, say, nondex-rt.jar. Next, the user can run NonDex
+APIs. It is often more cost-effective to proactively detect             on any Java application by adding to the bootclasspath (not
+bugs right when they are introduced rather than reactively,             the regular classpath) the generated nondex-rt.jar and the
+after they manifest.                                                    nondex-common.jar which contains code for configuring Non-
+   This paper makes several contributions to the tool design            Dex and logging its output. The two JAR files are added
+and implementation. We recently published the research                  to the bootclasspath because nondex-rt.jar modifies the be-
+idea of NonDex [16] and evaluated it using a prototype im-              havior of several classes in the standard library, and those
+plementation which modified the OpenJDK JVM and was                     classes must be loaded from the instrumented JAR. The fol-
+not easily portable. The current NonDex tool improves four              lowing example commands will run a class Main using Non-
+aspects: (1) the tool is pure Java and is widely portable due           Dex to randomly explore different allowed behaviors of the
+to a novel instrumentation mechanism, (2) the Maven plu-                underdetermined APIs:
+gin is new and allowed us to scale our experiments, (3) the
+                                                                        #    done once to g en e ra te the i n s t r u m e n t e d JAR file
+debugging feature is also new, and (4) NonDex is now open               $    java - jar nondex - inst rum enta tion . jar nondex - rt . jar
+source on GitHub and is under active development [15].                  #    running some Main a p p l i c a t i o n with NonDex
+While experimenting with the new implementation of Non-                 $    java - Xbootclasspath / p :\
+Dex, we detected 21 new bugs in eight Maven-based Java                         nondex - rt . jar : nondex - common . jar Main
+projects from GitHub. Using the new debugging feature,                    From command line, the user can optionally provide a
+we identified the underlying wrong assumptions for these 21             random seed and a mode (by default FULL) for NonDex.
+new bugs and 54 previously detected bugs. We opened 13
+pull requests, and developers already accepted 12. Further,
+the Checkstyle project, in which we found 5 bugs, integrated            3.      TECHNIQUE AND IMPLEMENTATION
+NonDex into their continuous-integration configuration to                  NonDex has two user-facing phases: (i) detection finds
+run on every push [2]. While trying out NonDex at Google,               tests that pass without NonDex but fail when NonDex
+we learned that Google had previously implemented a simi-               explores different allowed behaviors—such failures indicate
+lar exploration in March 20151 , confirming that the problem            wrong assumption(s) made on underdetermined APIs; and
+addressed by NonDex is important in practice.                           (ii) debugging searches through detected failures to find the
+                                                                        underdetermined APIs on which wrong assumptions were
+                                                                        made and to identify the invocation(s) making such assump-
+2.    USAGE                                                             tions. Currently, NonDex exploration handles 41 underde-
+  We describe how to use NonDex as a Maven plugin [13]                  termined APIs that we manually identified from the follow-
+or from command line.                                                   ing packages java.lang, java.util, java.io, and java.text;
+                                                                        we used 30 of these underdetermined APIs in our earlier
+2.1    Integration with Maven                                           paper [16, Table I]2 .
+  NonDex is most easily integrated in the testing process                  Internally, NonDex consists of four components: (1) the
+via the Maven plugin, available from the Maven Central                  instrumentation engine modifies the API classes in the stan-
+repository [14]. To use NonDex, developers only need to                 dard library to add code for random exploration, (2) the
+add NonDex as a plugin entry to their build file (pom.xml).             runner executes the program on the instrumented library,
+                                                                        (3) the detector reruns the program a specified number of
+1
+  The Google implementation predates our earlier publica-               times to randomly explore different behaviors, and (4) the
+tion [16], but their implementation handles only one API,
+                                                                        2
+has only one mode, does not integrate with Maven, and is                    The publicly released NonDex does not handle the native
+not open source, while NonDex handles 41 APIs, has two                  hashCode, because it did not expose any bugs during our
+modes, integrates with Maven, and is open source.                       experiments and would unnecessarily complicate the tool.
+
+
+
+                                                                  994
+                                                    Detector
+                                                                                                            Test
+                                                                                                           Reports
+             Tests and SUT
+                                                            Debugger
+
+
+                                                              Runner
+
+                                                                                                            Debug
+                                            Instrumentation                                                 Reports
+               rt.jar                                                         nondex-rt.jar
+                                                 Engine
+
+      Figure 1: High-level architecture of the key NonDex components; see Section 3 for the description
+
+
+debugger identifies the API invocation(s) where a wrong as-                Performing instrumentation from scratch on every run is
+sumption was made. Figure 1 shows an architectural over-                unnecessary, so we reuse each previously instrumented class
+view of the NonDex components, and the following subsec-                in subsequent runs, as long as the instrumented class from
+tions describe each component.                                          rt.jar did not change. (The original class does not change
+                                                                        until/unless the user switches to another version of Java.)
+3.1    Instrumentation Engine                                           To decide when to reuse the instrumented classes, NonDex
+   The goal of the instrumentation engine is to modify stan-            stores for each instrumented class the checksum of the class-
+dard Java library classes to allow random exploration. The              file from the rt.jar that was instrumented.
+challenge is to develop instrumentation that can automati-
+cally handle a large number of Java versions. For our original          3.2   Runner
+prototype [16], we manually modified the Java sources of the               The runner is a thin layer of code that enables random
+relevant files, compiled them, and used them in place of the            execution for APIs instrumented by NonDex. On every
+original files. However, this solution was brittle, because the         invocation of an instrumented API, the runner randomly
+tool would often not work unless the exact same Java ver-               chooses one behavior from the behaviors appropriate for that
+sion (e.g., 1.8.0-b132) was used for the run as the version             API. NonDex currently supports two kinds of behaviors:
+for which we manually modified the sources. The reason                  (1) permutation for APIs where order is underdetermined,
+the tool did not work was that some internal parts of the               and (2) extensions for APIs where only lower bounds on ar-
+modified files changed between Java versions, even when the             ray size(s) are specified. The runner takes as inputs (i) a
+signatures of the public APIs we modified did not change.               random seed, which completely determines the choice of be-
+Hence, we developed our current, instrumentation-based so-              haviors, (ii) the mode of exploration—ONE or FULL (the two
+lution that is much more robust, and we have tested it on               modes differ in the kind of wrong assumptions they can de-
+14 different versions of OpenJDK and Oracle’s JDK imple-                tect, as described in detail in our prior work [16]3 ), and
+mentations of Java 8, on Linux, OS X, and Windows.                      (iii) optionally the range of choices to be randomized (which
+   The instrumentation engine takes as input the rt.jar file            is used by debugging).
+containing the classfiles of the standard Java library that
+will be used when running the tests. The instrumentation                3.3   Detector
+engine selects from rt.jar the classfiles corresponding to
+the APIs that should be modified to add random explo-                      The detector first runs all tests once without randomiza-
+ration. For APIs that should be modified and return an                  tion and then calls the NonDex runner a number of times,
+array, our instrumentation simply adds a custom NonDex                  with different random seeds, to rerun all the tests. The de-
+helper method to explore different orders of the returned               tector reports tests that pass without NonDex randomiza-
+array (effectively randomly permuting the array before re-              tion but fail with NonDex randomization; such tests likely4
+turning it). This modification is robust as long as the type            make wrong assumptions on underdetermined APIs. The
+signature of the API does not change. The instrumentation               detector first runs the tests without NonDex because tests
+is much more involved for the (Concurrent)HashMap classes,              that fail on their own are due to some other causes and
+because their iterators are lazy, implemented as private data           should not be reported as failures due to wrong assump-
+structures that change even within the same Java major ver-             tions. After the first run, the detector invokes the instru-
+sion, e.g., the HashMap iterator was implemented using a class          mentation engine to create the instrumented APIs before it
+called Entry until OpenJDK version 1.8.0-b108 [5] and us-               starts running tests with NonDex.
+ing a class called Node since then; we developed customized             3
+instrumenters that can generate appropriate modified code                 We originally evaluated four different modes, but the pub-
+                                                                        licly released NonDex offers only two modes, ONE and FULL,
+based on whether rt.jar uses Entry or Node. This modifica-              because they are the easiest to understand and correspond
+tion would need to change in the future if the standard Java            to the two extremes of non-determinism.
+library implements HashMap using a third approach. We used              4
+                                                                          The tests may be flaky [10] due to other reasons and fail
+ASM [1] to implement all classfile manipulation.                        irrespective of NonDex.
+
+
+
+                                                                  995
+     The detector stores information about failing tests in a          three in nutzam/nutz, and one in each of alibaba/druid, buk-
+.nondex directory which also contains information about each           kit/bukkit, jankotek/mapdb, pedrovgs.algorithms/algorithms,
+execution, without and with NonDex, as well as the configu-            and perwendel/spark).
+ration used for test executions, the seed needed to reproduce
+the failure and the number of invocations of the runner’s              4.2    Debugging Failures
+choice generator; this number helps the debugging phase to                We further applied the automated NonDex debugging on
+search for the invocation(s) that caused the failure(s).               these 21 newly detected and 54 previously detected failing
+                                                                       tests to determine the root cause of each failure. The number
+3.4      Debugger                                                      of underdetermined API invocations that NonDex random-
+   When a test fails with NonDex, the test may invoke sev-             ized per failure ranged from 5 to 9,710. The results showed
+eral underdetermined APIs, e.g., it may iterate over several           that our simple binary-search debugging works extremely
+HashSet objects. Many of these invocations are correct, mak-           well for these cases—for 74 out of 75 failures, NonDex min-
+ing no wrong assumptions, so manually locating the invoca-             imized the cause down to only one invocation; the remaining
+tion(s) that caused the detected failure can be tedious. The           failure is for a test written in JUnit 3 for which the Surefire
+debugging phase automatically identifies such invocation(s).           Maven plugin (used by NonDex to run tests) cannot easily
+   To locate such invocation(s), NonDex uses a binary search           run single test methods. We also counted the number of
+that keeps track of a range of API invocations and selectively         wrong assumptions on various APIs supported by NonDex;
+enables exploration for half of them. Even for disabled in-            the invocations causing the failures were getDeclaredFields
+vocations, our search advances the random-number genera-               (41 cases), HashMap iteration (32 cases), and getGenericEx-
+tor, i.e., NonDex still calls the random-number generator              ceptionTypes (1 case). Because binary search is simple, we
+to shuffle the order of elements, but NonDex returns the               were surprised that it sufficed to identify only one invoca-
+original, not the shuffled, order. (Without this control, the          tion in all but one of the cases we tried. In the future, we
+search could get different behaviors for the same random               plan to explore more sophisticated search strategies, such as
+seed, making it harder to reproduce the failure.) Debug-               delta debugging [18], and automated fixing.
+ging continues until a single invocation is identified, or the
+remaining range cannot be further halved. If a single invoca-          4.3    Case Studies and Adoption
+tion cannot be identified from running just one test method,             We opened 13 pull requests (PRs) for failures detected
+NonDex re-starts debugging for the entire test class, and              by NonDex, reporting the issue and providing a fix, in four
+if again a single invocation cannot be identified, NonDex              open-source projects: five in alibaba/fastjson, five in check-
+re-starts debugging for the entire test suite. Debugging is            style/checkstyle, two in scribejava/scribejava, and one in
+repeated for each failing test reported by the detector.               square/retrofit. We did not open PRs for all bugs that
+   The debugging phase reports to the user an API that                 NonDex detected because we are not experts in the projects
+causes the detected failure together with the call stack of            and could not easily provide a fix for each bug. All PRs we
+the API’s invocation which further helps in localizing the             opened were accepted by developers except one PR in al-
+context in which the wrong assumption was made. In our                 ibaba/fastjson. One of the developers of Checkstyle was
+prior work [16], we performed all debugging manually; after            quite pleased with the PRs we opened, asked us about the
+implementing automated debugging, we found that we had                 tool we used to detect the issues, and recommended that
+made an error in manually identifying the root cause of one            we integrate NonDex in their continuous integration; we
+failure, which shows that the automated debugging helps to             indeed integrated NonDex in both pom.xml and .travis.yml
+more reliably identify the root causes.                                for Checkstyle [2]. Furthermore, we are piloting the use of
+                                                                       NonDex in a software testing course to educate students
+4.     EXPERIMENTS                                                     about wrong assumptions on underdetermined APIs. Stu-
+  Our initial NonDex prototype [16] detected dozens of                 dents are using NonDex to find issues both in their own
+tests in open-source code with wrong assumptions on under-             code and in open-source projects they are familiar with.
+determined APIs. We experimented with our new NonDex                   Overall, we found NonDex to be robust enough for use both
+tool by adding it to pom.xml for several open-source projects,         in real-world projects and in teaching.
+running nondex:nondex (which detected 21 new bugs), and
+running nondex:debug (for the 21 new bugs and 54 old bugs).            5.    CONCLUSIONS
+4.1      Detecting Failures                                              We presented the design and implementation of the Non-
+                                                                       Dex tool we developed to help in detecting and debugging
+   To test the NonDex tool in general and the NonDex                   wrong assumptions on underdetermined APIs in Java. Non-
+Maven plugin in particular, we integrated NonDex in the                Dex is open source, integrates well with Maven, and can be
+pom.xml files of several Maven-based projects from GitHub.
+                                                                       also run from the command line. Using NonDex, we de-
+Our goal was to test whether NonDex works with these                   tected and debugged several failures in open-source projects.
+projects “out-of-the-box” and not necessarily to detect any
+bugs. We found that integrating NonDex into these projects
+was indeed easy, and that by just adding a few lines to                6.    ACKNOWLEDGMENTS
+pom.xml, we could run NonDex on all these projects. Non-                 We thank Lamyaa Eloussi, Zach Gleason, Farah Hariri,
+Dex worked well with projects that use different testing               John Micco, Timothy Tunnell, and Tifany Yung for pro-
+frameworks (e.g., JUnit 4, JUnit 3, and TestNG) and even               viding feedback and suggesting improvements to the Non-
+various test runners (e.g., parameterized tests). Along the            Dex tool. This research was partially supported by the NSF
+way, we also detected 21 new failing tests in eight projects           Grant Nos. CCF-1409423, CCF-1421503, and CCF-1439957.
+(eight in alibaba/fastjason, five in checkstyle/checkstyle,            We also gratefully acknowledge the Google Faculty Award.
+
+
+
+                                                                 996
+7.   REFERENCES                                                      [10] Q. Luo, F. Hariri, L. Eloussi, and D. Marinov. An
+ [1] ASM: A code manipulation tool to implement                           empirical analysis of flaky tests. In FSE, 2014.
+     adaptable systems. In Adaptable and extensible                  [11] Maintaining the order of JUnit3 tests with JDK 1.7.
+     component systems, Grenoble, France, Nov. 2002.                      http://www.coderanch.com/t/600985/Testing/
+ [2] Checkstyle pull request integrating NonDex.                          Maintaining-order-JUnit-tests-JDK.
+     https://github.com/checkstyle/checkstyle/pull/3393.             [12] all and sundry: JUnit test method ordering.
+ [3] Fix internal data ordering. https://github.com/                      http://www.java-allandsundry.com/2013/01/
+     geosolutions-it/geoserver-manager/commit/5447c06.                    junit-test-method-ordering.html.
+ [4] HashSet Javadoc. https://docs.oracle.com/javase/8/              [13] Maven. https://maven.apache.org/.
+     docs/api/java/util/HashSet.html.                                [14] Maven Central. https://repo1.maven.org/maven2/
+ [5] Improvements to HashMap/LinkedHashMap use of                         edu/illinois/nondex-maven-plugin/.
+     bins/buckets and trees (red/black), Sept. 2013. http://         [15] NonDex Source Code.
+     hg.openjdk.java.net/jdk8/jdk8/jdk/rev/d62c911aebbb.                  https://github.com/TestingResearchIllinois/NonDex.
+ [6] JUnit 4.11 - What’s new? Test execution order.                  [16] A. Shi, A. Gyori, O. Legunsen, and D. Marinov.
+     http://randomallsorts.blogspot.com/2012/12/                          Detecting assumptions on deterministic
+     junit-411-whats-new-test-execution-order.html.                       implementations of non-deterministic specifications. In
+ [7] JSON. http://www.json.org/.                                          ICST, 2016.
+ [8] JUnit and Java 7. http://intellijava.blogspot.com/              [17] Must Use LinkedHashMap and LinkedList...
+     2012/05/junit-and-java-7.html.                                       https://github.com/EsotericSoftware/yamlbeans/
+ [9] B. Liskov and J. Guttag. Program Development in                      commit/1517822.
+     Java: Abstraction, Specification, and Object-Oriented           [18] A. Zeller and R. Hildebrandt. Simplifying and
+     Design. Addison-Wesley, 2000.                                        isolating failure-inducing input. TSE, 28(2), 2002.
+
+
+
+
+                                                               997
+

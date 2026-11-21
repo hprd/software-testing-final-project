@@ -1,0 +1,471 @@
+{
+  "complete": true,
+  "queue": "/misc/scratch/hkp423/software-testing-final-project/experiments/classifying-nondeterministic-specification/build/run-1/documentation/api-queue.jsonl",
+  "group_count": 21,
+  "call_count": 47,
+  "statuses": {
+    "not_selected": 14,
+    "error": 1,
+    "documentation_unavailable": 6
+  },
+  "groups": [
+    {
+      "id": "da9273df1d1fa5703733",
+      "owner": "java.lang.String",
+      "signature": "isEmpty()",
+      "kind": "method_reference",
+      "call_count": 2,
+      "sample_sites": [
+        {
+          "file": "src/test/java/org/apache/commons/lang3/stream/StreamsTest.java",
+          "line": 245,
+          "expression": "String::isEmpty"
+        },
+        {
+          "file": "src/test/java/org/apache/commons/lang3/stream/StreamsTest.java",
+          "line": 247,
+          "expression": "String::isEmpty"
+        }
+      ],
+      "documentation_status": "pending_review",
+      "status": "not_selected"
+    },
+    {
+      "id": "f16e0aca5526e4cb88f4",
+      "owner": "java.util.Arrays",
+      "signature": "<T>asList(T...)",
+      "kind": "method_invocation",
+      "call_count": 1,
+      "sample_sites": [
+        {
+          "file": "src/test/java/org/apache/commons/lang3/stream/StreamsTest.java",
+          "line": 246,
+          "expression": "Arrays.asList(\"OneOne\", \"TwoTwo\")"
+        }
+      ],
+      "documentation_status": "pending_review",
+      "status": "not_selected"
+    },
+    {
+      "id": "7b7483375fd99bad459e",
+      "owner": "java.util.Hashtable",
+      "signature": "Hashtable()",
+      "kind": "constructor",
+      "call_count": 2,
+      "sample_sites": [
+        {
+          "file": "src/test/java/org/apache/commons/lang3/stream/StreamsTest.java",
+          "line": 235,
+          "expression": "new Hashtable<>()"
+        },
+        {
+          "file": "src/test/java/org/apache/commons/lang3/stream/StreamsTest.java",
+          "line": 247,
+          "expression": "new Hashtable<String, Object>()"
+        }
+      ],
+      "documentation_status": "pending_review",
+      "status": "not_selected"
+    },
+    {
+      "id": "b214684e23dd4a25064d",
+      "owner": "java.util.Hashtable",
+      "signature": "elements()",
+      "kind": "method_invocation",
+      "call_count": 3,
+      "sample_sites": [
+        {
+          "file": "src/test/java/org/apache/commons/lang3/stream/StreamsTest.java",
+          "line": 236,
+          "expression": "table.elements()"
+        },
+        {
+          "file": "src/test/java/org/apache/commons/lang3/stream/StreamsTest.java",
+          "line": 238,
+          "expression": "table.elements()"
+        },
+        {
+          "file": "src/test/java/org/apache/commons/lang3/stream/StreamsTest.java",
+          "line": 240,
+          "expression": "table.elements()"
+        }
+      ],
+      "documentation_status": "pending_review",
+      "status": "not_selected"
+    },
+    {
+      "id": "336b1c6c68b4b8494fa7",
+      "owner": "java.util.Hashtable",
+      "signature": "keys()",
+      "kind": "method_invocation",
+      "call_count": 4,
+      "sample_sites": [
+        {
+          "file": "src/test/java/org/apache/commons/lang3/stream/StreamsTest.java",
+          "line": 241,
+          "expression": "table.keys()"
+        },
+        {
+          "file": "src/test/java/org/apache/commons/lang3/stream/StreamsTest.java",
+          "line": 245,
+          "expression": "table.keys()"
+        },
+        {
+          "file": "src/test/java/org/apache/commons/lang3/stream/StreamsTest.java",
+          "line": 246,
+          "expression": "table.keys()"
+        },
+        {
+          "file": "src/test/java/org/apache/commons/lang3/stream/StreamsTest.java",
+          "line": 247,
+          "expression": "new Hashtable<String, Object>().keys()"
+        }
+      ],
+      "documentation_status": "pending_review",
+      "status": "error",
+      "review": "/misc/scratch/hkp423/software-testing-final-project/experiments/classifying-nondeterministic-specification/build/run-1/pipeline/reviews/4071c0a03a28e9a3cc9fd981.json"
+    },
+    {
+      "id": "babcd1f95446bc17705b",
+      "owner": "java.util.Hashtable",
+      "signature": "put(K,V)",
+      "kind": "method_invocation",
+      "call_count": 2,
+      "sample_sites": [
+        {
+          "file": "src/test/java/org/apache/commons/lang3/stream/StreamsTest.java",
+          "line": 237,
+          "expression": "table.put(\"One\", 1)"
+        },
+        {
+          "file": "src/test/java/org/apache/commons/lang3/stream/StreamsTest.java",
+          "line": 239,
+          "expression": "table.put(\"Two\", 2)"
+        }
+      ],
+      "documentation_status": "pending_review",
+      "status": "not_selected"
+    },
+    {
+      "id": "a3c8cc32e63a585811e7",
+      "owner": "java.util.List",
+      "signature": "contains(java.lang.Object)",
+      "kind": "method_invocation",
+      "call_count": 2,
+      "sample_sites": [
+        {
+          "file": "src/test/java/org/apache/commons/lang3/stream/StreamsTest.java",
+          "line": 242,
+          "expression": "collect.contains(\"One\")"
+        },
+        {
+          "file": "src/test/java/org/apache/commons/lang3/stream/StreamsTest.java",
+          "line": 243,
+          "expression": "collect.contains(\"Two\")"
+        }
+      ],
+      "documentation_status": "pending_review",
+      "status": "not_selected"
+    },
+    {
+      "id": "8b85e694ffc0ee3bcab4",
+      "owner": "java.util.List",
+      "signature": "size()",
+      "kind": "method_invocation",
+      "call_count": 1,
+      "sample_sites": [
+        {
+          "file": "src/test/java/org/apache/commons/lang3/stream/StreamsTest.java",
+          "line": 244,
+          "expression": "collect.size()"
+        }
+      ],
+      "documentation_status": "pending_review",
+      "status": "not_selected"
+    },
+    {
+      "id": "08f3b4e323784d882cf1",
+      "owner": "java.util.Optional",
+      "signature": "isPresent()",
+      "kind": "method_invocation",
+      "call_count": 2,
+      "sample_sites": [
+        {
+          "file": "src/test/java/org/apache/commons/lang3/stream/StreamsTest.java",
+          "line": 245,
+          "expression": "Streams.of(table.keys()).filter(String::isEmpty).findFirst().isPresent()"
+        },
+        {
+          "file": "src/test/java/org/apache/commons/lang3/stream/StreamsTest.java",
+          "line": 247,
+          "expression": "Streams.of(new Hashtable<String, Object>().keys()).filter(String::isEmpty).findFirst().isPresent()"
+        }
+      ],
+      "documentation_status": "pending_review",
+      "status": "not_selected"
+    },
+    {
+      "id": "089907db4f84198a7526",
+      "owner": "java.util.stream.Collectors",
+      "signature": "<T>toList()",
+      "kind": "method_invocation",
+      "call_count": 2,
+      "sample_sites": [
+        {
+          "file": "src/test/java/org/apache/commons/lang3/stream/StreamsTest.java",
+          "line": 241,
+          "expression": "Collectors.toList()"
+        },
+        {
+          "file": "src/test/java/org/apache/commons/lang3/stream/StreamsTest.java",
+          "line": 246,
+          "expression": "Collectors.toList()"
+        }
+      ],
+      "documentation_status": "pending_review",
+      "status": "not_selected"
+    },
+    {
+      "id": "5976bfd977aee2257d94",
+      "owner": "java.util.stream.Stream",
+      "signature": "<R,A>collect(java.util.stream.Collector<? super T,A,R>)",
+      "kind": "method_invocation",
+      "call_count": 2,
+      "sample_sites": [
+        {
+          "file": "src/test/java/org/apache/commons/lang3/stream/StreamsTest.java",
+          "line": 241,
+          "expression": "Streams.of(table.keys()).collect(Collectors.toList())"
+        },
+        {
+          "file": "src/test/java/org/apache/commons/lang3/stream/StreamsTest.java",
+          "line": 246,
+          "expression": "Streams.of(table.keys()).map((s)->s + s).collect(Collectors.toList())"
+        }
+      ],
+      "documentation_status": "pending_review",
+      "status": "not_selected"
+    },
+    {
+      "id": "7e2c68c33a35286bc52d",
+      "owner": "java.util.stream.Stream",
+      "signature": "<R>map(java.util.function.Function<? super T,? extends R>)",
+      "kind": "method_invocation",
+      "call_count": 1,
+      "sample_sites": [
+        {
+          "file": "src/test/java/org/apache/commons/lang3/stream/StreamsTest.java",
+          "line": 246,
+          "expression": "Streams.of(table.keys()).map((s)->s + s)"
+        }
+      ],
+      "documentation_status": "pending_review",
+      "status": "not_selected"
+    },
+    {
+      "id": "13c3d64090a47167727c",
+      "owner": "java.util.stream.Stream",
+      "signature": "count()",
+      "kind": "method_invocation",
+      "call_count": 3,
+      "sample_sites": [
+        {
+          "file": "src/test/java/org/apache/commons/lang3/stream/StreamsTest.java",
+          "line": 236,
+          "expression": "Streams.of(table.elements()).count()"
+        },
+        {
+          "file": "src/test/java/org/apache/commons/lang3/stream/StreamsTest.java",
+          "line": 238,
+          "expression": "Streams.of(table.elements()).count()"
+        },
+        {
+          "file": "src/test/java/org/apache/commons/lang3/stream/StreamsTest.java",
+          "line": 240,
+          "expression": "Streams.of(table.elements()).count()"
+        }
+      ],
+      "documentation_status": "pending_review",
+      "status": "not_selected"
+    },
+    {
+      "id": "9ea81b051bd612b29ed1",
+      "owner": "java.util.stream.Stream",
+      "signature": "filter(java.util.function.Predicate<? super T>)",
+      "kind": "method_invocation",
+      "call_count": 2,
+      "sample_sites": [
+        {
+          "file": "src/test/java/org/apache/commons/lang3/stream/StreamsTest.java",
+          "line": 245,
+          "expression": "Streams.of(table.keys()).filter(String::isEmpty)"
+        },
+        {
+          "file": "src/test/java/org/apache/commons/lang3/stream/StreamsTest.java",
+          "line": 247,
+          "expression": "Streams.of(new Hashtable<String, Object>().keys()).filter(String::isEmpty)"
+        }
+      ],
+      "documentation_status": "pending_review",
+      "status": "not_selected"
+    },
+    {
+      "id": "c7e8d2ca6f9479022b0f",
+      "owner": "java.util.stream.Stream",
+      "signature": "findFirst()",
+      "kind": "method_invocation",
+      "call_count": 2,
+      "sample_sites": [
+        {
+          "file": "src/test/java/org/apache/commons/lang3/stream/StreamsTest.java",
+          "line": 245,
+          "expression": "Streams.of(table.keys()).filter(String::isEmpty).findFirst()"
+        },
+        {
+          "file": "src/test/java/org/apache/commons/lang3/stream/StreamsTest.java",
+          "line": 247,
+          "expression": "Streams.of(new Hashtable<String, Object>().keys()).filter(String::isEmpty).findFirst()"
+        }
+      ],
+      "documentation_status": "pending_review",
+      "status": "not_selected"
+    },
+    {
+      "id": "ed6d9af1c7049338cab2",
+      "owner": "org.apache.commons.lang3.stream.Streams",
+      "signature": "<E>of(java.util.Enumeration<E>)",
+      "kind": "method_invocation",
+      "call_count": 7,
+      "sample_sites": [
+        {
+          "file": "src/test/java/org/apache/commons/lang3/stream/StreamsTest.java",
+          "line": 236,
+          "expression": "Streams.of(table.elements())"
+        },
+        {
+          "file": "src/test/java/org/apache/commons/lang3/stream/StreamsTest.java",
+          "line": 238,
+          "expression": "Streams.of(table.elements())"
+        },
+        {
+          "file": "src/test/java/org/apache/commons/lang3/stream/StreamsTest.java",
+          "line": 240,
+          "expression": "Streams.of(table.elements())"
+        },
+        {
+          "file": "src/test/java/org/apache/commons/lang3/stream/StreamsTest.java",
+          "line": 241,
+          "expression": "Streams.of(table.keys())"
+        },
+        {
+          "file": "src/test/java/org/apache/commons/lang3/stream/StreamsTest.java",
+          "line": 245,
+          "expression": "Streams.of(table.keys())"
+        }
+      ],
+      "documentation_status": "documentation_unavailable",
+      "status": "documentation_unavailable"
+    },
+    {
+      "id": "115629874c6ae53f3397",
+      "owner": "org.junit.jupiter.api.Assertions",
+      "signature": "assertEquals(int,int)",
+      "kind": "method_invocation",
+      "call_count": 1,
+      "sample_sites": [
+        {
+          "file": "src/test/java/org/apache/commons/lang3/stream/StreamsTest.java",
+          "line": 244,
+          "expression": "assertEquals(2, collect.size())"
+        }
+      ],
+      "documentation_status": "documentation_unavailable",
+      "status": "documentation_unavailable"
+    },
+    {
+      "id": "0426577ffe58a4285aa7",
+      "owner": "org.junit.jupiter.api.Assertions",
+      "signature": "assertEquals(java.lang.Object,java.lang.Object)",
+      "kind": "method_invocation",
+      "call_count": 1,
+      "sample_sites": [
+        {
+          "file": "src/test/java/org/apache/commons/lang3/stream/StreamsTest.java",
+          "line": 246,
+          "expression": "assertEquals(Arrays.asList(\"OneOne\", \"TwoTwo\"), Streams.of(table.keys()).map((s)->s + s).collect(Collectors.toList()))"
+        }
+      ],
+      "documentation_status": "documentation_unavailable",
+      "status": "documentation_unavailable"
+    },
+    {
+      "id": "25dbbaa3916dd1d7fc52",
+      "owner": "org.junit.jupiter.api.Assertions",
+      "signature": "assertEquals(long,long)",
+      "kind": "method_invocation",
+      "call_count": 3,
+      "sample_sites": [
+        {
+          "file": "src/test/java/org/apache/commons/lang3/stream/StreamsTest.java",
+          "line": 236,
+          "expression": "assertEquals(0, Streams.of(table.elements()).count())"
+        },
+        {
+          "file": "src/test/java/org/apache/commons/lang3/stream/StreamsTest.java",
+          "line": 238,
+          "expression": "assertEquals(1, Streams.of(table.elements()).count())"
+        },
+        {
+          "file": "src/test/java/org/apache/commons/lang3/stream/StreamsTest.java",
+          "line": 240,
+          "expression": "assertEquals(2, Streams.of(table.elements()).count())"
+        }
+      ],
+      "documentation_status": "documentation_unavailable",
+      "status": "documentation_unavailable"
+    },
+    {
+      "id": "6e62b0a59bcd613aec60",
+      "owner": "org.junit.jupiter.api.Assertions",
+      "signature": "assertFalse(boolean)",
+      "kind": "method_invocation",
+      "call_count": 2,
+      "sample_sites": [
+        {
+          "file": "src/test/java/org/apache/commons/lang3/stream/StreamsTest.java",
+          "line": 245,
+          "expression": "assertFalse(Streams.of(table.keys()).filter(String::isEmpty).findFirst().isPresent())"
+        },
+        {
+          "file": "src/test/java/org/apache/commons/lang3/stream/StreamsTest.java",
+          "line": 247,
+          "expression": "assertFalse(Streams.of(new Hashtable<String, Object>().keys()).filter(String::isEmpty).findFirst().isPresent())"
+        }
+      ],
+      "documentation_status": "documentation_unavailable",
+      "status": "documentation_unavailable"
+    },
+    {
+      "id": "d8bbb75c14cfda6c72c6",
+      "owner": "org.junit.jupiter.api.Assertions",
+      "signature": "assertTrue(boolean)",
+      "kind": "method_invocation",
+      "call_count": 2,
+      "sample_sites": [
+        {
+          "file": "src/test/java/org/apache/commons/lang3/stream/StreamsTest.java",
+          "line": 242,
+          "expression": "assertTrue(collect.contains(\"One\"))"
+        },
+        {
+          "file": "src/test/java/org/apache/commons/lang3/stream/StreamsTest.java",
+          "line": 243,
+          "expression": "assertTrue(collect.contains(\"Two\"))"
+        }
+      ],
+      "documentation_status": "documentation_unavailable",
+      "status": "documentation_unavailable"
+    }
+  ],
+  "warning": "Model list review cannot add or remove compiler inventory entries. Contract outputs are proposals requiring human review, not validated findings."
+}

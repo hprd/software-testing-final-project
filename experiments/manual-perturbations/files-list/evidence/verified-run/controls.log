@@ -1,0 +1,17 @@
+yp_bind_client_create_v3: RPC: Unknown host
+yp_bind_client_create_v3: RPC: Unknown host
+FILES_LIST_FIXTURE call=1 action=identity
+FILES_LIST_FIXTURE call=2 action=swap-first-pair
+FILES_LIST_FIXTURE call=3 action=identity
+FILES_LIST_FIRST call=3 path=/tmp/files-list-controls-12226427780884258499/case-1/entry-0
+FILES_LIST_FIXTURE call=4 action=swap-first-pair
+FILES_LIST_FIRST call=4 path=/tmp/files-list-controls-12226427780884258499/case-1/entry-0
+FILES_LIST_FIXTURE call=5 action=identity
+FILES_LIST_FIRST call=5 path=/tmp/files-list-controls-12226427780884258499/case-2/entry-1
+FILES_LIST_FIXTURE call=6 action=swap-first-pair
+FILES_LIST_FIRST call=6 path=/tmp/files-list-controls-12226427780884258499/case-2/entry-0
+FILES_LIST_FIXTURE call=7 action=identity
+FILES_LIST_FIRST call=7 path=/tmp/files-list-controls-12226427780884258499/case-5/entry-4
+FILES_LIST_FIXTURE call=8 action=swap-first-pair
+FILES_LIST_FIRST call=8 path=/tmp/files-list-controls-12226427780884258499/case-5/entry-2
+PASS Files.list controls: lazy construction; bounded read-ahead; close propagation; read exception; empty/singleton/two/five entries; exact permutation; membership; sorted control; unmatched scope; missing-directory exception

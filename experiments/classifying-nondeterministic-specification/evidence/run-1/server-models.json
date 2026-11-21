@@ -1,0 +1,53 @@
+{
+  "models": [
+    {
+      "name": "local-coder",
+      "model": "local-coder",
+      "modified_at": "",
+      "size": "",
+      "digest": "",
+      "type": "model",
+      "description": "",
+      "tags": [
+        ""
+      ],
+      "capabilities": [
+        "completion"
+      ],
+      "parameters": "",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "",
+        "families": [
+          ""
+        ],
+        "parameter_size": "",
+        "quantization_level": ""
+      }
+    }
+  ],
+  "object": "list",
+  "data": [
+    {
+      "id": "local-coder",
+      "aliases": [
+        "local-coder"
+      ],
+      "tags": [],
+      "object": "model",
+      "created": 1795238424,
+      "owned_by": "llamacpp",
+      "meta": {
+        "vocab_type": true,
+        "n_vocab": 151936,
+        "n_ctx": 16384,
+        "n_ctx_train": 262144,
+        "n_embd": 2048,
+        "n_params": 30532122624,
+        "size": 17982447616,
+        "ftype": "Q4_K - Medium"
+      }
+    }
+  ]
+}

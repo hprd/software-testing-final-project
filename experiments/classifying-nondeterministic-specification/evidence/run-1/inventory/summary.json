@@ -1,0 +1,41 @@
+{
+  "project": "/misc/scratch/hkp423/software-testing-final-project/search/sources/commons-lang",
+  "git_revision": "d58c7ed8d4d3283ee5fbd01a866ce9a10ecf80a8",
+  "git_status": "",
+  "java_version": "yp_bind_client_create_v3: RPC: Unknown host\nyp_bind_client_create_v3: RPC: Unknown host\nopenjdk version \"11.0.33\" 2026-10-20\nOpenJDK Runtime Environment Temurin-11.0.33+10 (build 11.0.33+10)\nOpenJDK 64-Bit Server VM Temurin-11.0.33+10 (build 11.0.33+10, mixed mode)",
+  "baseline_command": [
+    "/misc/scratch/hkp423/testing-tools/apache-maven-3.9.9/bin/mvn",
+    "-o",
+    "-B",
+    "-Dmaven.repo.local=/misc/scratch/hkp423/testing-tools/maven-repository",
+    "-Dtest=StreamsTest#testOfEnumeration",
+    "-Drat.skip=true",
+    "-Dsurefire.rerunFailingTestsCount=0",
+    "test"
+  ],
+  "baseline_exit_code": 0,
+  "baseline_log": "baseline.log",
+  "source_roots": [
+    "src/main/java",
+    "src/test/java"
+  ],
+  "source_files_discovered": 636,
+  "source_files_processed": 636,
+  "failed_files": [],
+  "counts": {
+    "calls": 92282,
+    "resolved": 92280,
+    "unresolved": 2
+  },
+  "contracts_assessed": [
+    "java.util.Hashtable.keys()"
+  ],
+  "analysis_limitations": [
+    "Only src/main/java and src/test/java are scanned; other source sets, dependencies, generated sources, bytecode and runtime-only calls are excluded.",
+    "All method invocations, constructors and method references in parsed files are inventoried, including project calls; resolution is best effort, not proof of a correct runtime target.",
+    "Compiler attribution uses all JARs found in the given cache, not the project\u2019s exact build classpath; version conflicts and missing dependencies can produce incorrect or unresolved types.",
+    "Only a narrow direct-assertion rule for Hashtable.keys() is implemented; all other API contracts and cross-statement/interprocedural dataflow are unassessed.",
+    "No LLM, documentation retrieval, automated perturbation, or comprehensive behavioral-dependency analysis is implemented."
+  ],
+  "generated_at_utc": "2026-11-21T05:17:40.864675+00:00"
+}

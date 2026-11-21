@@ -1,0 +1,85 @@
+yp_bind_client_create_v3: RPC: Unknown host
+yp_bind_client_create_v3: RPC: Unknown host
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< commons-io:commons-io >------------------------
+[INFO] Building Apache Commons IO 2.23.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-maven-version) @ commons-io ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-java-version) @ commons-io ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+[INFO] 
+[INFO] --- apache-rat:0.17:check (rat-check) @ commons-io ---
+[INFO] RAT will not execute since it is configured to be skipped via system property 'rat.skip'.
+[INFO] 
+[INFO] --- artifact:3.7.0:check-buildplan (check-buildplan) @ commons-io ---
+[INFO] No known issue in 20 plugins
+[INFO] 
+[INFO] --- build-helper:3.6.2:parse-version (parse-version) @ commons-io ---
+[INFO] 
+[INFO] --- antrun:3.2.0:run (javadoc.resources) @ commons-io ---
+[INFO] Executing tasks
+[INFO]      [copy] Copying 2 files to /misc/scratch/hkp423/software-testing-final-project/experiments/files-list/build/verified-run/subject/target/apidocs/META-INF
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- remote-resources:3.3.0:process (process-resource-bundles) @ commons-io ---
+[INFO] Skipping remote resources execution.
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ commons-io ---
+[INFO] skip non existing resourceDirectory /misc/scratch/hkp423/software-testing-final-project/experiments/files-list/build/verified-run/subject/src/main/resources
+[INFO] Copying 2 resources from . to target/classes/META-INF
+[INFO] 
+[INFO] --- compiler:3.16.0:compile (default-compile) @ commons-io ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 277 source files with javac [debug release 8] to target/classes
+[INFO] /misc/scratch/hkp423/software-testing-final-project/experiments/files-list/build/verified-run/subject/src/main/java/org/apache/commons/io/input/ChecksumInputStream.java: Some input files use or override a deprecated API.
+[INFO] /misc/scratch/hkp423/software-testing-final-project/experiments/files-list/build/verified-run/subject/src/main/java/org/apache/commons/io/input/ChecksumInputStream.java: Recompile with -Xlint:deprecation for details.
+[INFO] /misc/scratch/hkp423/software-testing-final-project/experiments/files-list/build/verified-run/subject/src/main/java/org/apache/commons/io/IOExceptionList.java: Some input files use unchecked or unsafe operations.
+[INFO] /misc/scratch/hkp423/software-testing-final-project/experiments/files-list/build/verified-run/subject/src/main/java/org/apache/commons/io/IOExceptionList.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- bundle:5.1.9:manifest (bundle-manifest) @ commons-io ---
+[INFO] No MANIFEST.MF file found, generating manifest.
+[INFO] Writing manifest: /misc/scratch/hkp423/software-testing-final-project/experiments/files-list/build/verified-run/subject/target/osgi/MANIFEST.MF
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ commons-io ---
+[INFO] Copying 68 resources from src/test/resources to target/test-classes
+[INFO] Copying 2 resources from . to target/test-classes/META-INF
+[INFO] 
+[INFO] --- compiler:3.16.0:testCompile (default-testCompile) @ commons-io ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 306 source files with javac [debug release 8] to target/test-classes
+[INFO] /misc/scratch/hkp423/software-testing-final-project/experiments/files-list/build/verified-run/subject/src/test/java/org/apache/commons/io/input/MessageDigestCalculatingInputStreamTest.java: Some input files use or override a deprecated API.
+[INFO] /misc/scratch/hkp423/software-testing-final-project/experiments/files-list/build/verified-run/subject/src/test/java/org/apache/commons/io/input/MessageDigestCalculatingInputStreamTest.java: Recompile with -Xlint:deprecation for details.
+[INFO] /misc/scratch/hkp423/software-testing-final-project/experiments/files-list/build/verified-run/subject/src/test/java/org/apache/commons/io/comparator/CompositeFileComparatorTest.java: /misc/scratch/hkp423/software-testing-final-project/experiments/files-list/build/verified-run/subject/src/test/java/org/apache/commons/io/comparator/CompositeFileComparatorTest.java uses unchecked or unsafe operations.
+[INFO] /misc/scratch/hkp423/software-testing-final-project/experiments/files-list/build/verified-run/subject/src/test/java/org/apache/commons/io/comparator/CompositeFileComparatorTest.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- jacoco:0.8.16:prepare-agent (prepare-agent) @ commons-io ---
+[INFO] argLine set to -javaagent:/misc/scratch/hkp423/testing-tools/maven-repository/org/jacoco/org.jacoco.agent/0.8.16/org.jacoco.agent-0.8.16-runtime.jar=destfile=/misc/scratch/hkp423/software-testing-final-project/experiments/files-list/build/verified-run/subject/target/jacoco.exec,exclclassloader=jdk.internal.loader.ClassLoaders$PlatformClassLoader
+[INFO] 
+[INFO] --- surefire:3.6.1:test (default-test) @ commons-io ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+yp_bind_client_create_v3: RPC: Unknown host
+yp_bind_client_create_v3: RPC: Unknown host
+yp_bind_client_create_v3: RPC: Unknown host
+yp_bind_client_create_v3: RPC: Unknown host
+[INFO] Running org.apache.commons.io.function.IOBinaryOperatorStreamTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.130 s -- in org.apache.commons.io.function.IOBinaryOperatorStreamTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  39.781 s
+[INFO] Finished at: 2026-11-20T22:04:38-06:00
+[INFO] ------------------------------------------------------------------------

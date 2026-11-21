@@ -1,0 +1,50 @@
+Batch 1, exit=0
+yp_bind_client_create_v3: RPC: Unknown host
+yp_bind_client_create_v3: RPC: Unknown host
+files=80 compiler_errors=0
+
+Batch 2, exit=0
+yp_bind_client_create_v3: RPC: Unknown host
+yp_bind_client_create_v3: RPC: Unknown host
+files=80 compiler_errors=0
+
+Batch 3, exit=0
+yp_bind_client_create_v3: RPC: Unknown host
+yp_bind_client_create_v3: RPC: Unknown host
+files=80 compiler_errors=0
+
+Batch 4, exit=0
+yp_bind_client_create_v3: RPC: Unknown host
+yp_bind_client_create_v3: RPC: Unknown host
+files=80 compiler_errors=0
+
+Batch 5, exit=0
+yp_bind_client_create_v3: RPC: Unknown host
+yp_bind_client_create_v3: RPC: Unknown host
+files=80 compiler_errors=0
+
+Batch 6, exit=0
+yp_bind_client_create_v3: RPC: Unknown host
+yp_bind_client_create_v3: RPC: Unknown host
+files=80 compiler_errors=2
+/misc/scratch/hkp423/software-testing-final-project/search/sources/commons-lang/src/test/java/org/apache/commons/lang3/concurrent/MemoizerComputableTest.java:35: error: cannot find symbol
+        computable = EasyMock.mock(Computable.class);
+                             ^
+  symbol:   method mock(java.lang.Class<org.apache.commons.lang3.concurrent.Computable>)
+  location: class org.easymock.EasyMock
+/misc/scratch/hkp423/software-testing-final-project/search/sources/commons-lang/src/test/java/org/apache/commons/lang3/concurrent/MemoizerFunctionTest.java:38: error: cannot find symbol
+        function = EasyMock.mock(Function.class);
+                           ^
+  symbol:   method mock(java.lang.Class<java.util.function.Function>)
+  location: class org.easymock.EasyMock
+
+Batch 7, exit=0
+yp_bind_client_create_v3: RPC: Unknown host
+yp_bind_client_create_v3: RPC: Unknown host
+files=80 compiler_errors=0
+
+Batch 8, exit=0
+yp_bind_client_create_v3: RPC: Unknown host
+yp_bind_client_create_v3: RPC: Unknown host
+files=76 compiler_errors=0
+

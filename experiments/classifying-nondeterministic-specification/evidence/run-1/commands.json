@@ -1,0 +1,40 @@
+[
+  {
+    "label": "inventory",
+    "command": [
+      "/usr/bin/python3.11",
+      "/misc/scratch/hkp423/software-testing-final-project/Agent/run.py",
+      "/misc/scratch/hkp423/software-testing-final-project/search/sources/commons-lang",
+      "--java-home",
+      "/usr/lib/jvm/java-11-temurin-jdk",
+      "--maven-repo",
+      "/misc/scratch/hkp423/testing-tools/maven-repository",
+      "--output",
+      "/misc/scratch/hkp423/software-testing-final-project/experiments/classifying-nondeterministic-specification/build/run-1/inventory",
+      "--baseline",
+      "/misc/scratch/hkp423/testing-tools/apache-maven-3.9.9/bin/mvn",
+      "-o",
+      "-B",
+      "-Dmaven.repo.local=/misc/scratch/hkp423/testing-tools/maven-repository",
+      "-Dtest=StreamsTest#testOfEnumeration",
+      "-Drat.skip=true",
+      "-Dsurefire.rerunFailingTestsCount=0",
+      "test"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "documentation",
+    "command": [
+      "/usr/bin/python3.11",
+      "/misc/scratch/hkp423/software-testing-final-project/Agent/contracts_deep_dive.py",
+      "--inventory",
+      "/misc/scratch/hkp423/software-testing-final-project/experiments/classifying-nondeterministic-specification/build/run-1/test-calls.jsonl",
+      "--java-home",
+      "/usr/lib/jvm/java-11-temurin-jdk",
+      "--output",
+      "/misc/scratch/hkp423/software-testing-final-project/experiments/classifying-nondeterministic-specification/build/run-1/documentation"
+    ],
+    "exit_code": 0
+  }
+]

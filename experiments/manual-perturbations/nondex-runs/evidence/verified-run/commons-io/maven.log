@@ -1,0 +1,334 @@
+yp_bind_client_create_v3: RPC: Unknown host
+yp_bind_client_create_v3: RPC: Unknown host
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< commons-io:commons-io >------------------------
+[INFO] Building Apache Commons IO 2.23.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> nondex:2.2.5-SNAPSHOT:nondex (default-cli) > test-compile @ commons-io >>>
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-maven-version) @ commons-io ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-java-version) @ commons-io ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+[INFO] 
+[INFO] --- apache-rat:0.17:check (rat-check) @ commons-io ---
+[INFO] RAT will not execute since it is configured to be skipped via system property 'rat.skip'.
+[INFO] 
+[INFO] --- artifact:3.7.0:check-buildplan (check-buildplan) @ commons-io ---
+[INFO] No known issue in 20 plugins
+[INFO] 
+[INFO] --- build-helper:3.6.2:parse-version (parse-version) @ commons-io ---
+[INFO] 
+[INFO] --- antrun:3.2.0:run (javadoc.resources) @ commons-io ---
+[INFO] Executing tasks
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- remote-resources:3.3.0:process (process-resource-bundles) @ commons-io ---
+[INFO] Skipping remote resources execution.
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ commons-io ---
+[INFO] skip non existing resourceDirectory /misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/src/main/resources
+[INFO] Copying 2 resources from . to target/classes/META-INF
+[INFO] 
+[INFO] --- compiler:3.16.0:compile (default-compile) @ commons-io ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- bundle:5.1.9:manifest (bundle-manifest) @ commons-io ---
+[INFO] Writing manifest: /misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/target/osgi/MANIFEST.MF
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ commons-io ---
+[INFO] Copying 68 resources from src/test/resources to target/test-classes
+[INFO] Copying 2 resources from . to target/test-classes/META-INF
+[INFO] 
+[INFO] --- compiler:3.16.0:testCompile (default-testCompile) @ commons-io ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] <<< nondex:2.2.5-SNAPSHOT:nondex (default-cli) < test-compile @ commons-io <<<
+[INFO] 
+[INFO] 
+[INFO] --- nondex:2.2.5-SNAPSHOT:nondex (default-cli) @ commons-io ---
+FINE: Instrumenting  into /misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex/nondex-instr.jar
+INFO: The original argline is: 
+INFO: Adding NonDex argLine to existing argLine specified by the project
+FINE: Config node passed: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <classpathDependencyExcludes>
+    <classpathDependencyExclude>xerces:xercesImpl</classpathDependencyExclude>
+  </classpathDependencyExcludes>
+  <forkCount>1</forkCount>
+  <reuseForks>false</reuseForks>
+  <argLine> -DnondexFilter=&apos;.*&apos; -DnondexMode=FULL -DnondexSeed=933178 -DnondexStart=0 -DnondexEnd=9223372036854775807 -DnondexPrintstack=false -DnondexDir=&quot;/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex&quot; -DnondexJarDir=&quot;.nondex&quot; -DnondexExecid=clean_6+bcnDK9P338jqukmdY5JxRnnuNQ9GPPh9PqSrkJHA= -DnondexLogging=FINE @{argLine} -Xmx25M</argLine>
+  <jvm>${commons.surefire.java}</jvm>
+  <reportsDirectory>/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex/clean_6+bcnDK9P338jqukmdY5JxRnnuNQ9GPPh9PqSrkJHA=</reportsDirectory>
+  <disableXmlReport>false</disableXmlReport>
+</configuration>
+FINE: MavenProject: commons-io:commons-io:2.23.0-SNAPSHOT @ /misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/pom.xml
+org.apache.maven.execution.MavenSession@6e627ab8
+org.apache.maven.plugin.DefaultBuildPluginManager@cce672c
+CONFIG: nondexFilter=.*
+nondexMode=FULL
+nondexSeed=933178
+nondexStart=0
+nondexEnd=9223372036854775807
+nondexPrintstack=false
+nondexDir=/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex
+nondexJarDir=.nondex
+nondexExecid=clean_6+bcnDK9P338jqukmdY5JxRnnuNQ9GPPh9PqSrkJHA=
+nondexLogging=FINE
+test=
+FINE: Surefire config: Plugin [org.apache.maven.plugins:maven-surefire-plugin]  test <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <classpathDependencyExcludes>
+    <classpathDependencyExclude>xerces:xercesImpl</classpathDependencyExclude>
+  </classpathDependencyExcludes>
+  <forkCount>1</forkCount>
+  <reuseForks>false</reuseForks>
+  <argLine> -DnondexFilter=&apos;.*&apos; -DnondexMode=FULL -DnondexSeed=933178 -DnondexStart=0 -DnondexEnd=9223372036854775807 -DnondexPrintstack=false -DnondexDir=&quot;/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex&quot; -DnondexJarDir=&quot;.nondex&quot; -DnondexExecid=clean_6+bcnDK9P338jqukmdY5JxRnnuNQ9GPPh9PqSrkJHA= -DnondexLogging=FINE @{argLine} -Xmx25M</argLine>
+  <jvm>${commons.surefire.java}</jvm>
+  <reportsDirectory>/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex/clean_6+bcnDK9P338jqukmdY5JxRnnuNQ9GPPh9PqSrkJHA=</reportsDirectory>
+  <disableXmlReport>false</disableXmlReport>
+</configuration> org.twdata.maven.mojoexecutor.MojoExecutor$ExecutionEnvironment@198a0416
+[WARNING]  Parameter 'disableXmlReport' (user property 'disableXmlReport') is deprecated: instead use disable within statelessTestsetReporter since of 3.0.0-M6
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[WARNING] The system property nondexLogging is configured twice! The property appears in <argLine/> and any of <systemPropertyVariables/>, <systemProperties/> or user property.
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+yp_bind_client_create_v3: RPC: Unknown host
+yp_bind_client_create_v3: RPC: Unknown host
+yp_bind_client_create_v3: RPC: Unknown host
+[INFO] Running org.apache.commons.io.function.IOBinaryOperatorStreamTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.070 s -- in org.apache.commons.io.function.IOBinaryOperatorStreamTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+INFO: Adding excluded groups to newly created one
+FINE: The nondex path is: /misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex/nondex-instr.jar:/misc/scratch/hkp423/testing-tools/maven-repository/edu/illinois/nondex-common/2.2.5-SNAPSHOT/nondex-common-2.2.5-SNAPSHOT.jar
+FINE: Running surefire with:  -DnondexFilter='.*' -DnondexMode=FULL -DnondexSeed=933178 -DnondexStart=0 -DnondexEnd=9223372036854775807 -DnondexPrintstack=false -DnondexDir="/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex" -DnondexJarDir="/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex" -DnondexExecid=Kk8UqYFw7jTUz7o64oyZExQm+iwns7HW0oAilztc= -DnondexLogging=FINE
+FINE: ArgLine being set to: --add-exports java.base/edu.illinois.nondex.common=ALL-UNNAMED --add-exports java.base/edu.illinois.nondex.shuffling=ALL-UNNAMED  --patch-module java.base="/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex/nondex-instr.jar:/misc/scratch/hkp423/testing-tools/maven-repository/edu/illinois/nondex-common/2.2.5-SNAPSHOT/nondex-common-2.2.5-SNAPSHOT.jar":/misc/scratch/hkp423/testing-tools/maven-repository/edu/illinois/nondex-annotations/2.2.5-SNAPSHOT/nondex-annotations-2.2.5-SNAPSHOT.jar   -DnondexFilter='.*' -DnondexMode=FULL -DnondexSeed=933178 -DnondexStart=0 -DnondexEnd=9223372036854775807 -DnondexPrintstack=false -DnondexDir="/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex" -DnondexJarDir="/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex" -DnondexExecid=Kk8UqYFw7jTUz7o64oyZExQm+iwns7HW0oAilztc= -DnondexLogging=FINE
+INFO: Adding NonDex argLine to existing argLine specified by the project
+FINE: Set argline to: --add-exports java.base/edu.illinois.nondex.common=ALL-UNNAMED --add-exports java.base/edu.illinois.nondex.shuffling=ALL-UNNAMED  --patch-module java.base="/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex/nondex-instr.jar:/misc/scratch/hkp423/testing-tools/maven-repository/edu/illinois/nondex-common/2.2.5-SNAPSHOT/nondex-common-2.2.5-SNAPSHOT.jar":/misc/scratch/hkp423/testing-tools/maven-repository/edu/illinois/nondex-annotations/2.2.5-SNAPSHOT/nondex-annotations-2.2.5-SNAPSHOT.jar   -DnondexFilter='.*' -DnondexMode=FULL -DnondexSeed=933178 -DnondexStart=0 -DnondexEnd=9223372036854775807 -DnondexPrintstack=false -DnondexDir="/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex" -DnondexJarDir="/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex" -DnondexExecid=Kk8UqYFw7jTUz7o64oyZExQm+iwns7HW0oAilztc= -DnondexLogging=FINE @{argLine} -Xmx25M
+FINE: Config node passed: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <classpathDependencyExcludes>
+    <classpathDependencyExclude>xerces:xercesImpl</classpathDependencyExclude>
+  </classpathDependencyExcludes>
+  <forkCount>1</forkCount>
+  <reuseForks>false</reuseForks>
+  <argLine>--add-exports java.base/edu.illinois.nondex.common=ALL-UNNAMED --add-exports java.base/edu.illinois.nondex.shuffling=ALL-UNNAMED  --patch-module java.base=&quot;/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex/nondex-instr.jar:/misc/scratch/hkp423/testing-tools/maven-repository/edu/illinois/nondex-common/2.2.5-SNAPSHOT/nondex-common-2.2.5-SNAPSHOT.jar&quot;:/misc/scratch/hkp423/testing-tools/maven-repository/edu/illinois/nondex-annotations/2.2.5-SNAPSHOT/nondex-annotations-2.2.5-SNAPSHOT.jar   -DnondexFilter=&apos;.*&apos; -DnondexMode=FULL -DnondexSeed=933178 -DnondexStart=0 -DnondexEnd=9223372036854775807 -DnondexPrintstack=false -DnondexDir=&quot;/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex&quot; -DnondexJarDir=&quot;/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex&quot; -DnondexExecid=Kk8UqYFw7jTUz7o64oyZExQm+iwns7HW0oAilztc= -DnondexLogging=FINE @{argLine} -Xmx25M</argLine>
+  <jvm>${commons.surefire.java}</jvm>
+  <reportsDirectory>/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex/Kk8UqYFw7jTUz7o64oyZExQm+iwns7HW0oAilztc=</reportsDirectory>
+  <disableXmlReport>false</disableXmlReport>
+  <excludedGroups>edu.illinois.NonDexIgnore</excludedGroups>
+  <test/>
+</configuration>
+FINE: MavenProject: commons-io:commons-io:2.23.0-SNAPSHOT @ /misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/pom.xml
+org.apache.maven.execution.MavenSession@6e627ab8
+org.apache.maven.plugin.DefaultBuildPluginManager@cce672c
+CONFIG: nondexFilter=.*
+nondexMode=FULL
+nondexSeed=933178
+nondexStart=0
+nondexEnd=9223372036854775807
+nondexPrintstack=false
+nondexDir=/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex
+nondexJarDir=/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex
+nondexExecid=Kk8UqYFw7jTUz7o64oyZExQm+iwns7HW0oAilztc=
+nondexLogging=FINE
+test=
+FINE: Surefire config: Plugin [org.apache.maven.plugins:maven-surefire-plugin]  test <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <classpathDependencyExcludes>
+    <classpathDependencyExclude>xerces:xercesImpl</classpathDependencyExclude>
+  </classpathDependencyExcludes>
+  <forkCount>1</forkCount>
+  <reuseForks>false</reuseForks>
+  <argLine>--add-exports java.base/edu.illinois.nondex.common=ALL-UNNAMED --add-exports java.base/edu.illinois.nondex.shuffling=ALL-UNNAMED  --patch-module java.base=&quot;/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex/nondex-instr.jar:/misc/scratch/hkp423/testing-tools/maven-repository/edu/illinois/nondex-common/2.2.5-SNAPSHOT/nondex-common-2.2.5-SNAPSHOT.jar&quot;:/misc/scratch/hkp423/testing-tools/maven-repository/edu/illinois/nondex-annotations/2.2.5-SNAPSHOT/nondex-annotations-2.2.5-SNAPSHOT.jar   -DnondexFilter=&apos;.*&apos; -DnondexMode=FULL -DnondexSeed=933178 -DnondexStart=0 -DnondexEnd=9223372036854775807 -DnondexPrintstack=false -DnondexDir=&quot;/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex&quot; -DnondexJarDir=&quot;/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex&quot; -DnondexExecid=Kk8UqYFw7jTUz7o64oyZExQm+iwns7HW0oAilztc= -DnondexLogging=FINE @{argLine} -Xmx25M</argLine>
+  <jvm>${commons.surefire.java}</jvm>
+  <reportsDirectory>/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex/Kk8UqYFw7jTUz7o64oyZExQm+iwns7HW0oAilztc=</reportsDirectory>
+  <disableXmlReport>false</disableXmlReport>
+  <excludedGroups>edu.illinois.NonDexIgnore</excludedGroups>
+  <test/>
+</configuration> org.twdata.maven.mojoexecutor.MojoExecutor$ExecutionEnvironment@235b4aea
+[WARNING]  Parameter 'disableXmlReport' (user property 'disableXmlReport') is deprecated: instead use disable within statelessTestsetReporter since of 3.0.0-M6
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[WARNING] The system property nondexLogging is configured twice! The property appears in <argLine/> and any of <systemPropertyVariables/>, <systemProperties/> or user property.
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+yp_bind_client_create_v3: RPC: Unknown host
+yp_bind_client_create_v3: RPC: Unknown host
+yp_bind_client_create_v3: RPC: Unknown host
+[INFO] Running org.apache.commons.io.function.IOBinaryOperatorStreamTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.072 s -- in org.apache.commons.io.function.IOBinaryOperatorStreamTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[WARNING] Corrupted channel by directly writing to native stream in forked JVM 1. See FAQ web page and the dump file /misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex/Kk8UqYFw7jTUz7o64oyZExQm+iwns7HW0oAilztc=/2026-11-20T23-04-42_886-jvmRun1.dumpstream
+INFO: Adding excluded groups to newly created one
+FINE: The nondex path is: /misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex/nondex-instr.jar:/misc/scratch/hkp423/testing-tools/maven-repository/edu/illinois/nondex-common/2.2.5-SNAPSHOT/nondex-common-2.2.5-SNAPSHOT.jar
+FINE: Running surefire with:  -DnondexFilter='.*' -DnondexMode=FULL -DnondexSeed=974622 -DnondexStart=0 -DnondexEnd=9223372036854775807 -DnondexPrintstack=false -DnondexDir="/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex" -DnondexJarDir="/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex" -DnondexExecid=QXO6cf5JCps+Q9hM60znie7DQOy0xW4S4z3FBTbxyzA= -DnondexLogging=FINE
+FINE: ArgLine being set to: --add-exports java.base/edu.illinois.nondex.common=ALL-UNNAMED --add-exports java.base/edu.illinois.nondex.shuffling=ALL-UNNAMED  --patch-module java.base="/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex/nondex-instr.jar:/misc/scratch/hkp423/testing-tools/maven-repository/edu/illinois/nondex-common/2.2.5-SNAPSHOT/nondex-common-2.2.5-SNAPSHOT.jar":/misc/scratch/hkp423/testing-tools/maven-repository/edu/illinois/nondex-annotations/2.2.5-SNAPSHOT/nondex-annotations-2.2.5-SNAPSHOT.jar   -DnondexFilter='.*' -DnondexMode=FULL -DnondexSeed=974622 -DnondexStart=0 -DnondexEnd=9223372036854775807 -DnondexPrintstack=false -DnondexDir="/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex" -DnondexJarDir="/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex" -DnondexExecid=QXO6cf5JCps+Q9hM60znie7DQOy0xW4S4z3FBTbxyzA= -DnondexLogging=FINE
+INFO: Adding NonDex argLine to existing argLine specified by the project
+FINE: Set argline to: --add-exports java.base/edu.illinois.nondex.common=ALL-UNNAMED --add-exports java.base/edu.illinois.nondex.shuffling=ALL-UNNAMED  --patch-module java.base="/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex/nondex-instr.jar:/misc/scratch/hkp423/testing-tools/maven-repository/edu/illinois/nondex-common/2.2.5-SNAPSHOT/nondex-common-2.2.5-SNAPSHOT.jar":/misc/scratch/hkp423/testing-tools/maven-repository/edu/illinois/nondex-annotations/2.2.5-SNAPSHOT/nondex-annotations-2.2.5-SNAPSHOT.jar   -DnondexFilter='.*' -DnondexMode=FULL -DnondexSeed=974622 -DnondexStart=0 -DnondexEnd=9223372036854775807 -DnondexPrintstack=false -DnondexDir="/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex" -DnondexJarDir="/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex" -DnondexExecid=QXO6cf5JCps+Q9hM60znie7DQOy0xW4S4z3FBTbxyzA= -DnondexLogging=FINE @{argLine} -Xmx25M
+FINE: Config node passed: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <classpathDependencyExcludes>
+    <classpathDependencyExclude>xerces:xercesImpl</classpathDependencyExclude>
+  </classpathDependencyExcludes>
+  <forkCount>1</forkCount>
+  <reuseForks>false</reuseForks>
+  <argLine>--add-exports java.base/edu.illinois.nondex.common=ALL-UNNAMED --add-exports java.base/edu.illinois.nondex.shuffling=ALL-UNNAMED  --patch-module java.base=&quot;/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex/nondex-instr.jar:/misc/scratch/hkp423/testing-tools/maven-repository/edu/illinois/nondex-common/2.2.5-SNAPSHOT/nondex-common-2.2.5-SNAPSHOT.jar&quot;:/misc/scratch/hkp423/testing-tools/maven-repository/edu/illinois/nondex-annotations/2.2.5-SNAPSHOT/nondex-annotations-2.2.5-SNAPSHOT.jar   -DnondexFilter=&apos;.*&apos; -DnondexMode=FULL -DnondexSeed=974622 -DnondexStart=0 -DnondexEnd=9223372036854775807 -DnondexPrintstack=false -DnondexDir=&quot;/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex&quot; -DnondexJarDir=&quot;/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex&quot; -DnondexExecid=QXO6cf5JCps+Q9hM60znie7DQOy0xW4S4z3FBTbxyzA= -DnondexLogging=FINE @{argLine} -Xmx25M</argLine>
+  <jvm>${commons.surefire.java}</jvm>
+  <reportsDirectory>/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex/QXO6cf5JCps+Q9hM60znie7DQOy0xW4S4z3FBTbxyzA=</reportsDirectory>
+  <disableXmlReport>false</disableXmlReport>
+  <excludedGroups>edu.illinois.NonDexIgnore</excludedGroups>
+  <test/>
+</configuration>
+FINE: MavenProject: commons-io:commons-io:2.23.0-SNAPSHOT @ /misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/pom.xml
+org.apache.maven.execution.MavenSession@6e627ab8
+org.apache.maven.plugin.DefaultBuildPluginManager@cce672c
+CONFIG: nondexFilter=.*
+nondexMode=FULL
+nondexSeed=974622
+nondexStart=0
+nondexEnd=9223372036854775807
+nondexPrintstack=false
+nondexDir=/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex
+nondexJarDir=/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex
+nondexExecid=QXO6cf5JCps+Q9hM60znie7DQOy0xW4S4z3FBTbxyzA=
+nondexLogging=FINE
+test=
+FINE: Surefire config: Plugin [org.apache.maven.plugins:maven-surefire-plugin]  test <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <classpathDependencyExcludes>
+    <classpathDependencyExclude>xerces:xercesImpl</classpathDependencyExclude>
+  </classpathDependencyExcludes>
+  <forkCount>1</forkCount>
+  <reuseForks>false</reuseForks>
+  <argLine>--add-exports java.base/edu.illinois.nondex.common=ALL-UNNAMED --add-exports java.base/edu.illinois.nondex.shuffling=ALL-UNNAMED  --patch-module java.base=&quot;/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex/nondex-instr.jar:/misc/scratch/hkp423/testing-tools/maven-repository/edu/illinois/nondex-common/2.2.5-SNAPSHOT/nondex-common-2.2.5-SNAPSHOT.jar&quot;:/misc/scratch/hkp423/testing-tools/maven-repository/edu/illinois/nondex-annotations/2.2.5-SNAPSHOT/nondex-annotations-2.2.5-SNAPSHOT.jar   -DnondexFilter=&apos;.*&apos; -DnondexMode=FULL -DnondexSeed=974622 -DnondexStart=0 -DnondexEnd=9223372036854775807 -DnondexPrintstack=false -DnondexDir=&quot;/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex&quot; -DnondexJarDir=&quot;/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex&quot; -DnondexExecid=QXO6cf5JCps+Q9hM60znie7DQOy0xW4S4z3FBTbxyzA= -DnondexLogging=FINE @{argLine} -Xmx25M</argLine>
+  <jvm>${commons.surefire.java}</jvm>
+  <reportsDirectory>/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex/QXO6cf5JCps+Q9hM60znie7DQOy0xW4S4z3FBTbxyzA=</reportsDirectory>
+  <disableXmlReport>false</disableXmlReport>
+  <excludedGroups>edu.illinois.NonDexIgnore</excludedGroups>
+  <test/>
+</configuration> org.twdata.maven.mojoexecutor.MojoExecutor$ExecutionEnvironment@b3c7c75
+[WARNING]  Parameter 'disableXmlReport' (user property 'disableXmlReport') is deprecated: instead use disable within statelessTestsetReporter since of 3.0.0-M6
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[WARNING] The system property nondexLogging is configured twice! The property appears in <argLine/> and any of <systemPropertyVariables/>, <systemProperties/> or user property.
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+yp_bind_client_create_v3: RPC: Unknown host
+yp_bind_client_create_v3: RPC: Unknown host
+yp_bind_client_create_v3: RPC: Unknown host
+[INFO] Running org.apache.commons.io.function.IOBinaryOperatorStreamTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.204 s -- in org.apache.commons.io.function.IOBinaryOperatorStreamTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[WARNING] Corrupted channel by directly writing to native stream in forked JVM 1. See FAQ web page and the dump file /misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex/QXO6cf5JCps+Q9hM60znie7DQOy0xW4S4z3FBTbxyzA=/2026-11-20T23-04-42_886-jvmRun1.dumpstream
+INFO: Adding excluded groups to newly created one
+FINE: The nondex path is: /misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex/nondex-instr.jar:/misc/scratch/hkp423/testing-tools/maven-repository/edu/illinois/nondex-common/2.2.5-SNAPSHOT/nondex-common-2.2.5-SNAPSHOT.jar
+FINE: Running surefire with:  -DnondexFilter='.*' -DnondexMode=FULL -DnondexSeed=1016066 -DnondexStart=0 -DnondexEnd=9223372036854775807 -DnondexPrintstack=false -DnondexDir="/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex" -DnondexJarDir="/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex" -DnondexExecid=nWMBJOdSWWL19DcqYeL2gOO1BmIF+L4xfDNbOJHujS0= -DnondexLogging=FINE
+FINE: ArgLine being set to: --add-exports java.base/edu.illinois.nondex.common=ALL-UNNAMED --add-exports java.base/edu.illinois.nondex.shuffling=ALL-UNNAMED  --patch-module java.base="/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex/nondex-instr.jar:/misc/scratch/hkp423/testing-tools/maven-repository/edu/illinois/nondex-common/2.2.5-SNAPSHOT/nondex-common-2.2.5-SNAPSHOT.jar":/misc/scratch/hkp423/testing-tools/maven-repository/edu/illinois/nondex-annotations/2.2.5-SNAPSHOT/nondex-annotations-2.2.5-SNAPSHOT.jar   -DnondexFilter='.*' -DnondexMode=FULL -DnondexSeed=1016066 -DnondexStart=0 -DnondexEnd=9223372036854775807 -DnondexPrintstack=false -DnondexDir="/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex" -DnondexJarDir="/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex" -DnondexExecid=nWMBJOdSWWL19DcqYeL2gOO1BmIF+L4xfDNbOJHujS0= -DnondexLogging=FINE
+INFO: Adding NonDex argLine to existing argLine specified by the project
+FINE: Set argline to: --add-exports java.base/edu.illinois.nondex.common=ALL-UNNAMED --add-exports java.base/edu.illinois.nondex.shuffling=ALL-UNNAMED  --patch-module java.base="/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex/nondex-instr.jar:/misc/scratch/hkp423/testing-tools/maven-repository/edu/illinois/nondex-common/2.2.5-SNAPSHOT/nondex-common-2.2.5-SNAPSHOT.jar":/misc/scratch/hkp423/testing-tools/maven-repository/edu/illinois/nondex-annotations/2.2.5-SNAPSHOT/nondex-annotations-2.2.5-SNAPSHOT.jar   -DnondexFilter='.*' -DnondexMode=FULL -DnondexSeed=1016066 -DnondexStart=0 -DnondexEnd=9223372036854775807 -DnondexPrintstack=false -DnondexDir="/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex" -DnondexJarDir="/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex" -DnondexExecid=nWMBJOdSWWL19DcqYeL2gOO1BmIF+L4xfDNbOJHujS0= -DnondexLogging=FINE @{argLine} -Xmx25M
+FINE: Config node passed: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <classpathDependencyExcludes>
+    <classpathDependencyExclude>xerces:xercesImpl</classpathDependencyExclude>
+  </classpathDependencyExcludes>
+  <forkCount>1</forkCount>
+  <reuseForks>false</reuseForks>
+  <argLine>--add-exports java.base/edu.illinois.nondex.common=ALL-UNNAMED --add-exports java.base/edu.illinois.nondex.shuffling=ALL-UNNAMED  --patch-module java.base=&quot;/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex/nondex-instr.jar:/misc/scratch/hkp423/testing-tools/maven-repository/edu/illinois/nondex-common/2.2.5-SNAPSHOT/nondex-common-2.2.5-SNAPSHOT.jar&quot;:/misc/scratch/hkp423/testing-tools/maven-repository/edu/illinois/nondex-annotations/2.2.5-SNAPSHOT/nondex-annotations-2.2.5-SNAPSHOT.jar   -DnondexFilter=&apos;.*&apos; -DnondexMode=FULL -DnondexSeed=1016066 -DnondexStart=0 -DnondexEnd=9223372036854775807 -DnondexPrintstack=false -DnondexDir=&quot;/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex&quot; -DnondexJarDir=&quot;/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex&quot; -DnondexExecid=nWMBJOdSWWL19DcqYeL2gOO1BmIF+L4xfDNbOJHujS0= -DnondexLogging=FINE @{argLine} -Xmx25M</argLine>
+  <jvm>${commons.surefire.java}</jvm>
+  <reportsDirectory>/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex/nWMBJOdSWWL19DcqYeL2gOO1BmIF+L4xfDNbOJHujS0=</reportsDirectory>
+  <disableXmlReport>false</disableXmlReport>
+  <excludedGroups>edu.illinois.NonDexIgnore</excludedGroups>
+  <test/>
+</configuration>
+FINE: MavenProject: commons-io:commons-io:2.23.0-SNAPSHOT @ /misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/pom.xml
+org.apache.maven.execution.MavenSession@6e627ab8
+org.apache.maven.plugin.DefaultBuildPluginManager@cce672c
+CONFIG: nondexFilter=.*
+nondexMode=FULL
+nondexSeed=1016066
+nondexStart=0
+nondexEnd=9223372036854775807
+nondexPrintstack=false
+nondexDir=/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex
+nondexJarDir=/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex
+nondexExecid=nWMBJOdSWWL19DcqYeL2gOO1BmIF+L4xfDNbOJHujS0=
+nondexLogging=FINE
+test=
+FINE: Surefire config: Plugin [org.apache.maven.plugins:maven-surefire-plugin]  test <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <classpathDependencyExcludes>
+    <classpathDependencyExclude>xerces:xercesImpl</classpathDependencyExclude>
+  </classpathDependencyExcludes>
+  <forkCount>1</forkCount>
+  <reuseForks>false</reuseForks>
+  <argLine>--add-exports java.base/edu.illinois.nondex.common=ALL-UNNAMED --add-exports java.base/edu.illinois.nondex.shuffling=ALL-UNNAMED  --patch-module java.base=&quot;/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex/nondex-instr.jar:/misc/scratch/hkp423/testing-tools/maven-repository/edu/illinois/nondex-common/2.2.5-SNAPSHOT/nondex-common-2.2.5-SNAPSHOT.jar&quot;:/misc/scratch/hkp423/testing-tools/maven-repository/edu/illinois/nondex-annotations/2.2.5-SNAPSHOT/nondex-annotations-2.2.5-SNAPSHOT.jar   -DnondexFilter=&apos;.*&apos; -DnondexMode=FULL -DnondexSeed=1016066 -DnondexStart=0 -DnondexEnd=9223372036854775807 -DnondexPrintstack=false -DnondexDir=&quot;/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex&quot; -DnondexJarDir=&quot;/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex&quot; -DnondexExecid=nWMBJOdSWWL19DcqYeL2gOO1BmIF+L4xfDNbOJHujS0= -DnondexLogging=FINE @{argLine} -Xmx25M</argLine>
+  <jvm>${commons.surefire.java}</jvm>
+  <reportsDirectory>/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex/nWMBJOdSWWL19DcqYeL2gOO1BmIF+L4xfDNbOJHujS0=</reportsDirectory>
+  <disableXmlReport>false</disableXmlReport>
+  <excludedGroups>edu.illinois.NonDexIgnore</excludedGroups>
+  <test/>
+</configuration> org.twdata.maven.mojoexecutor.MojoExecutor$ExecutionEnvironment@218e28d9
+[WARNING]  Parameter 'disableXmlReport' (user property 'disableXmlReport') is deprecated: instead use disable within statelessTestsetReporter since of 3.0.0-M6
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[WARNING] The system property nondexLogging is configured twice! The property appears in <argLine/> and any of <systemPropertyVariables/>, <systemProperties/> or user property.
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+yp_bind_client_create_v3: RPC: Unknown host
+yp_bind_client_create_v3: RPC: Unknown host
+yp_bind_client_create_v3: RPC: Unknown host
+[INFO] Running org.apache.commons.io.function.IOBinaryOperatorStreamTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.071 s -- in org.apache.commons.io.function.IOBinaryOperatorStreamTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[WARNING] Corrupted channel by directly writing to native stream in forked JVM 1. See FAQ web page and the dump file /misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex/nWMBJOdSWWL19DcqYeL2gOO1BmIF+L4xfDNbOJHujS0=/2026-11-20T23-04-42_886-jvmRun1.dumpstream
+[INFO] NonDex SUMMARY:
+[INFO] *********
+[INFO] mvn nondex:nondex  -DnondexFilter='.*' -DnondexMode=FULL -DnondexSeed=933178 -DnondexStart=0 -DnondexEnd=9223372036854775807 -DnondexPrintstack=false -DnondexDir="/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex" -DnondexJarDir="/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex" -DnondexExecid=Kk8UqYFw7jTUz7o64oyZExQm+iwns7HW0oAilztc= -DnondexLogging=FINE
+[INFO] No Test Failed with this configuration.
+[INFO] *********
+[INFO] *********
+[INFO] mvn nondex:nondex  -DnondexFilter='.*' -DnondexMode=FULL -DnondexSeed=974622 -DnondexStart=0 -DnondexEnd=9223372036854775807 -DnondexPrintstack=false -DnondexDir="/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex" -DnondexJarDir="/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex" -DnondexExecid=QXO6cf5JCps+Q9hM60znie7DQOy0xW4S4z3FBTbxyzA= -DnondexLogging=FINE
+[INFO] No Test Failed with this configuration.
+[INFO] *********
+[INFO] *********
+[INFO] mvn nondex:nondex  -DnondexFilter='.*' -DnondexMode=FULL -DnondexSeed=1016066 -DnondexStart=0 -DnondexEnd=9223372036854775807 -DnondexPrintstack=false -DnondexDir="/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex" -DnondexJarDir="/misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex" -DnondexExecid=nWMBJOdSWWL19DcqYeL2gOO1BmIF+L4xfDNbOJHujS0= -DnondexLogging=FINE
+[INFO] No Test Failed with this configuration.
+[INFO] *********
+[INFO] All tests pass without NonDex shuffling
+[INFO] ####################
+[INFO] Across all seeds:
+[INFO] Test results can be found at: 
+[INFO] file:///misc/scratch/hkp423/software-testing-final-project/experiments/nondex-runs/build/run-1/commons-io/.nondex/Kk8UqYFw7jTUz7o64oyZExQm+iwns7HW0oAilztc=/test_results.html
+[INFO] [NonDex] The id of this run is: Kk8UqYFw7jTUz7o64oyZExQm+iwns7HW0oAilztc=
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  39.666 s
+[INFO] Finished at: 2026-11-20T23:05:01-06:00
+[INFO] ------------------------------------------------------------------------

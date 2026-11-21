@@ -1,0 +1,30 @@
+{
+  "author": "Coding assistant; source-based assessment, not independent human validation.",
+  "pipeline_status": "error",
+  "pipeline_error": "unverifiable variation quote",
+  "critic_called": false,
+  "automatic_contract_classification_completed": false,
+  "ordering_candidate_present_in_raw_proposals": true,
+  "extraction_issue": "Fail-fast status was listed as unknown despite an explicit not-fail-fast statement in the supplied Hashtable class Javadoc.",
+  "proposals": [
+    {
+      "proposal_index": 0,
+      "dimension": "Fail-fast behavior after structural modification",
+      "assessment": "reject",
+      "reason": "Contradicts the explicit not-fail-fast statement and uses structurally modified enumeration, whose results are undefined. Its explicit quotation also removes raw Javadoc link markup, failing the quotation validator."
+    },
+    {
+      "proposal_index": 1,
+      "dimension": "Enumeration encounter order",
+      "assessment": "provisional_candidate_requires_contract_review",
+      "reason": "Identifies the ordering dimension exercised by the separate manual witness. It uses absence_inference rather than explicit ordering evidence. Inferring no ordering guarantee just from a hash-table data structure is insufficient; complete applicable contracts and restrict to a stable, unmodified table. Preserve each key exactly once and the Enumeration contract."
+    },
+    {
+      "proposal_index": 2,
+      "dimension": "Whether Enumeration methods are supported",
+      "assessment": "reject",
+      "reason": "Returning an Enumeration requires its interface behavior; absent expansion of the interface Javadoc does not permit omitting or changing the required methods."
+    }
+  ],
+  "next_step": "Preserve the evidence gate; improve exact raw-Javadoc quotation adherence, class-fact coverage and inherited/interface documentation supply, then repeat with a new run and reviewed controls. No prompt or underlying Agent reviewer was altered in this pilot."
+}
