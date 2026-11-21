@@ -1,0 +1,6462 @@
+{
+  "revision": "f1f407ce3e026f597567e7d96ee08cb08875690f",
+  "java": "yp_bind_client_create_v3: RPC: Unknown host\nyp_bind_client_create_v3: RPC: Unknown host\nopenjdk version \"11.0.33\" 2026-10-20\nOpenJDK Runtime Environment Temurin-11.0.33+10 (build 11.0.33+10)\nOpenJDK 64-Bit Server VM Temurin-11.0.33+10 (build 11.0.33+10, mixed mode)",
+  "probe_count": 175,
+  "repeats": 24,
+  "dependencies_sha256": {
+    "asm-9.8.jar": "876eab6a83daecad5ca67eb9fcabb063c97b5aeb8cf1fca7a989ecde17522051",
+    "asm-analysis-9.8.jar": "e640732fbcd3c6271925a504f125e38384688f4dfbbf92c8622dfcee0d09edb9",
+    "asm-tree-9.8.jar": "14b7880cb7c85eed101e2710432fc3ffb83275532a6a894dc4c4095d49ad59f1",
+    "asm-util-9.8.jar": "8ba0460ecb28fd0e2980e5f3ef3433a513a457bc077f81a53bdc75b587a08d15",
+    "hamcrest-core-1.3.jar": "66fdef91e9739348df7a096aa384a5685f4e875584cce89386a7a47251c4d8e9",
+    "jaxb-api-2.3.1.jar": "88b955a0df57880a26a74708bc34f74dcaf8ebf4e78843a28b50eae945732b06",
+    "junit-4.13.2.jar": "8e495b634469d64fb8acfa3495a065cbacc8a0fff55ce1e31007be4c16dc57d3"
+  },
+  "probe_sha256": "58b0d5a57f86a0333539cdd09be1810358312991f01a8c2a864e50a47a8818c3",
+  "runner_sha256": "db53373e6164ed57bb84d9a966838610c5db1db482d970305c1755c402e31b2d",
+  "registered_classes": [
+    "java/io/File.class",
+    "java/lang/Class.class",
+    "java/lang/reflect/Field.class",
+    "java/lang/reflect/Method.class",
+    "java/text/BreakIterator.class",
+    "java/text/Collator.class",
+    "java/text/DateFormat.class",
+    "java/text/DateFormatSymbols.class",
+    "java/util/HashMap$HashIterator.class",
+    "java/util/IdentityHashMap$IdentityHashMapIterator.class",
+    "java/util/PriorityQueue$Itr.class",
+    "java/util/PriorityQueue.class",
+    "java/util/WeakHashMap$HashIterator.class",
+    "java/util/concurrent/ConcurrentHashMap$Traverser.class",
+    "java/util/concurrent/PriorityBlockingQueue.class"
+  ],
+  "standard_selectors": [
+    "java/io/File.list",
+    "java/io/File.listFiles",
+    "java/io/File.listRoots",
+    "java/lang/Class.getAnnotations",
+    "java/lang/Class.getClasses",
+    "java/lang/Class.getConstructors",
+    "java/lang/Class.getDeclaredAnnotations",
+    "java/lang/Class.getDeclaredClasses",
+    "java/lang/Class.getDeclaredConstructors",
+    "java/lang/Class.getDeclaredFields",
+    "java/lang/Class.getDeclaredMethods",
+    "java/lang/Class.getFields",
+    "java/lang/Class.getMethods",
+    "java/lang/reflect/Field.getAnnotationsByType",
+    "java/lang/reflect/Field.getDeclaredAnnotations",
+    "java/text/BreakIterator.getAvailableLocales",
+    "java/text/Collator.getAvailableLocales",
+    "java/text/DateFormat.getAvailableLocales",
+    "java/text/DateFormatSymbols.getZoneStrings",
+    "java/util/PriorityQueue.toArray"
+  ],
+  "direct_hook_methods": {
+    "java/lang/reflect/Field.class": [
+      "public <T extends java.lang.annotation.Annotation> T[] getAnnotationsByType(java.lang.Class<T>);",
+      "public java.lang.annotation.Annotation[] getDeclaredAnnotations();"
+    ],
+    "java/text/BreakIterator.class": [
+      "public static synchronized java.util.Locale[] getAvailableLocales();"
+    ],
+    "java/lang/Class.class": [
+      "public java.lang.Class<?>[] getClasses();",
+      "public java.lang.Class<?>[] getDeclaredClasses() throws java.lang.SecurityException;",
+      "public java.lang.annotation.Annotation[] getAnnotations();",
+      "public java.lang.annotation.Annotation[] getDeclaredAnnotations();",
+      "public java.lang.reflect.Constructor<?>[] getConstructors() throws java.lang.SecurityException;",
+      "public java.lang.reflect.Constructor<?>[] getDeclaredConstructors() throws java.lang.SecurityException;",
+      "public java.lang.reflect.Field[] getDeclaredFields() throws java.lang.SecurityException;",
+      "public java.lang.reflect.Field[] getFields() throws java.lang.SecurityException;",
+      "public java.lang.reflect.Method[] getDeclaredMethods() throws java.lang.SecurityException;",
+      "public java.lang.reflect.Method[] getMethods() throws java.lang.SecurityException;"
+    ],
+    "java/text/DateFormatSymbols.class": [
+      "public java.lang.String[][] getZoneStrings();"
+    ],
+    "java/io/File.class": [
+      "public java.io.File[] listFiles();",
+      "public java.io.File[] listFiles(java.io.FileFilter);",
+      "public java.io.File[] listFiles(java.io.FilenameFilter);",
+      "public java.lang.String[] list();",
+      "public java.lang.String[] list(java.io.FilenameFilter);",
+      "public static java.io.File[] listRoots();"
+    ],
+    "java/text/Collator.class": [
+      "public static synchronized java.util.Locale[] getAvailableLocales();"
+    ],
+    "java/text/DateFormat.class": [
+      "public static java.util.Locale[] getAvailableLocales();"
+    ],
+    "java/util/PriorityQueue.class": [
+      "public <T> T[] toArray(T[]);",
+      "public java.lang.Object[] toArray();"
+    ],
+    "java/util/HashMap$HashIterator$HashIteratorShuffler.class": [
+      "public java.util.HashMap$HashIterator$HashIteratorShuffler(java.util.HashMap<K, V>.HashIterator);"
+    ],
+    "java/lang/reflect/Method.class": [
+      "public java.lang.Class<?>[] getExceptionTypes();",
+      "public java.lang.annotation.Annotation[] getDeclaredAnnotations();",
+      "public java.lang.annotation.Annotation[][] getParameterAnnotations();",
+      "public java.lang.reflect.Type[] getGenericExceptionTypes();"
+    ],
+    "java/util/HashMap$HashIterator.class": [],
+    "java/util/WeakHashMap$HashIterator.class": [
+      "java.util.WeakHashMap$HashIterator(java.util.WeakHashMap);"
+    ],
+    "java/util/concurrent/ConcurrentHashMap$Traverser.class": [
+      "java.util.concurrent.ConcurrentHashMap$Traverser(java.util.concurrent.ConcurrentHashMap$Node<K, V>[], int, int, int);"
+    ],
+    "java/util/concurrent/PriorityBlockingQueue.class": [
+      "public <T> T[] toArray(T[]);",
+      "public java.lang.Object[] toArray();",
+      "public java.lang.String toString();"
+    ],
+    "java/util/PriorityQueue$Itr.class": [
+      "java.util.PriorityQueue$Itr(java.util.PriorityQueue);"
+    ],
+    "java/util/IdentityHashMap$IdentityHashMapIterator.class": [
+      "private java.util.IdentityHashMap$IdentityHashMapIterator(java.util.IdentityHashMap);"
+    ]
+  },
+  "compiled_sources_sha256": {
+    "nondex-common/src/main/java/edu/illinois/nondex/common/Configuration.java": "cbfad674bcc37a94ecbae6fabf339a7521497f44f2325e96b65892afc7499029",
+    "nondex-common/src/main/java/edu/illinois/nondex/common/ConfigurationDefaults.java": "c5c96bee4d51ec919af3d37262ffbf40a0a97ff2008b0c1f4d5658c3d7c3d607",
+    "nondex-common/src/main/java/edu/illinois/nondex/common/Level.java": "50810c1195dc30a46c38d822c019d122b5318f491f6de946bfc3a31c712d5572",
+    "nondex-common/src/main/java/edu/illinois/nondex/common/Logger.java": "9efe53b336b169f7bfde72e8a2d37971554fbd7ac05a9b7cc0be99022da46670",
+    "nondex-common/src/main/java/edu/illinois/nondex/common/Mode.java": "63f1a996bd3f645952879449d5b697e46c84833823f820042a610dcfa0703e00",
+    "nondex-common/src/main/java/edu/illinois/nondex/common/NonDex.java": "07fc128e9f261e295e863adf3ee2d4a61a45a8565109f917c052614207cdea6f",
+    "nondex-common/src/main/java/edu/illinois/nondex/common/Utils.java": "08fd1c175079c3fd4e8fcc897556f0c4e0286cbdf2b8cfe5b5ae3a50756de4df",
+    "nondex-common/src/main/java/edu/illinois/nondex/shuffling/ControlNondeterminism.java": "9b173eb9baaa9d8c247d8237b39251b5e7fac4cd1e0d3708499d17980b4e0bc6",
+    "nondex-instrumentation/src/main/java/edu/illinois/nondex/instr/CVFactory.java": "a6ebd0c91f904bbea533790c16b197856f2531c1af95574bbc2dd1ef2109ca9b",
+    "nondex-instrumentation/src/main/java/edu/illinois/nondex/instr/ClassVisitorShufflingAdder.java": "4b5e2a9cdc3f545aaf401ef56ebd0adb680d13e6624468e72988fbc3abc23aab",
+    "nondex-instrumentation/src/main/java/edu/illinois/nondex/instr/ConcurrentHashMapShufflingAdder.java": "c26190b847265d36abf6aee7b1ee5425ea55cea58815276943dc4011443dce9f",
+    "nondex-instrumentation/src/main/java/edu/illinois/nondex/instr/HashIteratorShufflerASMDump.java": "d6890c5c5e75970a61298c3f423bf6a4687317c589433f2a63c914a0ea850bdb",
+    "nondex-instrumentation/src/main/java/edu/illinois/nondex/instr/HashMapShufflingAdder.java": "53107a24450908e3fbca9fe9746256ffdee451537a70c25135ec03b585a938f4",
+    "nondex-instrumentation/src/main/java/edu/illinois/nondex/instr/IdentityHashMapShufflingAdder.java": "b6bf8da2978dd9e4c78aad5b13a69edd6d48f0c978a5beb1fa05fa70362198f1",
+    "nondex-instrumentation/src/main/java/edu/illinois/nondex/instr/Instrumenter.java": "164cc7a30038fe5803695b618e2019985d3113fcd6b45e8efc068a76784fcf4d",
+    "nondex-instrumentation/src/main/java/edu/illinois/nondex/instr/Main.java": "84b4da79d86d3d7c64be5095ada47c3f484fa0dfd650e195f851180245ee9057",
+    "nondex-instrumentation/src/main/java/edu/illinois/nondex/instr/MethodShufflingAdder.java": "c739d18a9c22e2ea7ae7b0747ed6a5e3728e12d18bb624eba5bbbaa684d8cb97",
+    "nondex-instrumentation/src/main/java/edu/illinois/nondex/instr/PriorityBlockingQueueShufflingAdder.java": "f5da3a78820c19be90b32a42a93cbea4a979430ea83cd56181301ae4e183adbd",
+    "nondex-instrumentation/src/main/java/edu/illinois/nondex/instr/PriorityQueueShufflingAdder.java": "1130c29c779382f8c28ecfd3ca25ee093266c6cace4f7d05eaf5455e844d7c1a",
+    "nondex-instrumentation/src/main/java/edu/illinois/nondex/instr/WeakHashMapShufflingAdder.java": "f4df557ebc729f8986abf7c4b9743d92611fb012ca94443446c81768c3a8fcc1"
+  },
+  "runs": {
+    "plain-933178": {
+      "File.list()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "File.list(FilenameFilter)": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "File.listFiles()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "File.listFiles(FilenameFilter)": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "File.listFiles(FileFilter)": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "File.listRoots()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Class.getClasses()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Class.getDeclaredClasses()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Class.getFields()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Class.getDeclaredFields()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Class.getMethods()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Class.getDeclaredMethods()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Class.getConstructors()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Class.getDeclaredConstructors()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Class.getAnnotations()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Class.getDeclaredAnnotations()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Method.getExceptionTypes()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Method.getGenericExceptionTypes()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Method.getDeclaredAnnotations()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Method.getParameterAnnotations()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Method.getAnnotations()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Method.getAnnotationsByType(Tag.class)": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Method.getDeclaredAnnotationsByType(Tag.class)": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Field.getDeclaredAnnotations()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Field.getAnnotationsByType(Tag.class)": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Field.getAnnotations()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Field.getDeclaredAnnotationsByType(Tag.class)": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "BreakIterator.getAvailableLocales()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Collator.getAvailableLocales()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DateFormat.getAvailableLocales()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DateFormatSymbols.getAvailableLocales()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DecimalFormatSymbols.getAvailableLocales()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DateFormatSymbols.getZoneStrings()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.entrySet().iterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.entrySet().toArray()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.entrySet().toArray(T[])": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.entrySet().forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.entrySet().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.entrySet().toString()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.entrySet().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.entrySet().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.keySet().iterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.keySet().toArray()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.keySet().toArray(T[])": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.keySet().forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.keySet().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.keySet().toString()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.keySet().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.keySet().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.values().iterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.values().toArray()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.values().toArray(T[])": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.values().forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.values().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.values().toString()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.values().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.values().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.toString()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.entrySet().iterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.entrySet().toArray()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.entrySet().toArray(T[])": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.entrySet().forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.entrySet().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.entrySet().toString()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.entrySet().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.entrySet().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.keySet().iterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.keySet().toArray()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.keySet().toArray(T[])": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.keySet().forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.keySet().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.keySet().toString()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.keySet().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.keySet().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.values().iterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.values().toArray()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.values().toArray(T[])": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.values().forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.values().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.values().toString()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.values().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.values().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.toString()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.entrySet().iterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.entrySet().toArray()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.entrySet().toArray(T[])": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.entrySet().forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.entrySet().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.entrySet().toString()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.entrySet().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.entrySet().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.keySet().iterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.keySet().toArray()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.keySet().toArray(T[])": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.keySet().forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.keySet().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.keySet().toString()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.keySet().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.keySet().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.values().iterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.values().toArray()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.values().toArray(T[])": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.values().forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.values().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.values().toString()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.values().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.values().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.toString()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.entrySet().iterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.entrySet().toArray()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.entrySet().toArray(T[])": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.entrySet().forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.entrySet().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.entrySet().toString()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.entrySet().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.entrySet().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.keySet().iterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.keySet().toArray()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.keySet().toArray(T[])": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.keySet().forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.keySet().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.keySet().toString()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.keySet().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.keySet().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.values().iterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.values().toArray()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.values().toArray(T[])": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.values().forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.values().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.values().toString()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.values().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.values().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.toString()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.keys()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.elements()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashSet.iterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashSet.toArray()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashSet.toArray(T[])": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashSet.toString()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashSet.forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashSet.spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashSet.stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashSet.parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityQueue.iterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityQueue.toArray()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityQueue.toArray(T[])": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityQueue.toString()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityQueue.forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityQueue.spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityQueue.stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityQueue.parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityBlockingQueue.iterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityBlockingQueue.toArray()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityBlockingQueue.toArray(T[])": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityBlockingQueue.toString()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityBlockingQueue.forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityBlockingQueue.spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityBlockingQueue.stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityBlockingQueue.parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DelayQueue.iterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DelayQueue.toArray()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DelayQueue.toArray(T[])": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DelayQueue.toString()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DelayQueue.forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DelayQueue.spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DelayQueue.stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DelayQueue.parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Hashtable.keys()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Object.hashCode()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "System.identityHashCode(Object)": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Files.list(Path)": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      }
+    },
+    "plain-974622": {
+      "File.list()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "File.list(FilenameFilter)": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "File.listFiles()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "File.listFiles(FilenameFilter)": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "File.listFiles(FileFilter)": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "File.listRoots()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Class.getClasses()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Class.getDeclaredClasses()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Class.getFields()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Class.getDeclaredFields()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Class.getMethods()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Class.getDeclaredMethods()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Class.getConstructors()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Class.getDeclaredConstructors()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Class.getAnnotations()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Class.getDeclaredAnnotations()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Method.getExceptionTypes()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Method.getGenericExceptionTypes()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Method.getDeclaredAnnotations()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Method.getParameterAnnotations()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Method.getAnnotations()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Method.getAnnotationsByType(Tag.class)": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Method.getDeclaredAnnotationsByType(Tag.class)": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Field.getDeclaredAnnotations()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Field.getAnnotationsByType(Tag.class)": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Field.getAnnotations()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Field.getDeclaredAnnotationsByType(Tag.class)": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "BreakIterator.getAvailableLocales()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Collator.getAvailableLocales()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DateFormat.getAvailableLocales()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DateFormatSymbols.getAvailableLocales()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DecimalFormatSymbols.getAvailableLocales()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DateFormatSymbols.getZoneStrings()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.entrySet().iterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.entrySet().toArray()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.entrySet().toArray(T[])": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.entrySet().forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.entrySet().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.entrySet().toString()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.entrySet().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.entrySet().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.keySet().iterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.keySet().toArray()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.keySet().toArray(T[])": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.keySet().forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.keySet().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.keySet().toString()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.keySet().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.keySet().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.values().iterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.values().toArray()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.values().toArray(T[])": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.values().forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.values().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.values().toString()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.values().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.values().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.toString()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.entrySet().iterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.entrySet().toArray()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.entrySet().toArray(T[])": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.entrySet().forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.entrySet().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.entrySet().toString()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.entrySet().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.entrySet().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.keySet().iterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.keySet().toArray()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.keySet().toArray(T[])": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.keySet().forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.keySet().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.keySet().toString()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.keySet().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.keySet().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.values().iterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.values().toArray()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.values().toArray(T[])": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.values().forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.values().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.values().toString()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.values().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.values().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.toString()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.entrySet().iterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.entrySet().toArray()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.entrySet().toArray(T[])": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.entrySet().forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.entrySet().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.entrySet().toString()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.entrySet().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.entrySet().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.keySet().iterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.keySet().toArray()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.keySet().toArray(T[])": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.keySet().forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.keySet().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.keySet().toString()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.keySet().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.keySet().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.values().iterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.values().toArray()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.values().toArray(T[])": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.values().forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.values().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.values().toString()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.values().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.values().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.toString()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.entrySet().iterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.entrySet().toArray()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.entrySet().toArray(T[])": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.entrySet().forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.entrySet().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.entrySet().toString()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.entrySet().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.entrySet().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.keySet().iterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.keySet().toArray()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.keySet().toArray(T[])": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.keySet().forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.keySet().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.keySet().toString()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.keySet().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.keySet().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.values().iterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.values().toArray()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.values().toArray(T[])": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.values().forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.values().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.values().toString()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.values().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.values().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.toString()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.keys()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.elements()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashSet.iterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashSet.toArray()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashSet.toArray(T[])": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashSet.toString()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashSet.forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashSet.spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashSet.stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashSet.parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityQueue.iterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityQueue.toArray()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityQueue.toArray(T[])": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityQueue.toString()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityQueue.forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityQueue.spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityQueue.stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityQueue.parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityBlockingQueue.iterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityBlockingQueue.toArray()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityBlockingQueue.toArray(T[])": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityBlockingQueue.toString()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityBlockingQueue.forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityBlockingQueue.spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityBlockingQueue.stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityBlockingQueue.parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DelayQueue.iterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DelayQueue.toArray()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DelayQueue.toArray(T[])": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DelayQueue.toString()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DelayQueue.forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DelayQueue.spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DelayQueue.stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DelayQueue.parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Hashtable.keys()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Object.hashCode()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "System.identityHashCode(Object)": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Files.list(Path)": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      }
+    },
+    "plain-1016066": {
+      "File.list()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "File.list(FilenameFilter)": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "File.listFiles()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "File.listFiles(FilenameFilter)": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "File.listFiles(FileFilter)": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "File.listRoots()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Class.getClasses()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Class.getDeclaredClasses()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Class.getFields()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Class.getDeclaredFields()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Class.getMethods()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Class.getDeclaredMethods()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Class.getConstructors()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Class.getDeclaredConstructors()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Class.getAnnotations()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Class.getDeclaredAnnotations()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Method.getExceptionTypes()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Method.getGenericExceptionTypes()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Method.getDeclaredAnnotations()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Method.getParameterAnnotations()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Method.getAnnotations()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Method.getAnnotationsByType(Tag.class)": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Method.getDeclaredAnnotationsByType(Tag.class)": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Field.getDeclaredAnnotations()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Field.getAnnotationsByType(Tag.class)": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Field.getAnnotations()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Field.getDeclaredAnnotationsByType(Tag.class)": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "BreakIterator.getAvailableLocales()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Collator.getAvailableLocales()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DateFormat.getAvailableLocales()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DateFormatSymbols.getAvailableLocales()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DecimalFormatSymbols.getAvailableLocales()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DateFormatSymbols.getZoneStrings()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.entrySet().iterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.entrySet().toArray()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.entrySet().toArray(T[])": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.entrySet().forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.entrySet().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.entrySet().toString()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.entrySet().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.entrySet().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.keySet().iterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.keySet().toArray()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.keySet().toArray(T[])": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.keySet().forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.keySet().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.keySet().toString()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.keySet().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.keySet().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.values().iterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.values().toArray()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.values().toArray(T[])": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.values().forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.values().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.values().toString()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.values().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.values().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.toString()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.entrySet().iterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.entrySet().toArray()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.entrySet().toArray(T[])": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.entrySet().forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.entrySet().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.entrySet().toString()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.entrySet().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.entrySet().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.keySet().iterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.keySet().toArray()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.keySet().toArray(T[])": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.keySet().forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.keySet().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.keySet().toString()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.keySet().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.keySet().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.values().iterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.values().toArray()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.values().toArray(T[])": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.values().forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.values().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.values().toString()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.values().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.values().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.toString()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.entrySet().iterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.entrySet().toArray()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.entrySet().toArray(T[])": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.entrySet().forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.entrySet().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.entrySet().toString()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.entrySet().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.entrySet().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.keySet().iterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.keySet().toArray()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.keySet().toArray(T[])": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.keySet().forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.keySet().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.keySet().toString()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.keySet().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.keySet().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.values().iterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.values().toArray()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.values().toArray(T[])": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.values().forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.values().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.values().toString()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.values().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.values().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.toString()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.entrySet().iterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.entrySet().toArray()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.entrySet().toArray(T[])": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.entrySet().forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.entrySet().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.entrySet().toString()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.entrySet().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.entrySet().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.keySet().iterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.keySet().toArray()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.keySet().toArray(T[])": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.keySet().forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.keySet().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.keySet().toString()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.keySet().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.keySet().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.values().iterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.values().toArray()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.values().toArray(T[])": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.values().forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.values().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.values().toString()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.values().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.values().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.toString()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.keys()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.elements()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashSet.iterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashSet.toArray()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashSet.toArray(T[])": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashSet.toString()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashSet.forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashSet.spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashSet.stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashSet.parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityQueue.iterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityQueue.toArray()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityQueue.toArray(T[])": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityQueue.toString()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityQueue.forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityQueue.spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityQueue.stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityQueue.parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityBlockingQueue.iterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityBlockingQueue.toArray()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityBlockingQueue.toArray(T[])": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityBlockingQueue.toString()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityBlockingQueue.forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityBlockingQueue.spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityBlockingQueue.stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityBlockingQueue.parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DelayQueue.iterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DelayQueue.toArray()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DelayQueue.toArray(T[])": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DelayQueue.toString()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DelayQueue.forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DelayQueue.spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DelayQueue.stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DelayQueue.parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Hashtable.keys()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Object.hashCode()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "System.identityHashCode(Object)": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Files.list(Path)": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      }
+    },
+    "patched-933178": {
+      "File.list()": {
+        "choices": 24,
+        "distinct_outputs": 20,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "File.list(FilenameFilter)": {
+        "choices": 24,
+        "distinct_outputs": 21,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "File.listFiles()": {
+        "choices": 24,
+        "distinct_outputs": 21,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "File.listFiles(FilenameFilter)": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "File.listFiles(FileFilter)": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "File.listRoots()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Class.getClasses()": {
+        "choices": 48,
+        "distinct_outputs": 6,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Class.getDeclaredClasses()": {
+        "choices": 24,
+        "distinct_outputs": 6,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Class.getFields()": {
+        "choices": 24,
+        "distinct_outputs": 6,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Class.getDeclaredFields()": {
+        "choices": 24,
+        "distinct_outputs": 6,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Class.getMethods()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Class.getDeclaredMethods()": {
+        "choices": 24,
+        "distinct_outputs": 6,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Class.getConstructors()": {
+        "choices": 24,
+        "distinct_outputs": 6,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Class.getDeclaredConstructors()": {
+        "choices": 24,
+        "distinct_outputs": 6,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Class.getAnnotations()": {
+        "choices": 24,
+        "distinct_outputs": 6,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Class.getDeclaredAnnotations()": {
+        "choices": 24,
+        "distinct_outputs": 6,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Method.getExceptionTypes()": {
+        "choices": 24,
+        "distinct_outputs": 6,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Method.getGenericExceptionTypes()": {
+        "choices": 48,
+        "distinct_outputs": 5,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Method.getDeclaredAnnotations()": {
+        "choices": 24,
+        "distinct_outputs": 17,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Method.getParameterAnnotations()": {
+        "choices": 48,
+        "distinct_outputs": 18,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Method.getAnnotations()": {
+        "choices": 24,
+        "distinct_outputs": 17,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Method.getAnnotationsByType(Tag.class)": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Method.getDeclaredAnnotationsByType(Tag.class)": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Field.getDeclaredAnnotations()": {
+        "choices": 24,
+        "distinct_outputs": 16,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Field.getAnnotationsByType(Tag.class)": {
+        "choices": 24,
+        "distinct_outputs": 5,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Field.getAnnotations()": {
+        "choices": 24,
+        "distinct_outputs": 16,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Field.getDeclaredAnnotationsByType(Tag.class)": {
+        "choices": 24,
+        "distinct_outputs": 6,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "BreakIterator.getAvailableLocales()": {
+        "choices": 72,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Collator.getAvailableLocales()": {
+        "choices": 72,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DateFormat.getAvailableLocales()": {
+        "choices": 72,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DateFormatSymbols.getAvailableLocales()": {
+        "choices": 48,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DecimalFormatSymbols.getAvailableLocales()": {
+        "choices": 48,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DateFormatSymbols.getZoneStrings()": {
+        "choices": 24,
+        "distinct_outputs": 2,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.entrySet().iterator()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.entrySet().toArray()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.entrySet().toArray(T[])": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.entrySet().forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.entrySet().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.entrySet().toString()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.entrySet().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.entrySet().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.keySet().iterator()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.keySet().toArray()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.keySet().toArray(T[])": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.keySet().forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.keySet().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.keySet().toString()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.keySet().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.keySet().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.values().iterator()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.values().toArray()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.values().toArray(T[])": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.values().forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.values().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.values().toString()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.values().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.values().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.toString()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.entrySet().iterator()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.entrySet().toArray()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.entrySet().toArray(T[])": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.entrySet().forEach()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.entrySet().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.entrySet().toString()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.entrySet().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.entrySet().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.keySet().iterator()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.keySet().toArray()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.keySet().toArray(T[])": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.keySet().forEach()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.keySet().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.keySet().toString()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.keySet().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.keySet().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.values().iterator()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.values().toArray()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.values().toArray(T[])": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.values().forEach()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.values().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.values().toString()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.values().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.values().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.toString()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.entrySet().iterator()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.entrySet().toArray()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.entrySet().toArray(T[])": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.entrySet().forEach()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.entrySet().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.entrySet().toString()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.entrySet().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.entrySet().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.keySet().iterator()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.keySet().toArray()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.keySet().toArray(T[])": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.keySet().forEach()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.keySet().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.keySet().toString()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.keySet().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.keySet().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.values().iterator()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.values().toArray()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.values().toArray(T[])": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.values().forEach()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.values().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.values().toString()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.values().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.values().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.toString()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.entrySet().iterator()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.entrySet().toArray()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.entrySet().toArray(T[])": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.entrySet().forEach()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.entrySet().spliterator()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.entrySet().toString()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.entrySet().stream()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.entrySet().parallelStream()": {
+        "choices": 96,
+        "distinct_outputs": 24,
+        "membership_violations": 24,
+        "first_violation": "expected=[a=a, b=b, c=c, d=d, e=e, f=f]; actual=[a=a, b=b, c=c, c=c, d=d, e=e, f=f]"
+      },
+      "ConcurrentHashMap.keySet().iterator()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.keySet().toArray()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.keySet().toArray(T[])": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.keySet().forEach()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.keySet().spliterator()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.keySet().toString()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.keySet().stream()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.keySet().parallelStream()": {
+        "choices": 96,
+        "distinct_outputs": 24,
+        "membership_violations": 24,
+        "first_violation": "expected=[a, b, c, d, e, f]; actual=[a, b, d, d]"
+      },
+      "ConcurrentHashMap.values().iterator()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.values().toArray()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.values().toArray(T[])": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.values().forEach()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.values().spliterator()": {
+        "choices": 24,
+        "distinct_outputs": 22,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.values().toString()": {
+        "choices": 24,
+        "distinct_outputs": 22,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.values().stream()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.values().parallelStream()": {
+        "choices": 96,
+        "distinct_outputs": 24,
+        "membership_violations": 24,
+        "first_violation": "expected=[a, b, c, d, e, f]; actual=[c, d, e, f, f]"
+      },
+      "ConcurrentHashMap.toString()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.forEach()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.keys()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.elements()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashSet.iterator()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashSet.toArray()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashSet.toArray(T[])": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashSet.toString()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashSet.forEach()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashSet.spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashSet.stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashSet.parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityQueue.iterator()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityQueue.toArray()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityQueue.toArray(T[])": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityQueue.toString()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityQueue.forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityQueue.spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityQueue.stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityQueue.parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityBlockingQueue.iterator()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityBlockingQueue.toArray()": {
+        "choices": 24,
+        "distinct_outputs": 21,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityBlockingQueue.toArray(T[])": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityBlockingQueue.toString()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityBlockingQueue.forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityBlockingQueue.spliterator()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityBlockingQueue.stream()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityBlockingQueue.parallelStream()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DelayQueue.iterator()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DelayQueue.toArray()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DelayQueue.toArray(T[])": {
+        "choices": 24,
+        "distinct_outputs": 22,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DelayQueue.toString()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DelayQueue.forEach()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DelayQueue.spliterator()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DelayQueue.stream()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DelayQueue.parallelStream()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Hashtable.keys()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Object.hashCode()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "System.identityHashCode(Object)": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Files.list(Path)": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      }
+    },
+    "patched-974622": {
+      "File.list()": {
+        "choices": 24,
+        "distinct_outputs": 22,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "File.list(FilenameFilter)": {
+        "choices": 24,
+        "distinct_outputs": 22,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "File.listFiles()": {
+        "choices": 24,
+        "distinct_outputs": 22,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "File.listFiles(FilenameFilter)": {
+        "choices": 24,
+        "distinct_outputs": 22,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "File.listFiles(FileFilter)": {
+        "choices": 24,
+        "distinct_outputs": 20,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "File.listRoots()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Class.getClasses()": {
+        "choices": 48,
+        "distinct_outputs": 6,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Class.getDeclaredClasses()": {
+        "choices": 24,
+        "distinct_outputs": 6,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Class.getFields()": {
+        "choices": 24,
+        "distinct_outputs": 6,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Class.getDeclaredFields()": {
+        "choices": 24,
+        "distinct_outputs": 6,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Class.getMethods()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Class.getDeclaredMethods()": {
+        "choices": 24,
+        "distinct_outputs": 6,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Class.getConstructors()": {
+        "choices": 24,
+        "distinct_outputs": 6,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Class.getDeclaredConstructors()": {
+        "choices": 24,
+        "distinct_outputs": 6,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Class.getAnnotations()": {
+        "choices": 24,
+        "distinct_outputs": 6,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Class.getDeclaredAnnotations()": {
+        "choices": 24,
+        "distinct_outputs": 6,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Method.getExceptionTypes()": {
+        "choices": 24,
+        "distinct_outputs": 6,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Method.getGenericExceptionTypes()": {
+        "choices": 48,
+        "distinct_outputs": 6,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Method.getDeclaredAnnotations()": {
+        "choices": 24,
+        "distinct_outputs": 16,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Method.getParameterAnnotations()": {
+        "choices": 48,
+        "distinct_outputs": 16,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Method.getAnnotations()": {
+        "choices": 24,
+        "distinct_outputs": 18,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Method.getAnnotationsByType(Tag.class)": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Method.getDeclaredAnnotationsByType(Tag.class)": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Field.getDeclaredAnnotations()": {
+        "choices": 24,
+        "distinct_outputs": 15,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Field.getAnnotationsByType(Tag.class)": {
+        "choices": 24,
+        "distinct_outputs": 6,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Field.getAnnotations()": {
+        "choices": 24,
+        "distinct_outputs": 17,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Field.getDeclaredAnnotationsByType(Tag.class)": {
+        "choices": 24,
+        "distinct_outputs": 6,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "BreakIterator.getAvailableLocales()": {
+        "choices": 72,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Collator.getAvailableLocales()": {
+        "choices": 72,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DateFormat.getAvailableLocales()": {
+        "choices": 72,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DateFormatSymbols.getAvailableLocales()": {
+        "choices": 48,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DecimalFormatSymbols.getAvailableLocales()": {
+        "choices": 48,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DateFormatSymbols.getZoneStrings()": {
+        "choices": 24,
+        "distinct_outputs": 2,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.entrySet().iterator()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.entrySet().toArray()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.entrySet().toArray(T[])": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.entrySet().forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.entrySet().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.entrySet().toString()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.entrySet().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.entrySet().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.keySet().iterator()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.keySet().toArray()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.keySet().toArray(T[])": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.keySet().forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.keySet().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.keySet().toString()": {
+        "choices": 24,
+        "distinct_outputs": 22,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.keySet().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.keySet().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.values().iterator()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.values().toArray()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.values().toArray(T[])": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.values().forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.values().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.values().toString()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.values().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.values().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.toString()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.entrySet().iterator()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.entrySet().toArray()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.entrySet().toArray(T[])": {
+        "choices": 24,
+        "distinct_outputs": 22,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.entrySet().forEach()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.entrySet().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.entrySet().toString()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.entrySet().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.entrySet().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.keySet().iterator()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.keySet().toArray()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.keySet().toArray(T[])": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.keySet().forEach()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.keySet().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.keySet().toString()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.keySet().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.keySet().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.values().iterator()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.values().toArray()": {
+        "choices": 24,
+        "distinct_outputs": 22,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.values().toArray(T[])": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.values().forEach()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.values().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.values().toString()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.values().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.values().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.toString()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.entrySet().iterator()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.entrySet().toArray()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.entrySet().toArray(T[])": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.entrySet().forEach()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.entrySet().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.entrySet().toString()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.entrySet().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.entrySet().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.keySet().iterator()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.keySet().toArray()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.keySet().toArray(T[])": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.keySet().forEach()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.keySet().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.keySet().toString()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.keySet().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.keySet().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.values().iterator()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.values().toArray()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.values().toArray(T[])": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.values().forEach()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.values().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.values().toString()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.values().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.values().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.toString()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.entrySet().iterator()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.entrySet().toArray()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.entrySet().toArray(T[])": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.entrySet().forEach()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.entrySet().spliterator()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.entrySet().toString()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.entrySet().stream()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.entrySet().parallelStream()": {
+        "choices": 96,
+        "distinct_outputs": 24,
+        "membership_violations": 24,
+        "first_violation": "expected=[a=a, b=b, c=c, d=d, e=e, f=f]; actual=[a=a, a=a, c=c, d=d, e=e, e=e]"
+      },
+      "ConcurrentHashMap.keySet().iterator()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.keySet().toArray()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.keySet().toArray(T[])": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.keySet().forEach()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.keySet().spliterator()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.keySet().toString()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.keySet().stream()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.keySet().parallelStream()": {
+        "choices": 96,
+        "distinct_outputs": 24,
+        "membership_violations": 24,
+        "first_violation": "expected=[a, b, c, d, e, f]; actual=[c, d, f, f]"
+      },
+      "ConcurrentHashMap.values().iterator()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.values().toArray()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.values().toArray(T[])": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.values().forEach()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.values().spliterator()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.values().toString()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.values().stream()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.values().parallelStream()": {
+        "choices": 96,
+        "distinct_outputs": 24,
+        "membership_violations": 24,
+        "first_violation": "expected=[a, b, c, d, e, f]; actual=[b, d, d, e, f]"
+      },
+      "ConcurrentHashMap.toString()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.forEach()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.keys()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.elements()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashSet.iterator()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashSet.toArray()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashSet.toArray(T[])": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashSet.toString()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashSet.forEach()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashSet.spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashSet.stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashSet.parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityQueue.iterator()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityQueue.toArray()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityQueue.toArray(T[])": {
+        "choices": 24,
+        "distinct_outputs": 22,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityQueue.toString()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityQueue.forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityQueue.spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityQueue.stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityQueue.parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityBlockingQueue.iterator()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityBlockingQueue.toArray()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityBlockingQueue.toArray(T[])": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityBlockingQueue.toString()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityBlockingQueue.forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityBlockingQueue.spliterator()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityBlockingQueue.stream()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityBlockingQueue.parallelStream()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DelayQueue.iterator()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DelayQueue.toArray()": {
+        "choices": 24,
+        "distinct_outputs": 22,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DelayQueue.toArray(T[])": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DelayQueue.toString()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DelayQueue.forEach()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DelayQueue.spliterator()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DelayQueue.stream()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DelayQueue.parallelStream()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Hashtable.keys()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Object.hashCode()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "System.identityHashCode(Object)": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Files.list(Path)": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      }
+    },
+    "patched-1016066": {
+      "File.list()": {
+        "choices": 24,
+        "distinct_outputs": 18,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "File.list(FilenameFilter)": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "File.listFiles()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "File.listFiles(FilenameFilter)": {
+        "choices": 24,
+        "distinct_outputs": 21,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "File.listFiles(FileFilter)": {
+        "choices": 24,
+        "distinct_outputs": 22,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "File.listRoots()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Class.getClasses()": {
+        "choices": 48,
+        "distinct_outputs": 6,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Class.getDeclaredClasses()": {
+        "choices": 24,
+        "distinct_outputs": 6,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Class.getFields()": {
+        "choices": 24,
+        "distinct_outputs": 6,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Class.getDeclaredFields()": {
+        "choices": 24,
+        "distinct_outputs": 6,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Class.getMethods()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Class.getDeclaredMethods()": {
+        "choices": 24,
+        "distinct_outputs": 6,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Class.getConstructors()": {
+        "choices": 24,
+        "distinct_outputs": 6,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Class.getDeclaredConstructors()": {
+        "choices": 24,
+        "distinct_outputs": 6,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Class.getAnnotations()": {
+        "choices": 24,
+        "distinct_outputs": 6,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Class.getDeclaredAnnotations()": {
+        "choices": 24,
+        "distinct_outputs": 6,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Method.getExceptionTypes()": {
+        "choices": 24,
+        "distinct_outputs": 5,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Method.getGenericExceptionTypes()": {
+        "choices": 48,
+        "distinct_outputs": 6,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Method.getDeclaredAnnotations()": {
+        "choices": 24,
+        "distinct_outputs": 15,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Method.getParameterAnnotations()": {
+        "choices": 48,
+        "distinct_outputs": 17,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Method.getAnnotations()": {
+        "choices": 24,
+        "distinct_outputs": 15,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Method.getAnnotationsByType(Tag.class)": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Method.getDeclaredAnnotationsByType(Tag.class)": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Field.getDeclaredAnnotations()": {
+        "choices": 24,
+        "distinct_outputs": 15,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Field.getAnnotationsByType(Tag.class)": {
+        "choices": 24,
+        "distinct_outputs": 6,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Field.getAnnotations()": {
+        "choices": 24,
+        "distinct_outputs": 16,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Field.getDeclaredAnnotationsByType(Tag.class)": {
+        "choices": 24,
+        "distinct_outputs": 6,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "BreakIterator.getAvailableLocales()": {
+        "choices": 72,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Collator.getAvailableLocales()": {
+        "choices": 72,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DateFormat.getAvailableLocales()": {
+        "choices": 72,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DateFormatSymbols.getAvailableLocales()": {
+        "choices": 48,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DecimalFormatSymbols.getAvailableLocales()": {
+        "choices": 48,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DateFormatSymbols.getZoneStrings()": {
+        "choices": 24,
+        "distinct_outputs": 2,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.entrySet().iterator()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.entrySet().toArray()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.entrySet().toArray(T[])": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.entrySet().forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.entrySet().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.entrySet().toString()": {
+        "choices": 24,
+        "distinct_outputs": 22,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.entrySet().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.entrySet().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.keySet().iterator()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.keySet().toArray()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.keySet().toArray(T[])": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.keySet().forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.keySet().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.keySet().toString()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.keySet().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.keySet().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.values().iterator()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.values().toArray()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.values().toArray(T[])": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.values().forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.values().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.values().toString()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.values().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.values().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.toString()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashMap.forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.entrySet().iterator()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.entrySet().toArray()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.entrySet().toArray(T[])": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.entrySet().forEach()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.entrySet().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.entrySet().toString()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.entrySet().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.entrySet().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.keySet().iterator()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.keySet().toArray()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.keySet().toArray(T[])": {
+        "choices": 24,
+        "distinct_outputs": 22,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.keySet().forEach()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.keySet().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.keySet().toString()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.keySet().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.keySet().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.values().iterator()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.values().toArray()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.values().toArray(T[])": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.values().forEach()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.values().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.values().toString()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.values().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.values().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.toString()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "WeakHashMap.forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.entrySet().iterator()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.entrySet().toArray()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.entrySet().toArray(T[])": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.entrySet().forEach()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.entrySet().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.entrySet().toString()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.entrySet().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.entrySet().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.keySet().iterator()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.keySet().toArray()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.keySet().toArray(T[])": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.keySet().forEach()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.keySet().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.keySet().toString()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.keySet().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.keySet().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.values().iterator()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.values().toArray()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.values().toArray(T[])": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.values().forEach()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.values().spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.values().toString()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.values().stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.values().parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.toString()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "IdentityHashMap.forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.entrySet().iterator()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.entrySet().toArray()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.entrySet().toArray(T[])": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.entrySet().forEach()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.entrySet().spliterator()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.entrySet().toString()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.entrySet().stream()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.entrySet().parallelStream()": {
+        "choices": 96,
+        "distinct_outputs": 24,
+        "membership_violations": 24,
+        "first_violation": "expected=[a=a, b=b, c=c, d=d, e=e, f=f]; actual=[a=a, b=b, d=d, d=d, e=e, e=e, f=f, f=f]"
+      },
+      "ConcurrentHashMap.keySet().iterator()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.keySet().toArray()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.keySet().toArray(T[])": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.keySet().forEach()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.keySet().spliterator()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.keySet().toString()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.keySet().stream()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.keySet().parallelStream()": {
+        "choices": 96,
+        "distinct_outputs": 24,
+        "membership_violations": 24,
+        "first_violation": "expected=[a, b, c, d, e, f]; actual=[a, b, c, d, d, e, f]"
+      },
+      "ConcurrentHashMap.values().iterator()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.values().toArray()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.values().toArray(T[])": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.values().forEach()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.values().spliterator()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.values().toString()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.values().stream()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.values().parallelStream()": {
+        "choices": 96,
+        "distinct_outputs": 24,
+        "membership_violations": 23,
+        "first_violation": "expected=[a, b, c, d, e, f]; actual=[a, b, b]"
+      },
+      "ConcurrentHashMap.toString()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.forEach()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.keys()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "ConcurrentHashMap.elements()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashSet.iterator()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashSet.toArray()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashSet.toArray(T[])": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashSet.toString()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashSet.forEach()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashSet.spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashSet.stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "HashSet.parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityQueue.iterator()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityQueue.toArray()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityQueue.toArray(T[])": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityQueue.toString()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityQueue.forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityQueue.spliterator()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityQueue.stream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityQueue.parallelStream()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityBlockingQueue.iterator()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityBlockingQueue.toArray()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityBlockingQueue.toArray(T[])": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityBlockingQueue.toString()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityBlockingQueue.forEach()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityBlockingQueue.spliterator()": {
+        "choices": 24,
+        "distinct_outputs": 23,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityBlockingQueue.stream()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "PriorityBlockingQueue.parallelStream()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DelayQueue.iterator()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DelayQueue.toArray()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DelayQueue.toArray(T[])": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DelayQueue.toString()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DelayQueue.forEach()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DelayQueue.spliterator()": {
+        "choices": 24,
+        "distinct_outputs": 22,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DelayQueue.stream()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "DelayQueue.parallelStream()": {
+        "choices": 24,
+        "distinct_outputs": 24,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Hashtable.keys()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Object.hashCode()": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "System.identityHashCode(Object)": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      },
+      "Files.list(Path)": {
+        "choices": 0,
+        "distinct_outputs": 1,
+        "membership_violations": 0,
+        "first_violation": ""
+      }
+    }
+  },
+  "upstream_tests": "yp_bind_client_create_v3: RPC: Unknown host\nyp_bind_client_create_v3: RPC: Unknown host\nWARNING: module-info.class ignored in patch: /misc/scratch/hkp423/nondex-api-audit/deps/jaxb-api-2.3.1.jar\nJUnit version 4.13.2\n............................................................................................\nTime: 0.711\n\nOK (92 tests)"
+}

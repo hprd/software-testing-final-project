@@ -12,7 +12,7 @@
 
 The objective is LLM-assisted automation of new API perturbation support in NonDex; ChaosAPI is future work. The Hashtable and Files.list experiments are explicitly scoped standalone JDK patches. They do not consume proposals from the `Agent/` LLM pipeline and are not completed NonDex integrations. Distinguish intended functionality, implemented code, recorded historical results, and newly verified results. Current experiment status and evidence are in `HANDOFF.md` and the respective experiment READMEs.
 
-`NonDex/`, `NonDex.wiki/`, `ChaosAPI/`, and `local-llm/llama.cpp/` are separate Git submodules. Inspect current status before editing and preserve existing user changes. Reference NonDex coverage through [NonDex.wiki/SUPPORTED-APIS.md](NonDex.wiki/SUPPORTED-APIS.md); supporting runtime evidence lives under `NonDex.wiki/verification/`.
+`NonDex/`, `ChaosAPI/`, and `local-llm/llama.cpp/` are separate Git submodules. `NonDex.wiki/` is a project-maintained copy tracked directly in the main repository; commit its changes with the main project and do not publish them to the upstream wiki. Inspect current status before editing and preserve existing user changes. Reference NonDex coverage through [NonDex.wiki/SUPPORTED-APIS.md](NonDex.wiki/SUPPORTED-APIS.md); supporting runtime evidence lives under `NonDex.wiki/verification/`.
 
 Manual fixtures and their stock NonDex comparison runs live under `experiments/manual-perturbations/`. Live classification pilots using the existing `Agent/` infrastructure live under `experiments/classifying-nondeterministic-specification/`. Start with `experiments/README.md`. When reorganizing experiments, update executable fixture paths and documentation links while preserving historical raw evidence and its hashes.
 

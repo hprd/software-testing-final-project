@@ -1,10 +1,12 @@
 # Handoff: Java API contract and perturbation research
 
-Last updated: November 20, 2026.
+Last updated: November 21, 2026.
 
 This is the operational status document: completed work, evidence, limitations, directory meanings, immediate next work, and reproduction. [PROJECT_OVERVIEW.md](PROJECT_OVERVIEW.md) contains the purpose, terminology, target workflow, design ideas, and general roadmap. [README.md](README.md) provides a short introduction and checkout/setup entry points.
 
 ## Latest work and immediate next step
+
+- **Wiki stored directly in the main project:** `NonDex.wiki/` is now a regular tracked directory, preserving the files from local wiki commit `df3b723`. Its content is included in main-project commits and pushes; no upstream wiki publication is required. `NonDex/`, `ChaosAPI/`, and `local-llm/llama.cpp/` remain submodules. See the [local-copy provenance](NonDex.wiki/LOCAL-COPY.md).
 
 - **Two manual order-dependency witnesses are established.** The scoped Hashtable reversal exposed the ordered assertion in unchanged Commons Lang `StreamsTest#testOfEnumeration`; the scoped Files.list first-pair swap exposed the cross-listing assertion in unchanged Commons IO `IOBinaryOperatorStreamTest#testReduce`. Both have recorded passing baselines, fixture controls, expected perturbed failures, and passing unpatched rechecks. The Hashtable perturbation results are historical records; the Files.list run has saved local evidence. Neither patch is LLM-generated or integrated into NonDex. Start with [manual perturbations](experiments/manual-perturbations/README.md).
 - **Fresh stock NonDex subject runs did not flag either case.** On Java 11, the unchanged tests passed at JVM-verified seeds 933178, 974622, and 1016066. Commons Lang ran twice per seed through its Surefire configurations. The HashSet positive control passed cleanly and was flagged at all three seeds. Exact commands, source hashes, reports, counters, and the corrected seed invocation are in [NonDex test results](experiments/manual-perturbations/NONDEX-TEST-RESULTS.md). Passing these tests alone is not proof of absent API instrumentation; use the independent path analysis in the wiki.
@@ -45,7 +47,7 @@ The November 19 prototype and Hashtable perturbation results below were recorded
 | `Agent/tests/` | Prototype tests, including mocked orchestration checks and some environment-dependent integration controls. Passing mocks does not establish LLM accuracy. |
 | `Agent/results/` | Ignored generated inventories, documentation artifacts, model responses, and experiment logs. Mentioned historical results may not exist in a new clone. |
 | `NonDex/` | Git submodule containing the existing tool being extended. Pinned at `f1f407ce3e026f597567e7d96ee08cb08875690f`. Its active instrumentation is under `nondex-instrumentation/`; historical source files in `nondex-core/` are not an authoritative support list. |
-| `NonDex.wiki/` | Separate Git submodule for NonDex documentation. [SUPPORTED-APIS.md](NonDex.wiki/SUPPORTED-APIS.md) now contains the local audited support list, indirect paths, bypasses, and correctness caveats. Local edits do not imply changes were published upstream. |
+| `NonDex.wiki/` | Project-maintained NonDex documentation copy tracked directly by the main repository. [SUPPORTED-APIS.md](NonDex.wiki/SUPPORTED-APIS.md) now contains the local audited support list, indirect paths, bypasses, and correctness caveats. Local edits do not imply changes were published upstream. |
 | `NonDex.wiki/verification/` | Source-based coverage verifier, Java API probes, runtime manifests, and [coverage matrix](NonDex.wiki/verification/COVERAGE-MATRIX.md). This verifies stock-tool coverage on Java 8 and 11, not the project's LLM pipeline. |
 | `experiments/` | Experiment index: [manual perturbations](experiments/manual-perturbations/README.md) and [nondeterministic-specification classification](experiments/classifying-nondeterministic-specification/README.md). |
 | `experiments/classifying-nondeterministic-specification/` | Reproducible wrapper around the existing full-project inventory, method-scoped JDK documentation queue, and staged LLM review for `StreamsTest#testOfEnumeration`. Raw requests/responses and the source-based assessment are kept separate. |
@@ -60,7 +62,7 @@ The November 19 prototype and Hashtable perturbation results below were recorded
 
 ## Sharing evidence and local artifacts
 
-Inspect live Git status before sharing work. The parent records the NonDex submodule at `f1f407ce3e026f597567e7d96ee08cb08875690f`. Submodule changes have their own history and, when shared, require the relevant submodule commit and parent pointer update; a parent-repository push alone does not transfer uncommitted nested files.
+Inspect live Git status before sharing work. The parent records the NonDex submodule at `f1f407ce3e026f597567e7d96ee08cb08875690f`. Changes in the remaining submodules have their own history and require their commits to be available remotely. The `NonDex.wiki/` copy is ordinary main-project content and is transferred with its main-project commit.
 
 Several important local artifacts are explicitly ignored and will **not** accompany an ordinary push:
 
@@ -74,7 +76,7 @@ Several important local artifacts are explicitly ignored and will **not** accomp
 
 Selected shareable evidence now exists for the Files.list witness, the stock NonDex subject comparison, and the classification pilot. Include those experiment sources and evidence with their documentation when committing; the full classification inventory is intentionally omitted and its digest is recorded. Preserve raw evidence bytes when moving files, including historical paths.
 
-The NonDex wiki audit is committed as `df3b723`: `Supported-APIs.md` is replaced by `SUPPORTED-APIS.md`, and `verification/` contains the audit sources and results. The parent records this submodule revision. That commit must also be available from the wiki remote for recipients to initialize the submodule; a parent push alone does not publish it. The parent documentation consolidations and experiment reorganization include intentional moves and superseded documents.
+The local wiki snapshot comes from commit `df3b723`: `Supported-APIs.md` was replaced by `SUPPORTED-APIS.md`, and `verification/` contains the audit sources and results. These files are now tracked directly in the main project, without a wiki submodule pointer or an upstream wiki push. The old local wiki Git history was retained under the main repository's `.git/modules/NonDex.wiki` for recovery; recipients do not need it. The parent documentation consolidations and experiment reorganization include intentional moves and superseded documents.
 
 The prose records summarize prior runs, but a recipient cannot independently inspect ignored raw results from the push unless selected evidence is shared separately. If sharing results, review their size and contents, include the relevant input files, logs, manifests, hashes and model responses together, and avoid blindly adding generated subject builds or model weights. The source code and tests alone do not recreate the past observations. Use `git status --short`, `git status --ignored --short` on selected paths, and `git submodule status` to review what will be transferred.
 

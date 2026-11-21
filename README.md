@@ -17,9 +17,8 @@ git clone --recurse-submodules https://github.com/hprd/software-testing-final-pr
 cd software-testing-final-project
 ```
 
-This also downloads `ChaosAPI`, `NonDex`, `NonDex.wiki`, and
-`local-llm/llama.cpp` at the commits recorded by this repository.
-The NonDex wiki documentation is available locally in `NonDex.wiki/`.
+This also downloads `ChaosAPI`, `NonDex`, and `local-llm/llama.cpp` at the commits recorded by this repository.
+The project-maintained NonDex wiki copy is tracked directly in `NonDex.wiki/` and is included in a normal clone; it does not require a separate wiki push.
 
 If you already cloned the project and the submodule folders are empty, run
 this from the project root:
